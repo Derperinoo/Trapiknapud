@@ -9,6 +9,15 @@ var ecoland1;
 var tulipdr1;
 var quimpoblvd1;
 var sandawa1;
+var quezonblvd1;
+var mlquezon1;
+var cabaguio1;
+var dacudao1;
+var pichonst1;
+var sanpedro1;
+var bonifaciost1;
+var ftorrest1;
+var mroxas1;
 
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -207,1244 +216,2239 @@ app.get('/equirino',function(_req, _res){
     		analysisjf10:analysisjf10}));	  
 	});
 });
-// app.get('/jplaurel',function(_req, _res){
+app.get('/jplaurel',function(_req, _res){
 
-// 	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
-// 	  if (err) { return console.log(err); }
-// 	  	//jp south
+	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
+	  if (err) { return console.log(err); }
+	  	//jp south
 
-// 	  	//jp south intersections  	
-// 	  	streetj = body.RWS[0].RW[2].DE;
-// 	  	const int001 = body.RWS[0].RW[2].FIS[0].FI[0].TMC.DE;
-// 	  	const jf001 = body.RWS[0].RW[2].FIS[0].FI[0].CF[0].JF;	
-// 	  	const int002 = body.RWS[0].RW[2].FIS[0].FI[1].TMC.DE;
-// 	  	const jf002 = body.RWS[0].RW[2].FIS[0].FI[1].CF[0].JF;
-// 	 	const int003 = body.RWS[0].RW[2].FIS[0].FI[2].TMC.DE;
-// 	  	const jf003 = body.RWS[0].RW[2].FIS[0].FI[2].CF[0].JF;
-// 	  	const int004 = body.RWS[0].RW[2].FIS[0].FI[3].TMC.DE;
-// 	  	const jf004 = body.RWS[0].RW[2].FIS[0].FI[3].CF[0].JF;
-// 	  	const int005 = body.RWS[0].RW[2].FIS[0].FI[4].TMC.DE;
-// 	  	const jf005 = body.RWS[0].RW[2].FIS[0].FI[4].CF[0].JF;
-// 		const int006 = body.RWS[0].RW[2].FIS[0].FI[5].TMC.DE;
-// 	  	const jf006 = body.RWS[0].RW[2].FIS[0].FI[5].CF[0].JF;
-// 	  	var vva = ' ';
-// 	    let analysisjp01 = "";
-// 	  	if(jf001 == 0 || jf001 < 4){
-// 	  	analysisjp01 = "For"+vva+int001+vva+ "South bound lane Free flow of traffic";
-// 	  	}else if(jf001 == 4 || jf001 < 8){
-// 	  		analysisjp01 = "For"+vva+int001+vva+ "South bound Sluggish flow of traffic";
-// 	  	}else if(jf001 == 8 || jf001 < 10){
-// 	  		analysisjp01 = "For"+vva+int001+vva+ "South bound Slow flow of traffic";
-// 	  	}else if(jf001 == 10){
-// 	  		analysisjp01 = "For"+vva+int001+vva+ "South bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysisjp01 = "Cannot compute"
-// 	  	}
-// 	  	let analysisjp02 = "";
-// 	  	if(jf002 == 0 || jf002 < 4){
-// 	  	analysisjp02 = "For"+vva+int002+vva+ "South bound Free flow of traffic";
-// 	  	}else if(jf002 == 4 || jf002 < 8){
-// 	  		analysisjp02 = "For"+vva+int002+vva+ "South bound Sluggish flow of traffic";
-// 	  	}else if(jf002 == 8 || jf002 < 10){
-// 	  		analysisjp02 = "For"+vva+int002+vva+ "South bound Slow flow of traffic";
-// 	  	}else if(jf002 == 10){
-// 	  		analysisjp02 = "For"+vva+int002+vva+ "South bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysisjp02 = "Cannot compute"
-// 	  	}
-// 	  	let analysisjp03 = "";
-// 	  	if(jf003 == 0 || jf003 < 4){
-// 	  	analysisjp03 = "For"+vva+int003+vva+ "South bound Free flow of traffic";
-// 	  	}else if(jf003 == 4 || jf003 < 8){
-// 	  		analysisjp03 = "For"+vva+int003+vva+ "South bound Sluggish flow of traffic";
-// 	  	}else if(jf003 == 8 || jf003 < 10){
-// 	  		analysisjp03 = "For"+vva+int003+vva+ "South bound Slow flow of traffic";
-// 	  	}else if(jf003 == 10){
-// 	  		analysisjp03 = "For"+vva+int003+vva+ "South bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysisjp03 = "Cannot compute"
-// 	  	}
-// 	  	let analysisjp04 = "";
-// 	  	if(jf004 == 0 || jf004 < 4){
-// 	  	analysisjp04 = "For"+vva+int004+vva+ "South bound Free flow of traffic";
-// 	  	}else if(jf004 == 4 || jf004 < 8){
-// 	  		analysisjp04 = "For"+vva+int004+vva+ "South bound Sluggish flow of traffic";
-// 	  	}else if(jf004 == 8 || jf004 < 10){
-// 	  		analysisjp04 = "For"+vva+int004+vva+ "South bound Slow flow of traffic";
-// 	  	}else if(jf004 == 10){
-// 	  		analysisjp04 = "For"+vva+int004+vva+ "South bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysisjp04 = "Cannot compute"
-// 	  	}
+	  	//jp south intersections  	
+	  	jplaurel1 = body.RWS[0].RW[2].DE;
+	  	const intc11 = body.RWS[0].RW[2].FIS[0].FI[0].TMC.DE;
+	  	const jf11 = body.RWS[0].RW[2].FIS[0].FI[0].CF[0].JF;	
+	  	const intc12 = body.RWS[0].RW[2].FIS[0].FI[1].TMC.DE;
+	  	const jf12 = body.RWS[0].RW[2].FIS[0].FI[1].CF[0].JF;
+	 	const int13 = body.RWS[0].RW[2].FIS[0].FI[2].TMC.DE;
+	  	const jf13 = body.RWS[0].RW[2].FIS[0].FI[2].CF[0].JF;
+	  	const intc14 = body.RWS[0].RW[2].FIS[0].FI[3].TMC.DE;
+	  	const jf14 = body.RWS[0].RW[2].FIS[0].FI[3].CF[0].JF;
+	  	const intc15 = body.RWS[0].RW[2].FIS[0].FI[4].TMC.DE;
+	  	const jf15 = body.RWS[0].RW[2].FIS[0].FI[4].CF[0].JF;
+		const intc16 = body.RWS[0].RW[2].FIS[0].FI[5].TMC.DE;
+	  	const jf16 = body.RWS[0].RW[2].FIS[0].FI[5].CF[0].JF;
+	  	var vva = ' ';
+	    let analysisjf11 = "";
+	  	if(jf11 == 0 || jf11 < 4){
+	  		analysisjf11 = "For"+vva+intc11+vva+ "South bound lane Free flow of traffic";
+	  	}else if(jf11 == 4 || jf11 < 8){
+	  		analysisjf11 = "For"+vva+intc11+vva+ "South bound Sluggish flow of traffic";
+	  	}else if(jf11 == 8 || jf11 < 10){
+	  		analysisjf11 = "For"+vva+intc11+vva+ "South bound Slow flow of traffic";
+	  	}else if(jf11 == 10){
+	  		analysisjf11 = "For"+vva+intc11+vva+ "South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysisjf11 = "Cannot compute"
+	  	}
+	  	let analysisjf12 = "";
+	  	if(jf12 == 0 || jf12 < 4){
+	  		analysisjf12 = "For"+vva+intc12+vva+ "South bound Free flow of traffic";
+	  	}else if(jf12 == 4 || jf12 < 8){
+	  		analysisjf12 = "For"+vva+intc12+vva+ "South bound Sluggish flow of traffic";
+	  	}else if(jf12 == 8 || jf12 < 10){
+	  		analysisjf12 = "For"+vva+intc12+vva+ "South bound Slow flow of traffic";
+	  	}else if(jf12 == 10){
+	  		analysisjf12 = "For"+vva+intc12+vva+ "South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysisjf12 = "Cannot compute"
+	  	}
+	  	let analysisjf13 = "";
+	  	if(jf13 == 0 || jf13 < 4){
+	  		analysisjf13 = "For"+vva+intc13+vva+ "South bound Free flow of traffic";
+	  	}else if(jf13 == 4 || jf13 < 8){
+	  		analysisjf13 = "For"+vva+intc13+vva+ "South bound Sluggish flow of traffic";
+	  	}else if(jf13 == 8 || jf13 < 10){
+	  		analysisjf13 = "For"+vva+intc13+vva+ "South bound Slow flow of traffic";
+	  	}else if(jf13 == 10){
+	  		analysisjf13 = "For"+vva+intc13+vva+ "South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysisjf13 = "Cannot compute"
+	  	}
+	  	let analysisjf14 = "";
+	  	if(jf14 == 0 || jf14 < 4){
+	  		analysisjf14 = "For"+vva+intc14+vva+ "South bound Free flow of traffic";
+	  	}else if(jf14 == 4 || jf14 < 8){
+	  		analysisjf14 = "For"+vva+intc14+vva+ "South bound Sluggish flow of traffic";
+	  	}else if(jf14 == 8 || jf14 < 10){
+	  		analysisjf14 = "For"+vva+intc14+vva+ "South bound Slow flow of traffic";
+	  	}else if(jf14 == 10){
+	  		analysisjf14 = "For"+vva+intc14+vva+ "South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysisjf14 = "Cannot compute"
+	  	}
 
-// 	  	let analysisjp05 = "";
-// 	  	if(jf005 == 0 || jf005 < 4){
-// 	  	analysisjp05 = "For"+vva+int005+vva+ "South bound Free flow of traffic";
-// 	  	}else if(jf005 == 4 || jf005 < 8){
-// 	  		analysisjp05 = "For"+vva+int005+vva+ "South bound Sluggish flow of traffic";
-// 	  	}else if(jf005 == 8 || jf005 < 10){
-// 	  		analysisjp05 = "For"+vva+int005+vva+ "South bound Slow flow of traffic";
-// 	  	}else if(jf005 == 10){
-// 	  		analysisjp05 = "For"+vva+int005+vva+ "South bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysisjp05 = "Cannot compute"
-// 	  	}
-// 	    let analysisjp06 = "";
-// 	  	if(jf006 == 0 || jf006 < 4){
-// 	  	analysisjp06 = "For"+vva+int006+vva+ "South bound Free flow of traffic";
-// 	  	}else if(jf006 == 4 || jf006 < 8){
-// 	  		analysisjp06 = "For"+vva+int006+vva+ "South bound Sluggish flow of traffic";
-// 	  	}else if(jf006 == 8 || jf006 < 10){
-// 	  		analysisjp06 = "For"+vva+int006+vva+ "South bound Slow flow of traffic";
-// 	  	}else if(jf006 == 10){
-// 	  		analysisjp06 = "For"+vva+int006+vva+ "South bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysisjp06 = "Cannot compute"
-// 	  	}
-// 	  	//jp north 
+	  	let analysisjf15 = "";
+	  	if(jf15 == 0 || jf15 < 4){
+	  		analysisjf15 = "For"+vva+intc15+vva+ "South bound Free flow of traffic";
+	  	}else if(jf15 == 4 || jf15 < 8){
+	  		analysisjf15 = "For"+vva+intc15+vva+ "South bound Sluggish flow of traffic";
+	  	}else if(jf15 == 8 || jf15 < 10){
+	  		analysisjf15 = "For"+vva+intc15+vva+ "South bound Slow flow of traffic";
+	  	}else if(jf15 == 10){
+	  		analysisjf15 = "For"+vva+intc15+vva+ "South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysisjf15 = "Cannot compute"
+	  	}
+	    let analysisjf16 = "";
+	  	if(jf16 == 0 || jf16 < 4){
+	  		analysisjf16 = "For"+vva+intc16+vva+ "South bound Free flow of traffic";
+	  	}else if(jf16 == 4 || jf16 < 8){
+	  		analysisjf16 = "For"+vva+intc16+vva+ "South bound Sluggish flow of traffic";
+	  	}else if(jf16 == 8 || jf16 < 10){
+	  		analysisjf16 = "For"+vva+intc16+vva+ "South bound Slow flow of traffic";
+	  	}else if(jf16 == 10){
+	  		analysisjf16 = "For"+vva+intc16+vva+ "South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysisjf16 = "Cannot compute"
+	  	}
+	  	//jp north 
 
-// 	  	//jp north intersections
-// 	  	const street2 = body.RWS[0].RW[3].DE;
-// 	  	const int01 = body.RWS[0].RW[3].FIS[0].FI[0].TMC.DE;
-// 	  	const jf01 = body.RWS[0].RW[3].FIS[0].FI[0].CF[0].JF;
-// 	  	const int02 = body.RWS[0].RW[3].FIS[0].FI[1].TMC.DE;
-// 	  	const jf02 = body.RWS[0].RW[3].FIS[0].FI[1].CF[0].JF;
-// 	  	const int03 = body.RWS[0].RW[3].FIS[0].FI[2].TMC.DE;
-// 	  	const jf03 = body.RWS[0].RW[3].FIS[0].FI[2].CF[0].JF;
-// 	  	const int04 = body.RWS[0].RW[3].FIS[0].FI[3].TMC.DE;
-// 	  	const jf04 = body.RWS[0].RW[3].FIS[0].FI[3].CF[0].JF;
-// 	  	const int05 = body.RWS[0].RW[3].FIS[0].FI[4].TMC.DE;
-// 	  	const jf05 = body.RWS[0].RW[3].FIS[0].FI[4].CF[0].JF;
-// 	  	const int06 = body.RWS[0].RW[3].FIS[0].FI[5].TMC.DE;
-// 	  	const jf06 = body.RWS[0].RW[3].FIS[0].FI[5].CF[0].JF;
-// 	  	var pp = ' ';
-// 	  	let analysisjp1 = "";
-// 	  	if(jf01 == 0 || jf01 < 4){
-// 	  	analysisjp1 = "For"+pp+int01+pp+"North bound lane Free flow of traffic";
-// 	  	}else if(jf01 == 4 || jf01 < 8){
-// 	  		analysisjp1 = "For"+pp+int01+pp+"North bound lane Free Sluggish flow of traffic";
-// 	  	}else if(jf01 == 8 || jf01 < 10){
-// 	  		analysisjp1 = "For"+pp+int01+pp+"North bound lane Free Slow flow of traffic";
-// 	  	}else if(jf01 == 10){
-// 	  		analysisjp1 = "For"+pp+int01+pp+"North bound lane Free Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysisjp1 = "Cannot compute"
-// 	  	}
-// 	  	let analysisjp2 = "";
-// 	  	if(jf02 == 0 || jf02 < 4){
-// 	  	analysisjp2 = "For"+pp+int02+pp+"North bound lane Free Angliongto: Free flow of traffic";
-// 	  	}else if(jf02 == 4 || jf02 < 8){
-// 	  		analysisjp2 = "For"+pp+int02+pp+"North bound lane Free Sluggish flow of traffic";
-// 	  	}else if(jf02 == 8 || jf02 < 10){
-// 	  		analysisjp2 = "For"+pp+int02+pp+"North bound lane Free Slow flow of traffic";
-// 	  	}else if(jf02 == 10){
-// 	  		analysisjp2 = "For"+pp+int02+pp+"North bound lane Free Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysisjp2 = "Cannot compute"
-// 	  	}
-// 	  	let analysisjp3 = "";
-// 	  	if(jf03 == 0 || jf03 < 4){
-// 	  	analysisjp3 = "For"+pp+int03+pp+"North bound lane Free Free flow of traffic";
-// 	  	}else if(jf03 == 4 || jf03 < 8){
-// 	  		analysisjp3 = "For"+pp+int03+pp+"North bound lane Free Sluggish flow of traffic";
-// 	  	}else if(jf03 == 8 || jf03 < 10){
-// 	  		analysisjp3 = "For"+pp+int03+pp+"North bound lane Free Slow flow of traffic";
-// 	  	}else if(jf03 == 10){
-// 	  		analysisjp3 = "For"+pp+int03+pp+"North bound lane Free Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysisjp3 = "Cannot compute"
-// 	  	}
-// 	  	let analysisjp4 = "";
-// 	  	if(jf04 == 0 || jf04 < 4){
-// 	  	analysisjp4 = "For"+pp+int04+pp+"North bound lane Free Free flow of traffic";
-// 	  	}else if(jf04 == 4 || jf04 < 8){
-// 	  		analysisjp4 = "For"+pp+int04+pp+"North bound lane Free Sluggish flow of traffic";
-// 	  	}else if(jf04 == 8 || jf04 < 10){
-// 	  		analysisjp4 = "For"+pp+int04+pp+"North bound lane Free Slow flow of traffic";
-// 	  	}else if(jf04 == 10){
-// 	  		analysisjp4 = "For"+pp+int04+pp+"North bound lane Free Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysisjp4 = "Cannot compute"
-// 	  	}
-// 	  	let analysisjp5 = "";
-// 	  	if(jf05 == 0 || jf05 < 4){
-// 	  	analysisjp5 = "For"+pp+int05+pp+"North bound lane Free Free flow of traffic";
-// 	  	}else if(jf05 == 4 || jf05 < 8){
-// 	  		analysisjp5 = "For"+pp+int05+pp+"North bound lane Free Sluggish flow of traffic";
-// 	  	}else if(jf05 == 8 || jf05 < 10){
-// 	  		analysisjp5 = "For"+pp+int05+pp+"North bound lane Free Slow flow of traffic";
-// 	  	}else if(jf05 == 10){
-// 	  		analysisjp5 = "For"+pp+int05+pp+"North bound lane Free Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysisjp5 = "Cannot compute"
-// 	  	}
-// 	  	let analysisjp6 = "";
-// 	  	if(jf06 == 0 || jf06 < 4){
-// 	  	analysisjp6 = "For"+pp+int06+pp+"North bound lane Free Free flow of traffic";
-// 	  	}else if(jf06 == 4 || jf06 < 8){
-// 	  		analysisjp6 = "For"+pp+int06+pp+"North bound lane Free Sluggish flow of traffic";
-// 	  	}else if(jf06 == 8 || jf06 < 10){
-// 	  		analysisjp6 = "For"+pp+int06+pp+"North bound lane Free Slow flow of traffic";
-// 	  	}else if(jf06 == 10){
-// 	  		analysisjp6 = "For"+pp+int06+pp+"North bound lane Free Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysisjp6 = "Cannot compute"
-// 	  	}
-// 	  	_res.setHeader('Content-Type', 'application/json');
-//     	_res.send(JSON.stringify({ streetj: streetj,int01: int01, jf01: jf01,  int02: int02, jf02: jf02,  int03: int03, jf03: jf03,  
-//     		int04: int04, jf04: jf04,  int05: int05, jf05: jf05, int06: int06,jf06:jf06,analysisjp1:analysisjp1, analysisjp2:analysisjp2, analysisjp3:analysisjp3,
-//     		analysisjp4:analysisjp4, analysisjp5:analysisjp5,analysisjp6:analysisjp6,street1: street1,int001: int001, jf001: jf001,  int002: int002, jf002:  jf002 ,int003: int003, jf003: jf003, int004: int004, jf004: jf004,  int005: int005, jf005: jf005,
-//     		int006:int006,jf006:jf006, analysisjp6:analysisjp6,
-// 		analysisjp01:analysisjp01, analysisjp02:analysisjp02, analysisjp03:analysisjp03,
-//     		analysisjp04:analysisjp04, analysisjp05:analysisjp05, analysisjp06:analysisjp06}));
+	  	//jp north intersections
+	  	const jplaureel1 = body.RWS[0].RW[3].DE;
+	  	const intc17 = body.RWS[0].RW[3].FIS[0].FI[0].TMC.DE;
+	  	const jf17 = body.RWS[0].RW[3].FIS[0].FI[0].CF[0].JF;
+	  	const intc18 = body.RWS[0].RW[3].FIS[0].FI[1].TMC.DE;
+	  	const jf18 = body.RWS[0].RW[3].FIS[0].FI[1].CF[0].JF;
+	  	const intc19 = body.RWS[0].RW[3].FIS[0].FI[2].TMC.DE;
+	  	const jf19 = body.RWS[0].RW[3].FIS[0].FI[2].CF[0].JF;
+	  	const intc20 = body.RWS[0].RW[3].FIS[0].FI[3].TMC.DE;
+	  	const jf20 = body.RWS[0].RW[3].FIS[0].FI[3].CF[0].JF;
+	  	const intc21 = body.RWS[0].RW[3].FIS[0].FI[4].TMC.DE;
+	  	const jf21 = body.RWS[0].RW[3].FIS[0].FI[4].CF[0].JF;
+	  	const intc22 = body.RWS[0].RW[3].FIS[0].FI[5].TMC.DE;
+	  	const jf22 = body.RWS[0].RW[3].FIS[0].FI[5].CF[0].JF;
+	  	var pp = ' ';
+	  	let analysisjf17 = "";
+	  	if(jf17 == 0 || jf17 < 4){
+	  		analysisjf17 = "For"+pp+intc17+pp+"North bound lane Free flow of traffic";
+	  	}else if(jf17 == 4 || jf17 < 8){
+	  		analysisjf17 = "For"+pp+intc17+pp+"North bound lane Free Sluggish flow of traffic";
+	  	}else if(jf17 == 8 || jf17 < 10){
+	  		analysisjf17 = "For"+pp+intc17+pp+"North bound lane Free Slow flow of traffic";
+	  	}else if(jf17 == 10){
+	  		analysisjf17 = "For"+pp+intc17+pp+"North bound lane Free Traffic stopped or Road closed"
+	  	}else{
+	  		analysisjf17 = "Cannot compute"
+	  	}
+	  	let analysisjf18 = "";
+	  	if(jf18 == 0 || jf18 < 4){
+	  		analysisjf18 = "For"+pp+intc18+pp+"North bound lane Free flow of traffic";
+	  	}else if(jf18 == 4 || jf18 < 8){
+	  		analysisjf18 = "For"+pp+intc18+pp+"North bound lane Free Sluggish flow of traffic";
+	  	}else if(jf18 == 8 || jf18 < 10){
+	  		analysisjf18 = "For"+pp+intc18+pp+"North bound lane Free Slow flow of traffic";
+	  	}else if(jf18 == 10){
+	  		analysisjf18 = "For"+pp+intc18+pp+"North bound lane Free Traffic stopped or Road closed"
+	  	}else{
+	  		analysisjf18 = "Cannot compute"
+	  	}
+	  	let analysisjf19 = "";
+	  	if(jf19 == 0 || jf19 < 4){
+	  		analysisjf19 = "For"+pp+intc19+pp+"North bound lane Free flow of traffic";
+	  	}else if(jf19 == 4 || jf19 < 8){
+	  		analysisjf19 = "For"+pp+intc19+pp+"North bound lane Free Sluggish flow of traffic";
+	  	}else if(jf19 == 8 || jf19 < 10){
+	  		analysisjf19 = "For"+pp+intc19+pp+"North bound lane Free Slow flow of traffic";
+	  	}else if(jf19 == 10){
+	  		analysisjf19 = "For"+pp+intc19+pp+"North bound lane Free Traffic stopped or Road closed"
+	  	}else{
+	  		analysisjf19 = "Cannot compute"
+	  	}
+	  	let analysisjf20 = "";
+	  	if(jf20 == 0 || jf20 < 4){
+	  		analysisjf20 = "For"+pp+intc20+pp+"North bound lane Free flow of traffic";
+	  	}else if(jf20 == 4 || jf20 < 8){
+	  		analysisjf20 = "For"+pp+intc20+pp+"North bound lane Free Sluggish flow of traffic";
+	  	}else if(jf20 == 8 || jf20 < 10){
+	  		analysisjf20 = "For"+pp+intc20+pp+"North bound lane Free Slow flow of traffic";
+	  	}else if(jf20 == 10){
+	  		analysisjf20 = "For"+pp+intc20+pp+"North bound lane Free Traffic stopped or Road closed"
+	  	}else{
+	  		analysisjf20 = "Cannot compute"
+	  	}
+	  	let analysisjf21 = "";
+	  	if(jf21 == 0 || jf21 < 4){
+	  		analysisjf21 = "For"+pp+intc21+pp+"North bound lane Free flow of traffic";
+	  	}else if(jf21 == 4 || jf21 < 8){
+	  		analysisjf21 = "For"+pp+intc21+pp+"North bound lane Free Sluggish flow of traffic";
+	  	}else if(jf21 == 8 || jf21 < 10){
+	  		analysisjf21 = "For"+pp+intc21+pp+"North bound lane Free Slow flow of traffic";
+	  	}else if(jf21 == 10){
+	  		analysisjf21 = "For"+pp+intc21+pp+"North bound lane Free Traffic stopped or Road closed"
+	  	}else{
+	  		analysisjf21 = "Cannot compute"
+	  	}
+	  	let analysisjf22 = "";
+	  	if(jf22 == 0 || jf22 < 4){
+	  		analysisjf22 = "For"+pp+intc22+pp+"North bound lane Free flow of traffic";
+	  	}else if(jf22 == 4 || jf22 < 8){
+	  		analysisjf22 = "For"+pp+intc22+pp+"North bound lane Free Sluggish flow of traffic";
+	  	}else if(jf22 == 8 || jf22 < 10){
+	  		analysisjf22 = "For"+pp+intc22+pp+"North bound lane Free Slow flow of traffic";
+	  	}else if(jf22 == 10){
+	  		analysisjf22 = "For"+pp+intc22+pp+"North bound lane Free Traffic stopped or Road closed"
+	  	}else{
+	  		analysisjf22 = "Cannot compute"
+	  	}
+	  	_res.setHeader('Content-Type', 'application/json');
+    	_res.send(JSON.stringify({ jplaurel1: jplaurel1, intc11: intc11, jf11: jf11,  intc12: intc12, jf12: jf12,  intc13: intc13, jf13: jf13,  
+    		intc14: intc14, jf14: jf14,  intc15: intc15, jf15: jf15, intc16: intc16, jf16:jf16,analysisjf11:analysisjf11, analysisjf12:analysisjf12, analysisjf13:analysisjf13,
+    		analysisjf14:analysisjf14, analysisjf15:analysisjf15,analysisjf16:analysisjf16, jplaureel1: jplaureel1, intc17: intc17, jfc17: jfc17,  intc18: intc18, jf18:  jf18 ,intc19: intc19, jf19: jf19, intc20: intc20, jf20: jf20,  intc21: intc21, jf21: jf21,
+    		intc22:intc22,jf22:jf22, analysisjf17:analysisjf17,
+		analysisjf18:analysisjf18, analysisjf19:analysisjf19, analysisjf20:analysisjf20,
+    		analysisjf21:analysisjf21, analysisjf22:analysisjf22,}));
 	 
-// 	});
-// });
-// app.get('/mcarthur',function(_req, _res){
+	});
+});
+app.get('/mcarthur',function(_req, _res){
 
-// 	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
-// 	  if (err) { return console.log(err); }
+	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
+	  if (err) { return console.log(err); }
 	  	
-// 	  	//south intersections
-// 	  	streetmm = body.RWS[0].RW[4].DE;
-// 	  	const intm = body.RWS[0].RW[4].FIS[0].FI[0].TMC.DE;
-// 	  	const jfm = body.RWS[0].RW[4].FIS[0].FI[0].CF[0].JF;
-// 	  	const intm1 = body.RWS[0].RW[4].FIS[0].FI[1].TMC.DE;
-// 	  	const jf02 = body.RWS[0].RW[4].FIS[0].FI[1].CF[0].JF;
-// 		const intm2 = body.RWS[0].RW[4].FIS[0].FI[2].TMC.DE;
-// 	  	const jfm2 = body.RWS[0].RW[4].FIS[0].FI[2].CF[0].JF;
-// 		const intm3 = body.RWS[0].RW[4].FIS[0].FI[3].TMC.DE;
-// 	  	const jfm3 = body.RWS[0].RW[4].FIS[0].FI[3].CF[0].JF;
-// 	  	const intm4 = body.RWS[0].RW[4].FIS[0].FI[4].TMC.DE;
-// 	  	const jfm4 = body.RWS[0].RW[4].FIS[0].FI[4].CF[0].JF;
-// 	  	const intm5 = body.RWS[0].RW[4].FIS[0].FI[5].TMC.DE;
-// 	  	const jfm5 = body.RWS[0].RW[4].FIS[0].FI[5].CF[0].JF;
-// 	  	const intm6 = body.RWS[0].RW[4].FIS[0].FI[6].TMC.DE;
-// 	  	const jfm6 = body.RWS[0].RW[4].FIS[0].FI[6].CF[0].JF;
-// 	  	const intm7 = body.RWS[0].RW[4].FIS[0].FI[7].TMC.DE;
-// 	  	const jfm7 = body.RWS[0].RW[4].FIS[0].FI[7].CF[0].JF;
-// 	  	const intm8 = body.RWS[0].RW[4].FIS[0].FI[8].TMC.DE;
-// 	  	const jfm8 = body.RWS[0].RW[4].FIS[0].FI[8].CF[0].JF;
-// 	  	const intm9 = body.RWS[0].RW[4].FIS[0].FI[9].TMC.DE;
-// 	  	const jfm9 = body.RWS[0].RW[4].FIS[0].FI[9].CF[0].JF;
-// 	  	const intm10 = body.RWS[0].RW[4].FIS[0].FI[10].TMC.DE;
-// 	  	const jfm10  = body.RWS[0].RW[4].FIS[0].FI[10].CF[0].JF;	
-// 	  	const intm11 = body.RWS[0].RW[4].FIS[0].FI[11].TMC.DE;
-// 	  	const jfm11 = body.RWS[0].RW[4].FIS[0].FI[11].CF[0].JF;
-// 	  	const intm12 = body.RWS[0].RW[4].FIS[0].FI[12].TMC.DE;
-// 	  	const jfm12 = body.RWS[0].RW[4].FIS[0].FI[12].CF[0].JF;
-// 	  	const intm13 = body.RWS[0].RW[4].FIS[0].FI[13].TMC.DE;
-// 	  	const jfm13 = body.RWS[0].RW[4].FIS[0].FI[13].CF[0].JF;
-// 	  	var ya = ' ';
-// 	  	let analysis35 = "";
-// 	  	if(jfm == 0 || jfm < 4){
-// 	  	analysis35 = "For"+ya+intm+ya+"South bound lane Free flow of traffic";
-// 	  	}else if(jfm == 4 || jfm < 8){
-// 	  		analysis35 = "For"+ya+intm+ya+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm == 8 || jfm < 10){
-// 	  		analysis35 = "For"+ya+intm+ya+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfm == 10){
-// 	  		analysis35 = "For"+ya+intm+ya+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis35 = "Cannot compute"
-// 	  	}
-// 	  	let analysis22 = "";
-// 	  	if(jf02 == 0 || jf02 < 4){
-// 	  	analysis22 = "For"+ya+intm1+ya+"South bound lane Free flow of traffic";
-// 	  	}else if(jf02 == 4 || jf02 < 8){
-// 	  		analysis22 = "For"+ya+intm1+ya+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jf02 == 8 || jf02 < 10){
-// 	  		analysis22 = "For"+ya+intm1+ya+"South bound lane Slow flow of traffic";
-// 	  	}else if(jf02 == 10){
-// 	  		analysis22 = "For"+ya+intm1+ya+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis22 = "Cannot compute"
-// 	  	}
-// 	  	let analysis23 = "";
-// 	  	if(jfm2 == 0 || jfm2 < 4){
-// 	  	analysis23 = "For"+ya+intm2+ya+"South bound lane Free flow of traffic";
-// 	  	}else if(jfm2 == 4 || jfm2 < 8){
-// 	  		analysis23 = "For"+ya+intm2+ya+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm2 == 8 || jfm2 < 10){
-// 	  		analysis23 = "For"+ya+intm2+ya+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfm2 == 10){
-// 	  		analysis23 = "For"+ya+intm2+ya+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis23 = "Cannot compute"
-// 	  	} 	
-// 	  	let analysis24 = "";
-// 	  	if(jfm3 == 0 || jfm3 < 4){
-// 	  	analysis24 = "For"+ya+intm3+ya+"South bound lane Free flow of traffic";
-// 	  	}else if(jfm3 == 4 || jfm3 < 8){
-// 	  		analysis24 = "For"+ya+intm3+ya+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm3 == 8 || jfm3 < 10){
-// 	  		analysis24 = "For"+ya+intm3+ya+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfm3 == 10){
-// 	  		analysis24 = "For"+ya+intm3+ya+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis24 = "Cannot compute"
-// 	  	} 	
-// 	  	let analysis25 = "";
-// 	  	if(jfm4 == 0 || jfm4 < 4){
-// 	  	analysis25 = "For"+ya+intm4+ya+"South bound lane Free flow of traffic";
-// 	  	}else if(jfm4 == 4 || jfm4 < 8){
-// 	  		analysis25 = "For"+ya+intm4+ya+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm4 == 8 || jfm4 < 10){
-// 	  		analysis25 = "For"+ya+intm4+ya+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfm4 == 10){
-// 	  		analysis25 = "For"+ya+intm4+ya+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis25 = "Cannot compute"
-// 	  	} 	
-// 	  	let analysis26 = "";
-// 	  	if(jfm5 == 0 || jfm5 < 4){
-// 	  	analysis26 = "For"+ya+intm5+ya+"South bound lane Free flow of traffic";
-// 	  	}else if(jfm5 == 4 || jfm5 < 8){
-// 	  		analysis26 = "For"+ya+intm5+ya+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm5 == 8 || jfm5 < 10){
-// 	  		analysis26 = "For"+ya+intm5+ya+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfm5 == 10){
-// 	  		analysis26 = "For"+ya+intm5+ya+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis26 = "Cannot compute"
-// 	  	}
-// 	  	let analysis27 = "";
-// 	  	if(jfm6 == 0 || jfm6 < 4){
-// 	  	analysis27 = "For"+ya+intm6+ya+"South bound lane Free flow of traffic";
-// 	  	}else if(jfm6 == 4 || jfm6 < 8){
-// 	  		analysis27 = "For"+ya+intm6+ya+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm6 == 8 || jfm6 < 10){
-// 	  		analysis27 = "For"+ya+intm6+ya+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfm6 == 10){
-// 	  		analysis27 = "For"+ya+intm+ya+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis27 = "Cannot compute"
-// 	  	}
-// 	  	let analysis28 = "";
-// 	  	if(jfm7 == 0 || jfm7 < 4){
-// 	  	analysis28 = "For"+ya+intm7+ya+"South bound lane Free flow of traffic";
-// 	  	}else if(jfm7 == 4 || jfm7 < 8){
-// 	  		analysis28 = "For"+ya+intm7+ya+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm7 == 8 || jfm7 < 10){
-// 	  		analysis28 = "For"+ya+intm7+ya+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfm7 == 10){
-// 	  		analysis28 = "For"+ya+intm7+ya+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis28 = "Cannot compute"
-// 	  	}
-// 	  	let analysis29 = "";
-// 	  	if(jfm8 == 0 || jfm8 < 4){
-// 	  	analysis29 = "For"+ya+intm8+ya+"South bound lane Free flow of traffic";
-// 	  	}else if(jfm8 == 4 || jfm8 < 8){
-// 	  		analysis29 = "For"+ya+intm8+ya+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm8 == 8 || jfm8 < 10){
-// 	  		analysis29 = "For"+ya+intm8+ya+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfm8 == 10){
-// 	  		analysis29 = "For"+ya+intm8+ya+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis29 = "Cannot compute"
-// 	  	}
-// 	  	let analysis30 = "";
-// 	  	if(jfm9 == 0 || jfm9 < 4){
-// 	  	analysis30 = "For"+ya+intm9+ya+"South bound lane Free flow of traffic";
-// 	  	}else if(jfm9 == 4 || jfm9 < 8){
-// 	  		analysis30 = "For"+ya+intm9+ya+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm9 == 8 || jfm9 < 10){
-// 	  		analysis30 = "For"+ya+intm9+ya+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfm9 == 10){
-// 	  		analysis30 = "For"+ya+intm9+ya+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis30 = "Cannot compute"
-// 	  	}
-// 	  	let analysis31 = "";
-// 	  	if(jfm10 == 0 || jfm10 < 4){
-// 	  	analysis31 = "For"+ya+intm10+ya+"South bound lane Free flow of traffic";
-// 	  	}else if(jfm10 == 4 || jfm10 < 8){
-// 	  		analysis31 = "For"+ya+intm10+ya+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm10 == 8 || jfm10 < 10){
-// 	  		analysis31 = "For"+ya+intm10+ya+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfm10 == 10){
-// 	  		analysis31 = "For"+ya+intm10+ya+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis31 = "Cannot compute"
-// 	  	}
-// 	  	let analysis32 = "";
-// 	  	if(jfm11 == 0 || jfm11 < 4){
-// 	  	analysis32 = "For"+ya+intm11+ya+"South bound lane Free flow of traffic";
-// 	  	}else if(jfm11 == 4 || jfm11 < 8){
-// 	  		analysis32 = "For"+ya+intm11+ya+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm11 == 8 || jfm11 < 10){
-// 	  		analysis32 = "For"+ya+intm11+ya+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfm11 == 10){
-// 	  		analysis32 = "For"+ya+intm11+ya+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis32 = "Libby Rd"
-// 	  	}
-// 	  	let analysis33 = "";
-// 	  	if(jfm12 == 0 || jfm12 < 4){
-// 	  	analysis33 = "For"+ya+intm12+ya+"South bound lane Free flow of traffic";
-// 	  	}else if(jfm12 == 4 || jfm12 < 8){
-// 	  		analysis33 = "For"+ya+intm12+ya+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm12 == 8 || jfm12 < 10){
-// 	  		analysis33 = "For"+ya+intm12+ya+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfm12 == 10){
-// 	  		analysis33 = "For"+ya+intm12+ya+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis33 = "Cannot compute"
-// 	  	}
-// 	  	let analysis34 = "";
-// 	  	if(jfm13 == 0 || jfm13 < 4){
-// 	  	analysis34 = "For"+ya+intm13+ya+"South bound lane Free flow of traffic";
-// 	  	}else if(jfm13 == 4 || jfm13 < 8){
-// 	  		analysis34 = "For"+ya+intm13+ya+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm13 == 8 || jfm13 < 10){
-// 	  		analysis34 = "For"+ya+intm13+ya+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfm13 == 10){
-// 	  		analysis34 = "For"+ya+intm13+ya+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis34 = "Cannot compute"
-// 	  	}
+	  	//south intersections
+	  	mcarthur1 = body.RWS[0].RW[4].DE;
+	  	const intc23 = body.RWS[0].RW[4].FIS[0].FI[0].TMC.DE;
+	  	const jf23 = body.RWS[0].RW[4].FIS[0].FI[0].CF[0].JF;
+	  	const intc24 = body.RWS[0].RW[4].FIS[0].FI[1].TMC.DE;
+	  	const jf24 = body.RWS[0].RW[4].FIS[0].FI[1].CF[0].JF;
+		const intc25 = body.RWS[0].RW[4].FIS[0].FI[2].TMC.DE;
+	  	const jf25 = body.RWS[0].RW[4].FIS[0].FI[2].CF[0].JF;
+		const intc26 = body.RWS[0].RW[4].FIS[0].FI[3].TMC.DE;
+	  	const jf26 = body.RWS[0].RW[4].FIS[0].FI[3].CF[0].JF;
+	  	const intc27 = body.RWS[0].RW[4].FIS[0].FI[4].TMC.DE;
+	  	const jf27 = body.RWS[0].RW[4].FIS[0].FI[4].CF[0].JF;
+	  	const intc28 = body.RWS[0].RW[4].FIS[0].FI[5].TMC.DE;
+	  	const jf28 = body.RWS[0].RW[4].FIS[0].FI[5].CF[0].JF;
+	  	const intc29 = body.RWS[0].RW[4].FIS[0].FI[6].TMC.DE;
+	  	const jf29 = body.RWS[0].RW[4].FIS[0].FI[6].CF[0].JF;
+	  	const intc30 = body.RWS[0].RW[4].FIS[0].FI[7].TMC.DE;
+	  	const jf30 = body.RWS[0].RW[4].FIS[0].FI[7].CF[0].JF;
+	  	const intc31 = body.RWS[0].RW[4].FIS[0].FI[8].TMC.DE;
+	  	const jf31 = body.RWS[0].RW[4].FIS[0].FI[8].CF[0].JF;
+	  	const intc32 = body.RWS[0].RW[4].FIS[0].FI[9].TMC.DE;
+	  	const jf32 = body.RWS[0].RW[4].FIS[0].FI[9].CF[0].JF;
+	  	const intc33 = body.RWS[0].RW[4].FIS[0].FI[10].TMC.DE;
+	  	const jf33  = body.RWS[0].RW[4].FIS[0].FI[10].CF[0].JF;	
+	  	const intc34 = body.RWS[0].RW[4].FIS[0].FI[11].TMC.DE;
+	  	const jf34 = body.RWS[0].RW[4].FIS[0].FI[11].CF[0].JF;
+	  	const intc35 = body.RWS[0].RW[4].FIS[0].FI[12].TMC.DE;
+	  	const jf35 = body.RWS[0].RW[4].FIS[0].FI[12].CF[0].JF;
+	  	const intc36 = body.RWS[0].RW[4].FIS[0].FI[13].TMC.DE;
+	  	const jf36 = body.RWS[0].RW[4].FIS[0].FI[13].CF[0].JF;
+	  	var ya = ' ';
+	  	let analysis23 = "";
+	  	if(jf23 == 0 || jf23 < 4){
+	  		analysis23 = "For"+ya+intc23+ya+"South bound lane Free flow of traffic";
+	  	}else if(jf23 == 4 || jf23 < 8){
+	  		analysis23 = "For"+ya+intc23+ya+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf23 == 8 || jf23 < 10){
+	  		analysis23 = "For"+ya+intc23+ya+"South bound lane Slow flow of traffic";
+	  	}else if(jf23 == 10){
+	  		analysis23 = "For"+ya+intc23+ya+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis23 = "Cannot compute"
+	  	}
+	  	let analysis24 = "";
+	  	if(jf24 == 0 || jf24 < 4){
+	  		analysis24 = "For"+ya+intc24+ya+"South bound lane Free flow of traffic";
+	  	}else if(jf24 == 4 || jf24 < 8){
+	  		analysis24 = "For"+ya+intc24+ya+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf24 == 8 || jf24 < 10){
+	  		analysis24 = "For"+ya+intc24+ya+"South bound lane Slow flow of traffic";
+	  	}else if(jf24 == 10){
+	  		analysis24 = "For"+ya+intc24+ya+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis24 = "Cannot compute"
+	  	}
+	  	let analysis25 = "";
+	  	if(jf25 == 0 || jf25 < 4){
+	  		analysis25 = "For"+ya+intc25+ya+"South bound lane Free flow of traffic";
+	  	}else if(jf25 == 4 || jf25 < 8){
+	  		analysis25 = "For"+ya+intc25+ya+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf25 == 8 || jf25 < 10){
+	  		analysis25 = "For"+ya+intc25+ya+"South bound lane Slow flow of traffic";
+	  	}else if(jf25 == 10){
+	  		analysis25 = "For"+ya+intc25+ya+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis25 = "Cannot compute"
+	  	}
+	  	let analysis26 = "";
+	  	if(jf26 == 0 || jf26 < 4){
+	  		analysis26 = "For"+ya+intc26+ya+"South bound lane Free flow of traffic";
+	  	}else if(jf26 == 4 || jf26 < 8){
+	  		analysis26 = "For"+ya+intc26+ya+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf26 == 8 || jf26 < 10){
+	  		analysis26 = "For"+ya+intc26+ya+"South bound lane Slow flow of traffic";
+	  	}else if(jf26 == 10){
+	  		analysis26 = "For"+ya+intc26+ya+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis26 = "Cannot compute"
+	  	}
+	  	let analysis27 = "";
+	  	if(jf27 == 0 || jf27 < 4){
+	  		analysis27 = "For"+ya+intc27+ya+"South bound lane Free flow of traffic";
+	  	}else if(jf27 == 4 || jf27 < 8){
+	  		analysis27 = "For"+ya+intc27+ya+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf27 == 8 || jf27 < 10){
+	  		analysis27 = "For"+ya+intc27+ya+"South bound lane Slow flow of traffic";
+	  	}else if(jf27 == 10){
+	  		analysis27 = "For"+ya+intc27+ya+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis27 = "Cannot compute"
+	  	}
+	  	let analysis28 = "";
+	  	if(jf28 == 0 || jf28 < 4){
+	  		analysis28 = "For"+ya+intc28+ya+"South bound lane Free flow of traffic";
+	  	}else if(jf28 == 4 || jf28 < 8){
+	  		analysis28 = "For"+ya+intc28+ya+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf28 == 8 || jf28 < 10){
+	  		analysis28 = "For"+ya+intc28+ya+"South bound lane Slow flow of traffic";
+	  	}else if(jf28 == 10){
+	  		analysis28 = "For"+ya+intc28+ya+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis28 = "Cannot compute"
+	  	}
+	  	let analysis29 = "";
+	  	if(jf29 == 0 || jf29 < 4){
+	  		analysis29 = "For"+ya+intc29+ya+"South bound lane Free flow of traffic";
+	  	}else if(jf29 == 4 || jf29 < 8){
+	  		analysis29 = "For"+ya+intc29+ya+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf29 == 8 || jf29 < 10){
+	  		analysis29 = "For"+ya+intc29+ya+"South bound lane Slow flow of traffic";
+	  	}else if(jf29 == 10){
+	  		analysis29 = "For"+ya+intc29+ya+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis29 = "Cannot compute"
+	  	}
+	  	let analysis30 = "";
+	  	if(jf30 == 0 || jf30 < 4){
+	  		analysis30 = "For"+ya+intc30+ya+"South bound lane Free flow of traffic";
+	  	}else if(jf30 == 4 || jf30 < 8){
+	  		analysis30 = "For"+ya+intc30+ya+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf30 == 8 || jf30 < 10){
+	  		analysis30 = "For"+ya+intc30+ya+"South bound lane Slow flow of traffic";
+	  	}else if(jf30 == 10){
+	  		analysis30 = "For"+ya+intc30+ya+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis30 = "Cannot compute"
+	  	}
+	  	let analysis31 = "";
+	  	if(jf31 == 0 || jf31 < 4){
+	  		analysis31 = "For"+ya+intc31+ya+"South bound lane Free flow of traffic";
+	  	}else if(jf31 == 4 || jf31 < 8){
+	  		analysis31 = "For"+ya+intc31+ya+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf31 == 8 || jf31 < 10){
+	  		analysis31 = "For"+ya+intc31+ya+"South bound lane Slow flow of traffic";
+	  	}else if(jf31 == 10){
+	  		analysis31 = "For"+ya+intc31+ya+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis31 = "Cannot compute"
+	  	}
+	  	let analysis32 = "";
+	  	if(jf32 == 0 || jf32 < 4){
+	  		analysis32 = "For"+ya+intc32+ya+"South bound lane Free flow of traffic";
+	  	}else if(jf32 == 4 || jf32 < 8){
+	  		analysis32 = "For"+ya+intc32+ya+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf32 == 8 || jf32 < 10){
+	  		analysis32 = "For"+ya+intc32+ya+"South bound lane Slow flow of traffic";
+	  	}else if(jf32 == 10){
+	  		analysis32 = "For"+ya+intc32+ya+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis31 = "Cannot compute"
+	  	}
+	  	let analysis33 = "";
+	  	if(jf33 == 0 || jf33 < 4){
+	  		analysis33 = "For"+ya+intc33+ya+"South bound lane Free flow of traffic";
+	  	}else if(jf33 == 4 || jf33 < 8){
+	  		analysis33 = "For"+ya+intc33+ya+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf33 == 8 || jf33 < 10){
+	  		analysis33 = "For"+ya+intc33+ya+"South bound lane Slow flow of traffic";
+	  	}else if(jf33 == 10){
+	  		analysis33 = "For"+ya+intc33+ya+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis33 = "Cannot compute"
+	  	}
+	  	let analysis34 = "";
+	  	if(jf34 == 0 || jf34 < 4){
+	  		analysis34 = "For"+ya+intc34+ya+"South bound lane Free flow of traffic";
+	  	}else if(jf34 == 4 || jf34 < 8){
+	  		analysis34 = "For"+ya+intc34+ya+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf34 == 8 || jf34 < 10){
+	  		analysis34 = "For"+ya+intc34+ya+"South bound lane Slow flow of traffic";
+	  	}else if(jf34 == 10){
+	  		analysis34 = "For"+ya+intc34+ya+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis34 = "Cannot compute"
+	  	}
+	  	let analysis35 = "";
+	  	if(jf35 == 0 || jf35 < 4){
+	  		analysis35 = "For"+ya+intc35+ya+"South bound lane Free flow of traffic";
+	  	}else if(jf35 == 4 || jf35 < 8){
+	  		analysis35 = "For"+ya+intc35+ya+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf35 == 8 || jf35 < 10){
+	  		analysis35 = "For"+ya+intc35+ya+"South bound lane Slow flow of traffic";
+	  	}else if(jf35 == 10){
+	  		analysis35 = "For"+ya+intc35+ya+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis35 = "Cannot compute"
+	  	}
+	  	let analysis36 = "";
+	  	if(jf36 == 0 || jf36 < 4){
+	  		analysis36 = "For"+ya+intc36+ya+"South bound lane Free flow of traffic";
+	  	}else if(jf36 == 4 || jf36 < 8){
+	  		analysis36 = "For"+ya+intc36+ya+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf36 == 8 || jf36 < 10){
+	  		analysis36 = "For"+ya+intc36+ya+"South bound lane Slow flow of traffic";
+	  	}else if(jf36 == 10){
+	  		analysis36 = "For"+ya+intc36+ya+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis36 = "Cannot compute"
+	  	}
 
-// 	  	//north intersections
-// 	  	const streetmmm = body.RWS[0].RW[5].DE;
-// 	  	const intmm = body.RWS[0].RW[5].FIS[0].FI[0].TMC.DE;
-// 	  	const jfmm = body.RWS[0].RW[5].FIS[0].FI[0].CF[0].JF;
-// 	  	const intmm1 = body.RWS[0].RW[5].FIS[0].FI[1].TMC.DE;
-// 	  	const jfm02 = body.RWS[0].RW[5].FIS[0].FI[1].CF[0].JF;
-// 	  	const intmm2 = body.RWS[0].RW[5].FIS[0].FI[2].TMC.DE;
-// 	  	const jfmm2 = body.RWS[0].RW[5].FIS[0].FI[2].CF[0].JF;
-// 	  	const intmm3 = body.RWS[0].RW[5].FIS[0].FI[3].TMC.DE;
-// 	  	const jfmm3 = body.RWS[0].RW[5].FIS[0].FI[3].CF[0].JF;
-// 	  	const intmm4 = body.RWS[0].RW[5].FIS[0].FI[4].TMC.DE;
-// 	  	const jfmm4 = body.RWS[0].RW[5].FIS[0].FI[4].CF[0].JF;
-// 	  	const intmm5 = body.RWS[0].RW[5].FIS[0].FI[5].TMC.DE;
-// 	  	const jfmm5 = body.RWS[0].RW[5].FIS[0].FI[5].CF[0].JF;
-// 	  	const intmm6 = body.RWS[0].RW[5].FIS[0].FI[6].TMC.DE;
-// 	  	const jfmm6 = body.RWS[0].RW[5].FIS[0].FI[6].CF[0].JF;
-// 	  	const intmm7 = body.RWS[0].RW[5].FIS[0].FI[7].TMC.DE;
-// 	  	const jfmm7 = body.RWS[0].RW[5].FIS[0].FI[7].CF[0].JF;
-// 	  	const intmm8 = body.RWS[0].RW[5].FIS[0].FI[8].TMC.DE;
-// 	  	const jfmm8 = body.RWS[0].RW[5].FIS[0].FI[8].CF[0].JF;
-// 	  	const intmm9 = body.RWS[0].RW[5].FIS[0].FI[9].TMC.DE;
-// 	  	const jfmm9 = body.RWS[0].RW[5].FIS[0].FI[9].CF[0].JF;
-// 	  	const intmm10 = body.RWS[0].RW[5].FIS[0].FI[10].TMC.DE;
-// 	  	const jfmm10  = body.RWS[0].RW[5].FIS[0].FI[10].CF[0].JF;	
-// 	  	const intmm11 = body.RWS[0].RW[5].FIS[0].FI[11].TMC.DE;
-// 	  	const jfmm11 = body.RWS[0].RW[5].FIS[0].FI[11].CF[0].JF;
-// 	  	const intmm12 = body.RWS[0].RW[5].FIS[0].FI[12].TMC.DE;
-// 	  	const jfmm12 = body.RWS[0].RW[5].FIS[0].FI[12].CF[0].JF;	
-// 	  	const intmm13 = body.RWS[0].RW[5].FIS[0].FI[13].TMC.DE;
-// 	  	const jfmm13 = body.RWS[0].RW[5].FIS[0].FI[13].CF[0].JF;
+	  	//north intersections
+	  	const mcarthuur1 = body.RWS[0].RW[5].DE;
+	  	const intc37 = body.RWS[0].RW[5].FIS[0].FI[0].TMC.DE;
+	  	const jf37 = body.RWS[0].RW[5].FIS[0].FI[0].CF[0].JF;
+	  	const intc38 = body.RWS[0].RW[5].FIS[0].FI[1].TMC.DE;
+	  	const jf38 = body.RWS[0].RW[5].FIS[0].FI[1].CF[0].JF;
+	  	const intc39 = body.RWS[0].RW[5].FIS[0].FI[2].TMC.DE;
+	  	const jf39 = body.RWS[0].RW[5].FIS[0].FI[2].CF[0].JF;
+	  	const intc40 = body.RWS[0].RW[5].FIS[0].FI[3].TMC.DE;
+	  	const jf40 = body.RWS[0].RW[5].FIS[0].FI[3].CF[0].JF;
+	  	const intc41 = body.RWS[0].RW[5].FIS[0].FI[4].TMC.DE;
+	  	const jf41 = body.RWS[0].RW[5].FIS[0].FI[4].CF[0].JF;
+	  	const intc42 = body.RWS[0].RW[5].FIS[0].FI[5].TMC.DE;
+	  	const jf42 = body.RWS[0].RW[5].FIS[0].FI[5].CF[0].JF;
+	  	const intc43 = body.RWS[0].RW[5].FIS[0].FI[6].TMC.DE;
+	  	const jf43 = body.RWS[0].RW[5].FIS[0].FI[6].CF[0].JF;
+	  	const intc78 = body.RWS[0].RW[5].FIS[0].FI[7].TMC.DE;
+	  	const jf44 = body.RWS[0].RW[5].FIS[0].FI[7].CF[0].JF;
+	  	const intc45 = body.RWS[0].RW[5].FIS[0].FI[8].TMC.DE;
+	  	const jf45 = body.RWS[0].RW[5].FIS[0].FI[8].CF[0].JF;
+	  	const intc46 = body.RWS[0].RW[5].FIS[0].FI[9].TMC.DE;
+	  	const jf46 = body.RWS[0].RW[5].FIS[0].FI[9].CF[0].JF;
+	  	const intc47 = body.RWS[0].RW[5].FIS[0].FI[10].TMC.DE;
+	  	const jf47  = body.RWS[0].RW[5].FIS[0].FI[10].CF[0].JF;	
+	  	const intc48 = body.RWS[0].RW[5].FIS[0].FI[11].TMC.DE;
+	  	const jf48 = body.RWS[0].RW[5].FIS[0].FI[11].CF[0].JF;
+	  	const intc49 = body.RWS[0].RW[5].FIS[0].FI[12].TMC.DE;
+	  	const jf49 = body.RWS[0].RW[5].FIS[0].FI[12].CF[0].JF;	
+	  	const intc50 = body.RWS[0].RW[5].FIS[0].FI[13].TMC.DE;
+	  	const jf50 = body.RWS[0].RW[5].FIS[0].FI[13].CF[0].JF;
 
-// 		let analysis222 = "";
-// 	  	if(jfmm == 0 || jfmm < 4){
-// 	  	analysis222 = "For"+ya+intmm+ya+"North bound lane Free flow of traffic";
-// 	  	}else if(jfmm == 4 || jfmm < 8){
-// 	  		analysis222 = "For"+ya+intmm+ya+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfmm == 8 || jfmm < 10){
-// 	  		analysi2s22 = "For"+ya+intmm+ya+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfmm == 10){
-// 	  		analysis222 = "For"+ya+intmm+ya+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis222 = "Cannot compute"
-// 	  	}
-// 	  	let analysis223 = "";
-// 	  	if(jfm02 == 0 || jfm02 < 4){
-// 	  	analysis223 = "For"+ya+intmm1+ya+"North bound lane Free flow of traffic";
-// 	  	}else if(jfm02 == 4 || jfm02 < 8){
-// 	  		analysis223 = "For"+ya+intmm1+ya+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm02 == 8 || jfm02 < 10){
-// 	  		analysis223 = "For"+ya+intmm1+ya+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfm02 == 10){
-// 	  		analysis223 = "For"+ya+intmm1+ya+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis223 = "Cannot compute"
-// 	  	}	
-// 	  	let analysis224 = "";
-// 	  	if(jfmm2 == 0 || jfmm2 < 4){
-// 	  	analysis224 = "For"+ya+intmm2+ya+"North bound lane Free flow of traffic";
-// 	  	}else if(jfmm2 == 4 || jfmm2 < 8){
-// 	  		analysis224 = "For"+ya+intmm2+ya+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfmm2 == 8 || jfmm2 < 10){
-// 	  		analysis224 = "For"+ya+intmm2+ya+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfmm2 == 10){
-// 	  		analysis224 = "For"+ya+intmm2+ya+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis224 = "Cannot compute"
-// 	  	}	
-// 	  	let analysis225 = "";
-// 	  	if(jfmm3 == 0 || jfmm3 < 4){
-// 	  	analysis225 = "For"+ya+intmm3+ya+"North bound lane Free flow of traffic";
-// 	  	}else if(jfmm3 == 4 || jfmm3 < 8){
-// 	  		analysis225 = "For"+ya+intmm3+ya+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfmm3 == 8 || jfmm3 < 10){
-// 	  		analysis225 = "For"+ya+intmm3+ya+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfmm3 == 10){
-// 	  		analysis225 = "For"+ya+intmm3+ya+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis225 = "Cannot compute"
-// 	  	} 	
-// 	 	let analysis226 = "";
-// 	  	if(jfmm4 == 0 || jfmm4 < 4){
-// 	  	analysis226 = "For"+ya+intmm4+ya+"North bound lane Free flow of traffic";
-// 	  	}else if(jfmm4 == 4 || jfmm4 < 8){
-// 	  		analysis226 = "For"+ya+intmm4+ya+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfmm4 == 8 || jfmm4 < 10){
-// 	  		analysis226 = "For"+ya+intmm4+ya+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfmm4 == 10){
-// 	  		analysis226 = "For"+ya+intmm4+ya+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis226 = "Cannot compute"
-// 	  	}
-// 	  	let analysis227 = "";
-// 	  	if(jfmm5 == 0 || jfmm5 < 4){
-// 	  	analysis227 = "For"+ya+intmm5+ya+"North bound lane Free flow of traffic";
-// 	  	}else if(jfmm5 == 4 || jfmm5 < 8){
-// 	  		analysis227 = "For"+ya+intmm5+ya+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfmm5 == 8 || jfmm5 < 10){
-// 	  		analysis227 = "For"+ya+intmm5+ya+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfmm5 == 10){
-// 	  		analysis227 = "For"+ya+intmm5+ya+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis227 = "Cannot compute"
-// 	  	}
-// 	  	let analysis228 = "";
-// 	  	if(jfmm6 == 0 || jfmm6 < 4){
-// 	  	analysis228 = "For"+ya+intmm6+ya+"North bound lane Free flow of traffic";
-// 	  	}else if(jfmm6 == 4 || jfmm6 < 8){
-// 	  		analysis228 = "For"+ya+intmm6+ya+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfmm6 == 8 || jfmm6 < 10){
-// 	  		analysis228 = "For"+ya+intmm6+ya+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfmm6 == 10){
-// 	  		analysis228 = "For"+ya+intmm6+ya+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis228 = "Cannot compute"
-// 	  	}
-// 	  	let analysis229 = "";
-// 	  	if(jfmm7 == 0 || jfmm7 < 4){
-// 	  	analysis229 = "For"+ya+intmm7+ya+"North bound lane Free flow of traffic";
-// 	  	}else if(jfmm7 == 4 || jfmm7 < 8){
-// 	  		analysis229 = "For"+ya+intmm7+ya+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfmm7 == 8 || jfmm7 < 10){
-// 	  		analysis229 = "For"+ya+intmm7+ya+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfmm7 == 10){
-// 	  		analysis229 = "For"+ya+intmm7+ya+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis229 = "Cannot compute"
-// 	  	}
-// 	  	let analysis230 = "";
-// 	  	if(jfmm8 == 0 || jfmm8 < 4){
-// 	  	analysis230 = "For"+ya+intmm8+ya+"North bound lane Free flow of traffic";
-// 	  	}else if(jfmm8 == 4 || jfmm8 < 8){
-// 	  		analysis230 = "For"+ya+intmm8+ya+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfmm8 == 8 || jfmm8 < 10){
-// 	  		analysis230 = "For"+ya+intmm8+ya+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfmm8 == 10){
-// 	  		analysis230 = "For"+ya+intmm8+ya+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis230 = "Cannot compute"
-// 	  	}
-// 	  	let analysis231 = "";
-// 	  	if(jfmm9 == 0 || jfmm9 < 4){
-// 	  	analysis231 = "For"+ya+intmm9+ya+"North bound lane Free flow of traffic";
-// 	  	}else if(jfmm9 == 4 || jfmm9 < 8){
-// 	  		analysis231 = "For"+ya+intmm9+ya+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfmm9 == 8 || jfmm9 < 10){
-// 	  		analysis231 = "For"+ya+intmm9+ya+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfmm9 == 10){
-// 	  		analysis231 = "For"+ya+intmm9+ya+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis231 = "Cannot compute"
-// 	  	}
-// 	  	let analysis232 = "";
-// 	  	if(jfmm10 == 0 || jfmm10 < 4){
-// 	  	analysis232 = "For"+ya+intmm10+ya+"North bound lane Free flow of traffic";
-// 	  	}else if(jfmm10 == 4 || jfmm10 < 8){
-// 	  		analysis232 = "For"+ya+intmm10+ya+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfmm10 == 8 || jfmm10 < 10){
-// 	  		analysis232 = "For"+ya+intmm10+ya+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfmm10 == 10){
-// 	  		analysis232 = "For"+ya+intmm10+ya+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis232 = "Cannot compute"
-// 	  	}
-// 	  	let analysis233 = "";
-// 	  	if(jfmm11 == 0 || jfmm11 < 4){
-// 	  	analysis233 = "For"+ya+intmm11+ya+"North bound lane Free flow of traffic";
-// 	  	}else if(jfmm11 == 4 || jfmm11 < 8){
-// 	  		analysis233 = "For"+ya+intmm11+ya+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfmm11 == 8 || jfmm11 < 10){
-// 	  		analysis233 = "For"+ya+intmm11+ya+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfmm11 == 10){
-// 	  		analysis233 = "For"+ya+intmm11+ya+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis233 = "Cannot compute"
-// 	  	}
-// 	  	let analysis234 = "";
-// 	  	if(jfmm12 == 0 || jfmm12 < 4){
-// 	  	analysis234 = "For"+ya+intmm12+ya+"North bound lane Free flow of traffic";
-// 	  	}else if(jfmm12 == 4 || jfmm12 < 8){
-// 	  		analysis234 = "For"+ya+intmm12+ya+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfmm12 == 8 || jfmm12 < 10){
-// 	  		analysis234 = "For"+ya+intmm12+ya+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfmm12 == 10){
-// 	  		analysis234 = "For"+ya+intmm12+ya+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis234 = "Cannot compute"
-// 	  	}
-// 		let analysis235 = "";
-// 	  	if(jfmm13 == 0 || jfmm13 < 4){
-// 	  	analysis235 = "For"+ya+intmm13+ya+"North bound lane Free flow of traffic";
-// 	  	}else if(jfmm13 == 4 || jfmm13 < 8){
-// 	  		analysis235 = "For"+ya+intmm13+ya+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfmm13 == 8 || jfmm13 < 10){
-// 	  		analysis235 = "For"+ya+intmm13+ya+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfmm13 == 10){
-// 	  		analysis235 = "For"+ya+intmm13+ya+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis235 = "Cannot compute"
-// 	  	}
+		let analysis37 = "";
+	  	if(jf37 == 0 || jf37 < 4){
+	  		analysis37 = "For"+ya+intc37+ya+"North bound lane Free flow of traffic";
+	  	}else if(jf37 == 4 || jf37 < 8){
+	  		analysis37 = "For"+ya+intc37+ya+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf37 == 8 || jf37 < 10){
+	  		analysis37 = "For"+ya+intc37+ya+"North bound lane Slow flow of traffic";
+	  	}else if(jf37 == 10){
+	  		analysis37 = "For"+ya+intc37+ya+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis37 = "Cannot compute"
+	  	}
+	  	let analysis38 = "";
+	  	if(jf38 == 0 || jf38 < 4){
+	  		analysis38 = "For"+ya+intc38+ya+"North bound lane Free flow of traffic";
+	  	}else if(jf38 == 4 || jf38 < 8){
+	  		analysis38 = "For"+ya+intc38+ya+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf38 == 8 || jf38 < 10){
+	  		analysis38 = "For"+ya+intc38+ya+"North bound lane Slow flow of traffic";
+	  	}else if(jf38 == 10){
+	  		analysis38 = "For"+ya+intc38+ya+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis38 = "Cannot compute"
+	  	}	
+	  	let analysis39 = "";
+	  	if(jf39 == 0 || jf39 < 4){
+	  		analysis39 = "For"+ya+intc39+ya+"North bound lane Free flow of traffic";
+	  	}else if(jf39 == 4 || jf39 < 8){
+	  		analysis39 = "For"+ya+intc39+ya+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf39 == 8 || jf39 < 10){
+	  		analysis39 = "For"+ya+intc39+ya+"North bound lane Slow flow of traffic";
+	  	}else if(jf39 == 10){
+	  		analysis39 = "For"+ya+intc39+ya+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis39 = "Cannot compute"
+	  	}	
+	  	let analysis40 = "";
+	  	if(jf40 == 0 || jf40 < 4){
+	  		analysis40 = "For"+ya+intc40+ya+"North bound lane Free flow of traffic";
+	  	}else if(jf40 == 4 || jf40 < 8){
+	  		analysis40 = "For"+ya+intc40+ya+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf40 == 8 || jf40 < 10){
+	  		analysis40 = "For"+ya+intc40+ya+"North bound lane Slow flow of traffic";
+	  	}else if(jf40 == 10){
+	  		analysis40 = "For"+ya+intc40+ya+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis40 = "Cannot compute"
+	  	} 	
+	 	let analysis41 = "";
+	  	if(jf41 == 0 || jf41 < 4){
+	  		analysis41 = "For"+ya+intc41+ya+"North bound lane Free flow of traffic";
+	  	}else if(jf41 == 4 || jf41 < 8){
+	  		analysis41 = "For"+ya+intc41+ya+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf41 == 8 || jf41 < 10){
+	  		analysis41 = "For"+ya+intc41+ya+"North bound lane Slow flow of traffic";
+	  	}else if(jf41 == 10){
+	  		analysis41 = "For"+ya+intc41+ya+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis41 = "Cannot compute"
+	  	}
+	  	let analysis42 = "";
+	  	if(jf42 == 0 || jf42 < 4){
+	  		analysis42 = "For"+ya+intc42+ya+"North bound lane Free flow of traffic";
+	  	}else if(jf42 == 4 || jf42 < 8){
+	  		analysis42 = "For"+ya+intc42+ya+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf42 == 8 || jf42 < 10){
+	  		analysis42 = "For"+ya+intc42+ya+"North bound lane Slow flow of traffic";
+	  	}else if(jf42 == 10){
+	  		analysis42 = "For"+ya+intc42+ya+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis42 = "Cannot compute"
+	  	}
+	  	let analysis43 = "";
+	  	if(jf43 == 0 || jf43 < 4){
+	  		analysis43 = "For"+ya+intc43+ya+"North bound lane Free flow of traffic";
+	  	}else if(jf43 == 4 || jf43 < 8){
+	  		analysis43 = "For"+ya+intc43+ya+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf43 == 8 || jf43 < 10){
+	  		analysis43 = "For"+ya+intc43+ya+"North bound lane Slow flow of traffic";
+	  	}else if(jf43 == 10){
+	  		analysis43 = "For"+ya+intc43+ya+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis43 = "Cannot compute"
+	  	}
+	  	let analysis44 = "";
+	  	if(jf44 == 0 || jf44 < 4){
+	  		analysis44 = "For"+ya+intc78+ya+"North bound lane Free flow of traffic";
+	  	}else if(jf44 == 4 || jf44 < 8){
+	  		analysis44 = "For"+ya+intc78+ya+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf44 == 8 || jf44 < 10){
+	  		analysis44 = "For"+ya+intc78+ya+"North bound lane Slow flow of traffic";
+	  	}else if(jf44 == 10){
+	  		analysis44 = "For"+ya+intc78+ya+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis44 = "Cannot compute"
+	  	}
+	  	let analysis45 = "";
+	  	if(jf45 == 0 || jf45 < 4){
+	  		analysis45 = "For"+ya+intc45+ya+"North bound lane Free flow of traffic";
+	  	}else if(jf45 == 4 || jf45 < 8){
+	  		analysis45 = "For"+ya+intc45+ya+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf45 == 8 || jf45 < 10){
+	  		analysis45 = "For"+ya+intc45+ya+"North bound lane Slow flow of traffic";
+	  	}else if(jf45 == 10){
+	  		analysis45 = "For"+ya+intc45+ya+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis45 = "Cannot compute"
+	  	}
+	  	let analysis46 = "";
+	  	if(jf46 == 0 || jf46 < 4){
+	  	analysis46 = "For"+ya+intc46+ya+"North bound lane Free flow of traffic";
+	  	}else if(jf46 == 4 || jf46 < 8){
+	  		analysis46 = "For"+ya+intc46+ya+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf46 == 8 || jf46 < 10){
+	  		analysis46 = "For"+ya+intc46+ya+"North bound lane Slow flow of traffic";
+	  	}else if(jf46 == 10){
+	  		analysis46 = "For"+ya+intc46+ya+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis46 = "Cannot compute"
+	  	}
+	  	let analysis47 = "";
+	  	if(jf47 == 0 || jf47 < 4){
+	  	analysis47 = "For"+ya+intc47+ya+"North bound lane Free flow of traffic";
+	  	}else if(jf47 == 4 || jf47 < 8){
+	  		analysis47 = "For"+ya+intc47+ya+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf47 == 8 || jf47 < 10){
+	  		analysis47 = "For"+ya+intc47+ya+"North bound lane Slow flow of traffic";
+	  	}else if(jf47 == 10){
+	  		analysis47 = "For"+ya+intc47+ya+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis47 = "Cannot compute"
+	  	}
+	  	let analysis48 = "";
+	  	if(jf48 == 0 || jf48 < 4){
+	  	analysis48 = "For"+ya+intc48+ya+"North bound lane Free flow of traffic";
+	  	}else if(jf48 == 4 || jf48 < 8){
+	  		analysis48 = "For"+ya+intc48+ya+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf48 == 8 || jf48 < 10){
+	  		analysis48 = "For"+ya+intc48+ya+"North bound lane Slow flow of traffic";
+	  	}else if(jf48 == 10){
+	  		analysis48 = "For"+ya+intc48+ya+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis48 = "Cannot compute"
+	  	}
+	  	let analysis49 = "";
+	  	if(jf49 == 0 || jf49 < 4){
+	  	analysis49 = "For"+ya+intc49+ya+"North bound lane Free flow of traffic";
+	  	}else if(jf49 == 4 || jf49 < 8){
+	  		analysis49 = "For"+ya+intc49+ya+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf49 == 8 || jf49 < 10){
+	  		analysis49 = "For"+ya+intc49+ya+"North bound lane Slow flow of traffic";
+	  	}else if(jf49 == 10){
+	  		analysis49 = "For"+ya+intc49+ya+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis49 = "Cannot compute"
+	  	}
+		let analysis50 = "";
+	  	if(jf50 == 0 || jf50 < 4){
+	  	analysis50 = "For"+ya+intc50+ya+"North bound lane Free flow of traffic";
+	  	}else if(jf50 == 4 || jf50 < 8){
+	  		analysis50 = "For"+ya+intc50+ya+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf50 == 8 || jf50 < 10){
+	  		analysis50 = "For"+ya+intc50+ya+"North bound lane Slow flow of traffic";
+	  	}else if(jf50 == 10){
+	  		analysis50 = "For"+ya+intc50+ya+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis50 = "Cannot compute"
+	  	}
 
-//   	_res.setHeader('Content-Type', 'application/json');
-//     	_res.send(JSON.stringify({ streetmm: streetmm,intm: intm, jfm:jfm, intm1: intm1, jf02: jf02, intm2: intm2, jfm2: jfm2,  intm3: intm3, 
-//     		jfm3: jfm3, intm4: intm4, jfm4: jfm4,  intm5: intm5, jfm5: jfm5,  intm6: intm6, jfm6: jfm6,  intm7: intm7, 
-//     		jfm7: jfm7,  intm8: intm8, jfm8: jfm8,  intm9: intm9, jfm9: jfm9, intm10: intm10, jfm10: jfm10, 
-//     		intm11: intm11, jfm11: jfm11, intm12: intm12, jfm12: jfm12,  intm13: intm13, jfm13: jfm13,analysis35: analysis35,
-//     		analysis22: analysis22, analysis23:analysis23, analysis24:analysis24, analysis25:analysis25, analysis26:analysis26, analysis27:analysis27, analysis28:analysis28,
-//     		analysis29:analysis29, analysis30:analysis30, analysis31:analysis31, analysis32:analysis32, analysis33:analysis33, analysis34:analysis34, streetmmm: streetmmm,  
-//     		intmm: intmm, jfmm:jfmm, intmm1: intmm1, jfm02: jfm02, intmm2: intmm2, jfmm2: jfmm2,  intmm3: intmm3, 
-//     		jfmm3: jfmm3, intmm4: intmm4, jfmm4: jfmm4,  intmm5: intmm5, jfmm5: jfmm5,  intmm6: intmm6, jfmm6: jfmm6,  intmm7: intmm7, 
-//     		jfmm7: jfmm7,  intmm8: intmm8, jfmm8: jfmm8,  intmm9: intmm9, jfmm9: jfmm9, intmm10: intmm10, jfmm10: jfmm10, 
-//     		intmm11: intmm11, jfmm11: jfmm11, intmm12: intmm12, jfmm12: jfmm12,  intmm13: intmm13, jfmm13: jfmm13,  analysis222: analysis222,
-//     		analysis223: analysis223, analysis224: analysis224, analysis225: analysis225, analysis226: analysis226, 
-//     		analysis227: analysis227, analysis228: analysis228, analysis229: analysis229, analysis230: analysis230, analysis231: analysis231,
-//     		analysis232: analysis232, analysis233: analysis233, analysis234: analysis234, analysis235: analysis235 }));
-// 	});
-// });
-// app.get('/ecowestdr',function(_req, _res){
+  	_res.setHeader('Content-Type', 'application/json');
+    	_res.send(JSON.stringify({ mcarthur1: mcarthur1,intc23: intc23, jf23:jf23, intc24: intc24, jf24: jf24, intc25: intc25, jf25: jf25,  intc26: intc26, 
+    		jf26: jf26, intc27: intc27, jf27: jf27,  intc28: intc28, jf28: jf28,  intc29: intc29, jf29: jf29,  intc30: intc30, 
+    		jf30: jf30,  intc31: intc31, jf31: jf31,  intc32: intc32, jf32: jf32, intc33: intc3, jf33: jf33, 
+    		intc34: intc34, jf34: jf34, intc35: intc35, jf35: jf35,  intc36: intc36, jf36: jf36,analysis23: analysis23,
+    		analysis24: analysis24, analysis25:analysis25, analysis26:analysis26, analysis27:analysis27, analysis28:analysis28, analysis29:analysis29, analysis30:analysis30,
+    		analysis31:analysis31, analysis32:analysis32, analysis33:analysis33, analysis34:analysis34, analysis35:analysis35, analysis36:analysis36, mcarthuur1: mcarthuur1,  
+    		intc37: intc37, jf37:jf37, intc38: intc38, jf38: jf38, intc39: intc39, jf39: jf39,  intc40: intc40, 
+    		jf40: jf40, intc41: intc41, jf41: jf41,  intc42: intc42, jf42: jf42,  intc43: intc43, jf43: jf43,  intc78: intc78, 
+    		jf44: jf44,  intc45: intc45, jf45: jf45,  intc46: intc46, jf46: jf46, intc47: intc47, jf47: jf47, 
+    		intc48: intc48, jf48: jf48, intc49: intc49, jf49: jf49,  intc50: intc50, jf50: jf50,  analysis37: analysis37,
+    		analysis38: analysis38, analysis39: analysis39, analysis40: analysis40, analysis41: analysis41, 
+    		analysis42: analysis42, analysis43: analysis43, analysis44: analysis44, analysis45: analysis45, analysis46: analysis46,
+    		analysis47: analysis47, analysis48: analysis48, analysis49: analysis49, analysis50: analysis50 }));
+	});
+});
+app.get('/ecowestdr',function(_req, _res){
 
-// 	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
-// 	  if (err) { return console.log(err); }
-// 	  	//south intersections
-// 	 	streetec = body.RWS[0].RW[6].DE;
-// 	  	const inte1 = body.RWS[0].RW[6].FIS[0].FI[0].TMC.DE;
-// 	  	const jfe1 = body.RWS[0].RW[6].FIS[0].FI[0].CF[0].JF;
-// 	  	const inte2 = body.RWS[0].RW[6].FIS[0].FI[1].TMC.DE;
-// 	  	const jfe2 = body.RWS[0].RW[6].FIS[0].FI[1].CF[0].JF;
-// 	  	var yya = ' ';
-// 	  	let analysis5 = "";
-// 	  	if(jfe1 == 0 || jfe1 < 4){
-// 	  	analysis5 = "For"+yya+inte1+yya+"South bound lane Free flow of traffic";
-// 	  	}else if(jfe1 == 4 || jfe1 < 8){
-// 	  		analysis5 = "For"+yya+inte1+yya+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfe1 == 8 || jfe1 < 10){
-// 	  		analysis5 = "For"+yya+inte1+yya+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfe1 == 10){
-// 	  		analysis5 = "For"+yya+inte1+yya+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis5 = "Cannot compute"
-// 	  	}
-// 	  	let analysis6 = "";
-// 	  	if(jfe2 == 0 || jfe2 < 4){
-// 	  	    analysis6 = "For"+yya+inte2+yya+"South bound lane Free flow of traffic";
-// 	  	}else if(jfe2 == 4 || jfe2 < 8){
-// 	  		analysis6 = "For"+yya+inte2+yya+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfe2 == 8 || jfe2 < 10){
-// 	  		analysis6 = "For"+yya+inte2+yya+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfe2 == 10){
-// 	  		analysis6 = "For"+yya+inte2+yya+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis6 = "Cannot compute"
-// 	  	}
-// 	  	//north intersection
-// 	  	const streeteec = body.RWS[0].RW[7].DE;
-// 	  	const intee1 = body.RWS[0].RW[7].FIS[0].FI[0].TMC.DE;
-// 	  	const jfee1 = body.RWS[0].RW[7].FIS[0].FI[0].CF[0].JF;  	
-// 	  	const intee2 = body.RWS[0].RW[7].FIS[0].FI[1].TMC.DE;
-// 	  	const jfee2 = body.RWS[0].RW[7].FIS[0].FI[1].CF[0].JF;
-// 	  	let analysis05 = "";
-// 	  	if(jfee1 == 0 || jfee1 < 4){
-// 	  	analysis05 = "For"+yya+intee1+yya+"North bound lane Free flow of traffic";
-// 	  	}else if(jfee1 == 4 || jfee1 < 8){
-// 	  		analysis05 = "For"+yya+intee1+yya+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfee1 == 8 || jfee1 < 10){
-// 	  		analysis05 = "For"+yya+intee1+yya+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfee1 == 10){
-// 	  		analysis05 = "For"+yya+intee1+yya+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis05 = "Cannot compute"
-// 	  	}
-// 	  	let analysis06 = "";
-// 	  	if(jfee2 == 0 || jfee2 < 4){
-// 	  	    analysis06 = "For"+yya+intee2+yya+"North bound lane Free flow of traffic";
-// 	  	}else if(jfee2 == 4 || jfee2 < 8){
-// 	  		analysis06 = "For"+yya+intee2+yya+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfee2 == 8 || jfee2 < 10){
-// 	  		analysis06 = "For"+yya+intee2+yya+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfee2 == 10){
-// 	  		analysis06 = "For"+yya+intee2+yya+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis06 = "Cannot compute"
-// 	  	}  	
-// 	  	_res.setHeader('Content-Type', 'application/json');
-//     	_res.send(JSON.stringify({ street: streetec,inte1: inte1, jfe1: jfe1,  inte2: inte2, jfe2: jfe2, 
-//     		analysis5:analysis5, analysis6:analysis6,street: streetec, intee1: intee1, jfee1: jfee1,  intee2: intee2, jfee2: jfee2, 
-//     		analysis05:analysis05, analysis06:analysis06}));  
-// 	});
-// });
-// app.get('/matinaaplaya',function(_req, _res){
+	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
+	  if (err) { return console.log(err); }
+	  	//south intersections
+	 	ecowestdr1 = body.RWS[0].RW[6].DE;
+	  	const intc51 = body.RWS[0].RW[6].FIS[0].FI[0].TMC.DE;
+	  	const jf51 = body.RWS[0].RW[6].FIS[0].FI[0].CF[0].JF;
+	  	const intc52 = body.RWS[0].RW[6].FIS[0].FI[1].TMC.DE;
+	  	const jf52 = body.RWS[0].RW[6].FIS[0].FI[1].CF[0].JF;
+	  	var yya = ' ';
+	  	let analysis51 = "";
+	  	if(jf51 == 0 || jf51 < 4){
+	  		analysis51 = "For"+yya+intc51+yya+"South bound lane Free flow of traffic";
+	  	}else if(jf51 == 4 || jf51 < 8){
+	  		analysis51 = "For"+yya+intc51+yya+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf51 == 8 || jf51 < 10){
+	  		analysis51 = "For"+yya+intc51+yya+"South bound lane Slow flow of traffic";
+	  	}else if(jf51 == 10){
+	  		analysis51 = "For"+yya+intc51+yya+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis51 = "Cannot compute"
+	  	}
+	  	let analysis52 = "";
+	  	if(jf52 == 0 || jf52 < 4){
+	  	    analysis52 = "For"+yya+intc52+yya+"South bound lane Free flow of traffic";
+	  	}else if(jf52 == 4 || jf52 < 8){
+	  		analysis52 = "For"+yya+intc52+yya+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf52 == 8 || jf52 < 10){
+	  		analysis52 = "For"+yya+intc52+yya+"South bound lane Slow flow of traffic";
+	  	}else if(jf52 == 10){
+	  		analysis52 = "For"+yya+intc52+yya+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis52 = "Cannot compute"
+	  	}
+	  	//north intersection
+	  	const ecowestdrr1 = body.RWS[0].RW[7].DE;
+	  	const intc53 = body.RWS[0].RW[7].FIS[0].FI[0].TMC.DE;
+	  	const jf53 = body.RWS[0].RW[7].FIS[0].FI[0].CF[0].JF;  	
+	  	const intc54 = body.RWS[0].RW[7].FIS[0].FI[1].TMC.DE;
+	  	const jf54 = body.RWS[0].RW[7].FIS[0].FI[1].CF[0].JF;
+	  	let analysis53 = "";
+	  	if(jf53 == 0 || jf53 < 4){
+	  		analysis53 = "For"+yya+intc53+yya+"North bound lane Free flow of traffic";
+	  	}else if(jf53 == 4 || jf53 < 8){
+	  		analysis53 = "For"+yya+intc53+yya+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf53 == 8 || jf53 < 10){
+	  		analysis53 = "For"+yya+intc53+yya+"North bound lane Slow flow of traffic";
+	  	}else if(jf53 == 10){
+	  		analysis53 = "For"+yya+intc53+yya+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis53 = "Cannot compute"
+	  	}
+	  	let analysis54 = "";
+	  	if(jf54 == 0 || jf54 < 4){
+	  	    analysis54 = "For"+yya+intc54+yya+"North bound lane Free flow of traffic";
+	  	}else if(jf54 == 4 || jf54 < 8){
+	  		analysis54 = "For"+yya+intc54+yya+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf54 == 8 || jf54 < 10){
+	  		analysis54 = "For"+yya+intc54+yya+"North bound lane Slow flow of traffic";
+	  	}else if(jf54 == 10){
+	  		analysis54 = "For"+yya+intc54+yya+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis54 = "Cannot compute"
+	  	}  	
+	  	_res.setHeader('Content-Type', 'application/json');
+    	_res.send(JSON.stringify({ ecowestdr1: ecowestdr1, intc51: intc51, jf51: jf51,  intc52: intc52, jfc52: jfc52, 
+    		analysis51:analysis51, analysis52:analysis52, ecowestdrr1: ecowestdrr1, intc53: intc53, jf53: jf53,  intc54: intc54, jf54: jf54, 
+    		analysis53:analysis53, analysis54:analysis54}));  
+	});
+});
+app.get('/matinaaplaya',function(_req, _res){
 
-// 	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
-// 	  if (err) { return console.log(err); }
+	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
+	  if (err) { return console.log(err); }
 		
-// 		//south intersections
-// 		var yyas = ' ';
-// 	  	const streetm = body.RWS[0].RW[8].DE;
-// 	  	const intm1 = body.RWS[0].RW[8].FIS[0].FI[0].TMC.DE;
-// 	  	const jfm1 = body.RWS[0].RW[8].FIS[0].FI[0].CF[0].JF;  	
-// 	  	const intm2 = body.RWS[0].RW[8].FIS[0].FI[1].TMC.DE;
-// 	  	const jfm2 = body.RWS[0].RW[8].FIS[0].FI[1].CF[0].JF;
-// 	  	const intm3 = body.RWS[0].RW[8].FIS[0].FI[2].TMC.DE;
-// 	  	const jfm3 = body.RWS[0].RW[8].FIS[0].FI[2].CF[0].JF;
-// 	  	const intm4 = body.RWS[0].RW[8].FIS[0].FI[3].TMC.DE;
-// 	  	const jfm4 = body.RWS[0].RW[8].FIS[0].FI[3].CF[0].JF;  
+		//south intersections
+		var yyas = ' ';
+	  	matinaaplaya1 = body.RWS[0].RW[8].DE;
+	  	const intc55 = body.RWS[0].RW[8].FIS[0].FI[0].TMC.DE;
+	  	const jf55 = body.RWS[0].RW[8].FIS[0].FI[0].CF[0].JF;  	
+	  	const intc56 = body.RWS[0].RW[8].FIS[0].FI[1].TMC.DE;
+	  	const jf56 = body.RWS[0].RW[8].FIS[0].FI[1].CF[0].JF;
+	  	const intc57 = body.RWS[0].RW[8].FIS[0].FI[2].TMC.DE;
+	  	const jf57 = body.RWS[0].RW[8].FIS[0].FI[2].CF[0].JF;
+	  	const intc58 = body.RWS[0].RW[8].FIS[0].FI[3].TMC.DE;
+	  	const jf58 = body.RWS[0].RW[8].FIS[0].FI[3].CF[0].JF;  
 
-// 		let analysis9 = "";
-// 	  	if(jfm1 == 0 || jfm1 < 4){
-// 	  	analysis9 = "For"+yyas+intm1+yyas+"South bound lane Free flow of traffic";
-// 	  	}else if(jfm1 == 4 || jfm1 < 8){
-// 	  		analysis9 = "For"+yyas+intm1+yyas+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm1 == 8 || jfm1 < 10){
-// 	  		analysis9 = "For"+yyas+intm1+yyas+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfm1 == 10){
-// 	  		analysis9 = "For"+yyas+intm1+yyas+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis9 = "Cannot compute"
-// 	  	}
-// 		let analysis10 = "";
-// 	  	if(jfm2 == 0 || jfm2 < 4){
-// 	  	analysis10 = "For"+yyas+intm2+yyas+"South bound lane Free flow of traffic";
-// 	  	}else if(jfm2 == 4 || jfm2 < 8){
-// 	  		analysis10 = "For"+yyas+intm2+yyas+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm2 == 8 || jfm2 < 10){
-// 	  		analysis10 = "For"+yyas+intm2+yyas+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfm2 == 10){
-// 	  		analysis10 = "For"+yyas+intm2+yyas+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis10 = "Cannot compute"
-// 	  	}
-// 		let analysis11 = "";
-// 	  	if(jfm3 == 0 || jfm3 < 4){
-// 	  	analysis11 = "For"+yyas+intm3+yyas+"South bound lane Free flow of traffic";
-// 	  	}else if(jfm3 == 4 || jfm3 < 8){
-// 	  		analysis11 = "For"+yyas+intm3+yyas+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm3 == 8 || jfm3 < 10){
-// 	  		analysis11 = "For"+yyas+intm3+yyas+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfm3 == 10){
-// 	  		analysis11 = "For"+yyas+intm3+yyas+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis11 = "Cannot compute"
-// 	  	}
-// 	  	let analysis12 = "";
-// 	  	if(jfm4 == 0 || jfm4 < 4){
-// 	  	analysis12 = "For"+yyas+intm4+yyas+"South bound lane Free flow of traffic";
-// 	  	}else if(jfm4 == 4 || jfm4 < 8){
-// 	  		analysis12 = "For"+yyas+intm4+yyas+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm4 == 8 || jfm4 < 10){
-// 	  		analysis12 = "For"+yyas+intm4+yyas+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfm4 == 10){
-// 	  		analysis12 = "For"+yyas+intm4+yyas+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis12 = "Cannot compute"
-// 	  	}
+		let analysis55 = "";
+	  	if(jf55 == 0 || jf55 < 4){
+	  		analysis55 = "For"+yyas+intc55+yyas+"South bound lane Free flow of traffic";
+	  	}else if(jf55 == 4 || jf55 < 8){
+	  		analysis55 = "For"+yyas+intc55+yyas+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf55 == 8 || jf55 < 10){
+	  		analysis55 = "For"+yyas+intc55+yyas+"South bound lane Slow flow of traffic";
+	  	}else if(jf55 == 10){
+	  		analysis55 = "For"+yyas+intc55+yyas+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis55 = "Cannot compute"
+	  	}
+		let analysis56 = "";
+	  	if(jf56 == 0 || jf56 < 4){
+	  		analysis56 = "For"+yyas+intc56+yyas+"South bound lane Free flow of traffic";
+	  	}else if(jf56 == 4 || jf56 < 8){
+	  		analysis56 = "For"+yyas+intc56+yyas+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf56 == 8 || jf56 < 10){
+	  		analysis56 = "For"+yyas+intc56+yyas+"South bound lane Slow flow of traffic";
+	  	}else if(jf56 == 10){
+	  		analysis56 = "For"+yyas+intc56+yyas+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis56 = "Cannot compute"
+	  	}
+		let analysis57 = "";
+	  	if(jf57 == 0 || jf57 < 4){
+	  		analysis57 = "For"+yyas+intc57+yyas+"South bound lane Free flow of traffic";
+	  	}else if(jf57 == 4 || jf57 < 8){
+	  		analysis57 = "For"+yyas+intc57+yyas+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf57 == 8 || jf57 < 10){
+	  		analysis57 = "For"+yyas+intc57+yyas+"South bound lane Slow flow of traffic";
+	  	}else if(jf57 == 10){
+	  		analysis57 = "For"+yyas+intc57+yyas+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis57 = "Cannot compute"
+	  	}
+	  	let analysis58 = "";
+	  	if(jf58 == 0 || jf58 < 4){
+	  		analysis58 = "For"+yyas+intc58+yyas+"South bound lane Free flow of traffic";
+	  	}else if(jf58 == 4 || jf58 < 8){
+	  		analysis58 = "For"+yyas+intc58+yyas+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf58 == 8 || jf58 < 10){
+	  		analysis58 = "For"+yyas+intc58+yyas+"South bound lane Slow flow of traffic";
+	  	}else if(jf58 == 10){
+	  		analysis58 = "For"+yyas+intc58+yyas+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis58 = "Cannot compute"
+	  	}
 
-// 	  	//north intersections
-// 	  	streetmmm = body.RWS[0].RW[10].DE;
-// 	  	const intmm1 = body.RWS[0].RW[10].FIS[0].FI[0].TMC.DE;
-// 	  	const jfmm1 = body.RWS[0].RW[10].FIS[0].FI[0].CF[0].JF;
-// 	  	const intmm2 = body.RWS[0].RW[10].FIS[0].FI[1].TMC.DE;
-// 	  	const jfmm2 = body.RWS[0].RW[10].FIS[0].FI[1].CF[0].JF;
-// 	  	const intmm3 = body.RWS[0].RW[10].FIS[0].FI[2].TMC.DE;
-// 	  	const jfmm3 = body.RWS[0].RW[10].FIS[0].FI[2].CF[0].JF;
-// 	  	const intmm4 = body.RWS[0].RW[10].FIS[0].FI[3].TMC.DE;
-// 	  	const jfmm4 = body.RWS[0].RW[10].FIS[0].FI[3].CF[0].JF;
+	  	//north intersections
+	  	const matinaaplayaa1 = body.RWS[0].RW[10].DE;
+	  	const intc59 = body.RWS[0].RW[10].FIS[0].FI[0].TMC.DE;
+	  	const jf59 = body.RWS[0].RW[10].FIS[0].FI[0].CF[0].JF;
+	  	const intc60 = body.RWS[0].RW[10].FIS[0].FI[1].TMC.DE;
+	  	const jf60 = body.RWS[0].RW[10].FIS[0].FI[1].CF[0].JF;
+	  	const intc61 = body.RWS[0].RW[10].FIS[0].FI[2].TMC.DE;
+	  	const jf61 = body.RWS[0].RW[10].FIS[0].FI[2].CF[0].JF;
+	  	const intc62 = body.RWS[0].RW[10].FIS[0].FI[3].TMC.DE;
+	  	const jf62 = body.RWS[0].RW[10].FIS[0].FI[3].CF[0].JF;
 
-// 	  	let analysis09 = "";
-// 	  	if(jfmm1 == 0 || jfmm1 < 4){
-// 	  	analysis09 = "For"+yyas+intmm1+yyas+"North bound lane Free flow of traffic";
-// 	  	}else if(jfmm1 == 4 || jfmm1 < 8){
-// 	  		analysis09 = "For"+yyas+intmm1+yyas+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfmm1 == 8 || jfmm1 < 10){
-// 	  		analysis09 = "For"+yyas+intmm1+yyas+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfmm1 == 10){
-// 	  		analysis09 = "For"+yyas+intmm1+yyas+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis09 = "Cannot compute"
-// 	  	}
+	  	let analysis59 = "";
+	  	if(jf59 == 0 || jf59 < 4){
+	  		analysis59 = "For"+yyas+intc59+yyas+"North bound lane Free flow of traffic";
+	  	}else if(jf59 == 4 || jf59 < 8){
+	  		analysis59 = "For"+yyas+intc59+yyas+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf59 == 8 || jf59 < 10){
+	  		analysis59 = "For"+yyas+intc59+yyas+"North bound lane Slow flow of traffic";
+	  	}else if(jf59 == 10){
+	  		analysis59 = "For"+yyas+intc59+yyas+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis59 = "Cannot compute"
+	  	}
 
-// 		let analysis010 = "";
-// 	  	if(jfmm2 == 0 || jfmm2 < 4){
-// 	  	analysis010 = "For"+yyas+intmm2+yyas+"North bound lane Free flow of traffic";
-// 	  	}else if(jfmm2 == 4 || jfmm2 < 8){
-// 	  		analysis010 = "For"+yyas+intmm2+yyas+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfmm2 == 8 || jfmm2 < 10){
-// 	  		analysis010 = "For"+yyas+intmm2+yyas+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfmm2 == 10){
-// 	  		analysis010 = "For"+yyas+intmm2+yyas+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis010 = "Cannot compute"
-// 	  	}
+		let analysis60 = "";
+	  	if(jf60 == 0 || jf60 < 4){
+	  		analysis60 = "For"+yyas+intc60+yyas+"North bound lane Free flow of traffic";
+	  	}else if(jf60 == 4 || jf60 < 8){
+	  		analysis60 = "For"+yyas+intc60+yyas+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf60 == 8 || jf60 < 10){
+	  		analysis60 = "For"+yyas+intc60+yyas+"North bound lane Slow flow of traffic";
+	  	}else if(jf60 == 10){
+	  		analysis60 = "For"+yyas+intc60+yyas+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis60 = "Cannot compute"
+	  	}
 
-// 		let analysis011 = "";
-// 	  	if(jfmm3 == 0 || jfmm3 < 4){
-// 	  	analysis011 = "For"+yyas+intmm3+yyas+"North bound lane Free flow of traffic";
-// 	  	}else if(jfmm3 == 4 || jfmm3 < 8){
-// 	  		analysis011 = "For"+yyas+intmm3+yyas+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfmm3 == 8 || jfmm3 < 10){
-// 	  		analysis011 = "For"+yyas+intmm3+yyas+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfmm3 == 10){
-// 	  		analysis011 = "For"+yyas+intmm3+yyas+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis011 = "Cannot compute"
-// 	  	}
+		let analysis61 = "";
+	  	if(jf61 == 0 || jf61 < 4){
+	  		analysis61 = "For"+yyas+intc61+yyas+"North bound lane Free flow of traffic";
+	  	}else if(jf61 == 4 || jf61 < 8){
+	  		analysis61 = "For"+yyas+intc61+yyas+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf61 == 8 || jf61 < 10){
+	  		analysis61 = "For"+yyas+intc61+yyas+"North bound lane Slow flow of traffic";
+	  	}else if(jf61 == 10){
+	  		analysis61 = "For"+yyas+intc61+yyas+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis61 = "Cannot compute"
+	  	}
 
-// 		let analysis012 = "";
-// 	  	if(jfmm4 == 0 || jfmm4 < 4){
-// 	  	analysis012 = "For"+yyas+intmm4+yyas+"North bound lane Free flow of traffic";
-// 	  	}else if(jfmm4 == 4 || jfmm4 < 8){
-// 	  		analysis012 = "For"+yyas+intmm4+yyas+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfmm4 == 8 || jfmm4 < 10){
-// 	  		analysis012 = "For"+yyas+intmm4+yyas+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfmm4 == 10){
-// 	  		analysis012 = "For"+yyas+intmm4+yyas+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis012 = "Cannot compute"
-// 	  	}
+		let analysis62 = "";
+	  	if(jf62 == 0 || jf62 < 4){
+	  		analysis62 = "For"+yyas+intc62+yyas+"North bound lane Free flow of traffic";
+	  	}else if(jf62 == 4 || jf62 < 8){
+	  		analysis62 = "For"+yyas+intc62+yyas+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf62 == 8 || jf62 < 10){
+	  		analysis62 = "For"+yyas+intc62+yyas+"North bound lane Slow flow of traffic";
+	  	}else if(jf62 == 10){
+	  		analysis62 = "For"+yyas+intc62+yyas+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis62 = "Cannot compute"
+	  	}
 
-// 	  	_res.setHeader('Content-Type', 'application/json');
-//     	_res.send(JSON.stringify({ street: streetm,  intm1: intm1, jfm1: jfm1,  intm2: intm2, jfm2: jfm2, intm3: intm3, jfm3: jfm3, intm4:intm4, jfm4:jfm4, 
-//     		 analysis9:analysis9, analysis10: analysis10, analysis11: analysis11,analysis12:analysis12,streetm: streetm, intmm1: intmm1, jfmm1: jfmm1, 
-//     		  intmm2: intmm2, jfmm2: jfmm2, intmm3: intmm3, jfmm3: jfmm3, intmm4:intmm4, jfmm4:jfmm4,
-//     	analysis09:analysis09, analysis010:analysis010, analysis011:analysis011, analysis012:analysis012}));
+	  	_res.setHeader('Content-Type', 'application/json');
+    	_res.send(JSON.stringify({ matinaaplaya1: matinaaplaya1,  intc55: intc55, jf55: jf55,  intc56: intc56, jf56: jf56, intc57: intc57, jf57: jf57, intc58:intc58, jf58:jf58, 
+    		 analysis55:analysis55, analysis56: analysis56, analysis57: analysis57,analysis58:analysis58, matinaaplayaa1: matinaaplayaa1, intc59: intc59, jf59: jf59, 
+    		  intc60: intc60, jf60: jf60, intc61: intc61, jf61: jf61, intc62:intc62, jf62:jf62,
+    	analysis59:analysis59, analysis60:analysis60, analysis61:analysis61, analysis62:analysis62}));
   
-// 	});
-// });
-// app.get('/ecoland',function(_req, _res){
+	});
+});
+app.get('/ecoland',function(_req, _res){
 
-// 	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
-// 	  if (err) { return console.log(err); }
-// 	  	//south intersection	
-// 	  	street = body.RWS[0].RW[9].DE;
-// 	  	const intc1 = body.RWS[0].RW[9].FIS[0].FI[0].TMC.DE;
-// 	  	const jfc1 = body.RWS[0].RW[9].FIS[0].FI[0].CF[0].JF;  	
-// 	  	const intc2 = body.RWS[0].RW[9].FIS[0].FI[1].TMC.DE;
-// 	  	const jfc2 = body.RWS[0].RW[9].FIS[0].FI[1].CF[0].JF;
-// 	  	const intc3 = body.RWS[0].RW[9].FIS[0].FI[2].TMC.DE;
-// 	  	const jfc3 = body.RWS[0].RW[9].FIS[0].FI[2].CF[0].JF;
-// 	  	var s = ' ';
-// 	  	let analysis10 = "";
-// 	  	if(jfc1 == 0 || jfc1 < 4){
-// 	  		analysis10 = "For"+s+intc1+s+"South bound lane Free flow of traffic";
-// 	  	}else if(jfc1 == 4 || jfc1 < 8){
-// 	  		analysis10 = "For"+s+intc1+s+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfc1 == 8 || jfc1 < 10){
-// 	  		analysis10 = "For"+s+intc1+s+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfc1 == 10){
-// 	  		analysis10 = "For"+s+intc1+s+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis10 = "Cannot compute"
-// 	  	}
-// 	  	let analysis11 = "";
-// 	  	if(jfc2 == 0 || jfc2 < 4){
-// 	  		analysis11 = "For"+s+intc2+s+"South bound lane Free flow of traffic";
-// 	  	}else if(jfc2 == 4 || jfc2 < 8){
-// 	  		analysis11 = "For"+s+intc2+s+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfc2 == 8 || jfc2 < 10){
-// 	  		analysis11 = "For"+s+intc2+s+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfc2 == 10){
-// 	  		analysis11 = "For"+s+intc2+s+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis11 = "Cannot compute"
-// 	  	}
-// 	  	let analysis12 = "";
-// 	  	if(jfc3 == 0 || jfc3 < 4){
-// 	  		analysis12 = "For"+s+intc3+s+"South bound lane Free flow of traffic";
-// 	  	}else if(jfc3 == 4 || jfc3 < 8){
-// 	  		analysis12 = "For"+s+intc3+s+"South bound lane Sluggish flow of traffic";
-// 	  	}else if(jfc3 == 8 || jfc3 < 10){
-// 	  		analysis12 = "For"+s+intc3+s+"South bound lane Slow flow of traffic";
-// 	  	}else if(jfc3 == 10){
-// 	  		analysis12 = "For"+s+intc3+s+"South bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis12 = "Cannot compute"
-// 	  	}
-// 	  	//north intersection
-// 	  	const streeet = body.RWS[0].RW[11].DE;
-// 	  	const intm1 = body.RWS[0].RW[11].FIS[0].FI[0].TMC.DE;
-// 	  	const jfm1 = body.RWS[0].RW[11].FIS[0].FI[0].CF[0].JF; 	
-// 	  	const intm2 = body.RWS[0].RW[11].FIS[0].FI[1].TMC.DE;
-// 	  	const jfm2 = body.RWS[0].RW[11].FIS[0].FI[1].CF[0].JF;
-// 	  	const intm3 = body.RWS[0].RW[11].FIS[0].FI[2].TMC.DE;
-// 	  	const jfm3 = body.RWS[0].RW[11].FIS[0].FI[2].CF[0].JF;
-// 	  	const intm4 = body.RWS[0].RW[11].FIS[0].FI[3].TMC.DE;
-// 	  	const jfm4 = body.RWS[0].RW[11].FIS[0].FI[3].CF[0].JF;
-// 	  	let analysis09 = "";
-// 	  	if(jfm1 == 0 || jfm1 < 4){
-// 	  	analysis09 = "For"+s+intm1+s+"North bound lane Free flow of traffic";
-// 	  	}else if(jfm1 == 4 || intm1 < 8){
-// 	  		analysis09 = "For"+s+jfm1+s+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm1 == 8 || intm1 < 10){
-// 	  		analysis09 = "For"+s+intm1+s+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfm1 == 10){
-// 	  		analysis09 = "For"+s+intm1+s+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis09 = "Cannot compute"
-// 	  	}
-// 		let analysis010 = "";
-// 	  	if(jfm2 == 0 || jfm2 < 4){
-// 	  	analysis010 = "For"+s+intm2+s+"North bound lane Free flow of traffic";
-// 	  	}else if(jfm2 == 4 || intm2 < 8){
-// 	  		analysis010 = "For"+s+intm2+s+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm2 == 8 || intm2 < 10){
-// 	  		analysis010 = "For"+s+intm2+s+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfm2 == 10){
-// 	  		analysis010 = "For"+s+intm2+s+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis010 = "Cannot compute"
-// 	  	}
-// 		let analysis011 = "";
-// 	  	if(jfm3 == 0 || jfm3 < 4){
-// 	  	analysis011 = "For"+s+intm3+s+"North bound lane Free flow of traffic";
-// 	  	}else if(jfm3 == 4 || jfm3 < 8){
-// 	  		analysis011 = "For"+s+intm3+s+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm3 == 8 || jfm3 < 10){
-// 	  		analysis011 = "For"+s+intm3+s+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfm3 == 10){
-// 	  		analysis011 = "For"+s+intm3+s+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis011 = "Cannot compute"
-// 	  	}
-// 		let analysis012 = "";
-// 	  	if(jfm4 == 0 || jfm4 < 4){
-// 	  	analysis012 = "For"+s+intm4+s+"North bound lane Free flow of traffic";
-// 	  	}else if(jfm4 == 4 || jfm4 < 8){
-// 	  		analysis012 = "For"+s+intm4+s+"North bound lane Sluggish flow of traffic";
-// 	  	}else if(jfm4 == 8 || jfm4 < 10){
-// 	  		analysis012 = "For"+s+intm4+s+"North bound lane Slow flow of traffic";
-// 	  	}else if(jfm4 == 10){
-// 	  		analysis012 = "For"+s+intm4+s+"North bound lane Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis012 = "Cannot compute"
-// 	  	}
-// 	  	_res.setHeader('Content-Type', 'application/json');
-//     	_res.send(JSON.stringify({ street:street,intc1: intc1, jfc1: jfc1,  intc2: intc2, jfc2: jfc2, intc3: intc3, jfc3: jfc3,
-//     	analysis10:analysis10, analysis11:analysis11, analysis12:analysis12, streeet: streeet, intm1: intm1, jfm1: jfm1,  intm2: intm2, jfm2: jfm2, intm3: intm3, jfm3: jfm3, intm4:intm4, jfm4:jfm4,
-//     	analysis09:analysis09, analysis010:analysis010, analysis011:analysis011, analysis012:analysis012}));  
-// 	});
-// });
-// app.get('/tulipdr',function(_req, _res){
+	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
+	  if (err) { return console.log(err); }
+	  	//south intersection	
+	  	ecoland1 = body.RWS[0].RW[9].DE;
+	  	const intc63 = body.RWS[0].RW[9].FIS[0].FI[0].TMC.DE;
+	  	const jf63 = body.RWS[0].RW[9].FIS[0].FI[0].CF[0].JF;  	
+	  	const intc64 = body.RWS[0].RW[9].FIS[0].FI[1].TMC.DE;
+	  	const jf64 = body.RWS[0].RW[9].FIS[0].FI[1].CF[0].JF;
+	  	const intc65 = body.RWS[0].RW[9].FIS[0].FI[2].TMC.DE;
+	  	const jf65 = body.RWS[0].RW[9].FIS[0].FI[2].CF[0].JF;
+	  	var s = ' ';
+	  	let analysis63 = "";
+	  	if(jf63 == 0 || jf63 < 4){
+	  		analysis63 = "For"+s+intc63+s+"South bound lane Free flow of traffic";
+	  	}else if(jf63 == 4 || jf63 < 8){
+	  		analysis63 = "For"+s+intc63+s+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf63 == 8 || jf63 < 10){
+	  		analysis63 = "For"+s+intc63+s+"South bound lane Slow flow of traffic";
+	  	}else if(jf63 == 10){
+	  		analysis63 = "For"+s+intc63+s+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis63 = "Cannot compute"
+	  	}
+	  	let analysis64 = "";
+	  	if(jf64 == 0 || jf64 < 4){
+	  		analysis64 = "For"+s+intc64+s+"South bound lane Free flow of traffic";
+	  	}else if(jf64 == 4 || jf64 < 8){
+	  		analysis64 = "For"+s+intc64+s+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf64 == 8 || jf64 < 10){
+	  		analysis64 = "For"+s+intc64+s+"South bound lane Slow flow of traffic";
+	  	}else if(jf64 == 10){
+	  		analysis64 = "For"+s+intc64+s+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis64 = "Cannot compute"
+	  	}
+	  	let analysis65 = "";
+	  	if(jf65 == 0 || jf65 < 4){
+	  		analysis65 = "For"+s+intc65+s+"South bound lane Free flow of traffic";
+	  	}else if(jf65 == 4 || jf65 < 8){
+	  		analysis65 = "For"+s+intc65+s+"South bound lane Sluggish flow of traffic";
+	  	}else if(jf65 == 8 || jf65 < 10){
+	  		analysis65 = "For"+s+intc65+s+"South bound lane Slow flow of traffic";
+	  	}else if(jf65 == 10){
+	  		analysis65 = "For"+s+intc65+s+"South bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis65 = "Cannot compute"
+	  	}
+	  	//north intersection
+	  	const ecolaand1 = body.RWS[0].RW[11].DE;
+	  	const intc66 = body.RWS[0].RW[11].FIS[0].FI[0].TMC.DE;
+	  	const jf66 = body.RWS[0].RW[11].FIS[0].FI[0].CF[0].JF; 	
+	  	const intc67 = body.RWS[0].RW[11].FIS[0].FI[1].TMC.DE;
+	  	const jf67 = body.RWS[0].RW[11].FIS[0].FI[1].CF[0].JF;
+	  	const intc68 = body.RWS[0].RW[11].FIS[0].FI[2].TMC.DE;
+	  	const jf68 = body.RWS[0].RW[11].FIS[0].FI[2].CF[0].JF;
 
-// 	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
-// 	  if (err) { return console.log(err); }
+	  	let analysis66 = "";
+	  	if(jf66 == 0 || jf66 < 4){
+	  		analysis66 = "For"+s+intc66+s+"North bound lane Free flow of traffic";
+	  	}else if(jf66 == 4 || jf66 < 8){
+	  		analysis66 = "For"+s+intc66+s+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf66 == 8 || jf66 < 10){
+	  		analysis66 = "For"+s+intc66+s+"North bound lane Slow flow of traffic";
+	  	}else if(jf66 == 10){
+	  		analysis66 = "For"+s+intc66+s+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis66 = "Cannot compute"
+	  	}
+		let analysis67 = "";
+	  	if(jf67 == 0 || jf67 < 4){
+	  		analysis67 = "For"+s+intc67+s+"North bound lane Free flow of traffic";
+	  	}else if(jf67 == 4 || jf67 < 8){
+	  		analysis67 = "For"+s+intc67+s+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf67 == 8 || jf67 < 10){
+	  		analysis67 = "For"+s+intc67+s+"North bound lane Slow flow of traffic";
+	  	}else if(jf67 == 10){
+	  		analysis67 = "For"+s+intc67+s+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis67 = "Cannot compute"
+	  	}
+		let analysis68 = "";
+	  	if(jf68 == 0 || jf68 < 4){
+	  		analysis68 = "For"+s+intc68+s+"North bound lane Free flow of traffic";
+	  	}else if(jf68 == 4 || jf68 < 8){
+	  		analysis68 = "For"+s+intc68+s+"North bound lane Sluggish flow of traffic";
+	  	}else if(jf68 == 8 || jf68 < 10){
+	  		analysis68 = "For"+s+intc68+s+"North bound lane Slow flow of traffic";
+	  	}else if(jf68 == 10){
+	  		analysis68 = "For"+s+intc68+s+"North bound lane Traffic stopped or Road closed"
+	  	}else{
+	  		analysis68 = "Cannot compute"
+	  	}
+		
+	  	_res.setHeader('Content-Type', 'application/json');
+    	_res.send(JSON.stringify({ ecoland1:ecoland1, intc63: intc63, jf63: jf63,  intc64: intc64, jf64: jf64, intc65: intc65, jf65: jf65,
+    	analysis63:analysis63, analysis64:analysis64, analysis65:analysis65, ecolaand1: ecolaand1, intc66: intc66, jf66: jf66,  intc67: intc67, jf67: jf67, intc68: intc68, jf68: jf68,
+    	analysis66:analysis66, analysis67:analysis67, analysis68:analysis68}));  
+	});
+});
+app.get('/tulipdr',function(_req, _res){
 
-// 		var wa = ' ';
-// 	  	//south intersections
-// 	 	streetccc = body.RWS[0].RW[12].DE;
-// 	  	const intcc1 = body.RWS[0].RW[12].FIS[0].FI[0].TMC.DE;
-// 	  	const jfcc1 = body.RWS[0].RW[12].FIS[0].FI[0].CF[0].JF;	
-// 	  	const intcc2 = body.RWS[0].RW[12].FIS[0].FI[1].TMC.DE;
-// 	  	const jfcc2 = body.RWS[0].RW[12].FIS[0].FI[1].CF[0].JF;
-// 	  	const intcc3 = body.RWS[0].RW[12].FIS[0].FI[2].TMC.DE;
-// 	  	const jfcc3 = body.RWS[0].RW[12].FIS[0].FI[2].CF[0].JF;
+	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
+	  if (err) { return console.log(err); }
 
-// 	  	let analysis111 = "";
-// 	  	if(jfcc1 == 0 || jfcc1 < 4){
-// 	  		analysis111 = "For"+wa+intcc1+wa+"South bound Free flow of traffic";
-// 	  	}else if(jfcc1 == 4 || jfcc1 < 8){
-// 	  		analysis111 = "For"+wa+intcc1+wa+"South bound flow of traffic";
-// 	  	}else if(jfcc1 == 8 || jfcc1 < 10){
-// 	  		analysis111 = "For"+wa+intcc1+wa+"South bound Ecoland: Slow flow of traffic";
-// 	  	}else if(jfcc1 == 10){
-// 	  		analysis111 = "For"+wa+intcc1+wa+"South bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis11 = "Cannot compute"
-// 	  	}
-// 		let analysis112 = "";
-// 	  	if(jfcc2 == 0 || jfcc2 < 4){
-// 	  		analysis112 = "For"+wa+intcc2+wa+"South bound Free flow of traffic";
-// 	  	}else if(jfcc2 == 4 || jfcc2 < 8){
-// 	  		analysis112 = "For"+wa+intcc2+wa+"South bound Sluggish flow of traffic";
-// 	  	}else if(jfcc2 == 8 || jfcc2 < 10){
-// 	  		analysis112 = "For"+wa+intcc2+wa+"South bound Slow flow of traffic";
-// 	  	}else if(jfcc2 == 10){
-// 	  		analysis112 = "For"+wa+intcc2+wa+"South bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis12 = "Cannot compute"
-// 	  	}
-// 		let analysis113 = "";
-// 	  	if(jfcc3 == 0 || jfcc3 < 4){
-// 	  		analysis113 = "For"+wa+intcc3+wa+"South bound Free flow of traffic";
-// 	  	}else if(jfcc3 == 4 || jfcc3 < 8){
-// 	  		analysis113 = "For"+wa+intcc3+wa+"South bound Sluggish flow of traffic";
-// 	  	}else if(jfcc3 == 8 || jfcc3 < 10){
-// 	  		analysis113 = "For"+wa+intcc3+wa+"South bound Slow flow of traffic";
-// 	  	}else if(jfcc3 == 10){
-// 	  		analysis113 = "For"+wa+intcc3+wa+"South bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis113 = "Cannot compute"
-// 	  	}
+		var wa = ' ';
+	  	//south intersections
+	 	tulipdr1 = body.RWS[0].RW[12].DE;
+	  	const intc69 = body.RWS[0].RW[12].FIS[0].FI[0].TMC.DE;
+	  	const jf69 = body.RWS[0].RW[12].FIS[0].FI[0].CF[0].JF;	
+	  	const intc70 = body.RWS[0].RW[12].FIS[0].FI[1].TMC.DE;
+	  	const jf70 = body.RWS[0].RW[12].FIS[0].FI[1].CF[0].JF;
+	  	const intc71 = body.RWS[0].RW[12].FIS[0].FI[2].TMC.DE;
+	  	const jf71 = body.RWS[0].RW[12].FIS[0].FI[2].CF[0].JF;
 
-// 	  	//north intersections
-// 		const streeetccc = body.RWS[0].RW[13].DE;
-// 	  	const intc1 = body.RWS[0].RW[13].FIS[0].FI[0].TMC.DE;
-// 	  	const jfc1 = body.RWS[0].RW[13].FIS[0].FI[0].CF[0].JF;  	
-// 	  	const intc2 = body.RWS[0].RW[13].FIS[0].FI[1].TMC.DE;
-// 	  	const jfc2 = body.RWS[0].RW[13].FIS[0].FI[1].CF[0].JF;
-// 	  	const intc3 = body.RWS[0].RW[13].FIS[0].FI[2].TMC.DE;
-// 	  	const jfc3 = body.RWS[0].RW[13].FIS[0].FI[2].CF[0].JF;
+	  	let analysis69 = "";
+	  	if(jf69 == 0 || jf69 < 4){
+	  		analysis69 = "For"+wa+intc69+wa+"South bound Free flow of traffic";
+	  	}else if(jf69 == 4 || jf69 < 8){
+	  		analysis69 = "For"+wa+intc69+wa+"South bound flow of traffic";
+	  	}else if(jf69 == 8 || jf69 < 10){
+	  		analysis69 = "For"+wa+intc69+wa+"South bound Ecoland: Slow flow of traffic";
+	  	}else if(jf69 == 10){
+	  		analysis69 = "For"+wa+intc69+wa+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis11 = "Cannot compute"
+	  	}
+		let analysis70 = "";
+	  	if(jf70 == 0 || jf70 < 4){
+	  		analysis70 = "For"+wa+intc70+wa+"South bound Free flow of traffic";
+	  	}else if(jf70 == 4 || jf70 < 8){
+	  		analysis70 = "For"+wa+intc70+wa+"South bound Sluggish flow of traffic";
+	  	}else if(jf70 == 8 || jf70 < 10){
+	  		analysis70 = "For"+wa+intc70+wa+"South bound Slow flow of traffic";
+	  	}else if(jf70 == 10){
+	  		analysis70 = "For"+wa+intc70+wa+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis12 = "Cannot compute"
+	  	}
+		let analysis71 = "";
+	  	if(jf71 == 0 || jf71 < 4){
+	  		analysis71 = "For"+wa+intc71+wa+"South bound Free flow of traffic";
+	  	}else if(jf71 == 4 || jf71 < 8){
+	  		analysis71 = "For"+wa+intc71+wa+"South bound Sluggish flow of traffic";
+	  	}else if(jf71 == 8 || jf71 < 10){
+	  		analysis71 = "For"+wa+intc71+wa+"South bound Slow flow of traffic";
+	  	}else if(jf71 == 10){
+	  		analysis71 = "For"+wa+intc71+wa+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis71 = "Cannot compute"
+	  	}
+
+	  	//north intersections
+		const tulipdrr1 = body.RWS[0].RW[13].DE;
+	  	const intc72 = body.RWS[0].RW[13].FIS[0].FI[0].TMC.DE;
+	  	const jf72 = body.RWS[0].RW[13].FIS[0].FI[0].CF[0].JF;  	
+	  	const intc73 = body.RWS[0].RW[13].FIS[0].FI[1].TMC.DE;
+	  	const jf73 = body.RWS[0].RW[13].FIS[0].FI[1].CF[0].JF;
+	  	const intc74 = body.RWS[0].RW[13].FIS[0].FI[2].TMC.DE;
+	  	const jf74 = body.RWS[0].RW[13].FIS[0].FI[2].CF[0].JF;
 	
-// 	  	let analysis12 = "";
-// 	  	if(jfc1 == 0 || jfc1 < 4){
-// 	  		analysis12 = "For"+wa+intc1+wa+"North bound Free flow of traffic";
-// 	  	}else if(jfc1 == 4 || jfc1 < 8){
-// 	  		analysis12 = "For"+wa+intc1+wa+"North bound Sluggish flow of traffic";
-// 	  	}else if(jfc1 == 8 || jfc1 < 10){
-// 	  		analysis12 = "For"+wa+intc1+wa+"North bound Slow flow of traffic";
-// 	  	}else if(jfc1 == 10){
-// 	  		analysis12 = "For"+wa+intc1+wa+"North bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis12 = "Cannot compute"
-// 	  	}
-// 		let analysis13 = "";
-// 	  	if(jfc2 == 0 || jfc2 < 4){
-// 	  		analysis13 = "For"+wa+intc2+wa+"North bound Free flow of traffic";
-// 	  	}else if(jfc2 == 4 || jfc2 < 8){
-// 	  		analysis13 = "For"+wa+intc2+wa+"North bound Slow flow of traffic";
-// 	  	}else if(jfc2 == 8 || jfc2 < 10){
-// 	  		analysis13 = "For"+wa+intc2+wa+"North bound Slow flow of traffic";
-// 	  	}else if(jfc2 == 10){
-// 	  		analysis13 = "For"+wa+intc2+wa+"North bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis13 = "Cannot compute"
-// 	  	}
-// 		let analysis14 = "";
-// 	  	if(jfc3 == 0 || jfc3 < 4){
-// 	  		analysis14 = "For"+wa+intc3+wa+"North bound Free flow of traffic";
-// 	  	}else if(jfc3 == 4 || jfc3 < 8){
-// 	  		analysis14 = "For"+wa+intc3+wa+"North bound Sluggish flow of traffic";
-// 	  	}else if(jfc3 == 8 || jfc3 < 10){
-// 	  		analysis14 = "For"+wa+intc3+wa+"North bound Slow flow of traffic";
-// 	  	}else if(jfc3 == 10){
-// 	  		analysis14 = "For"+wa+intc3+wa+"North bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis14 = "Cannot compute"
-// 	  	}
-// 	  	_res.setHeader('Content-Type', 'application/json');
-//     	_res.send(JSON.stringify({ streetccc: streetccc,intc1: intc1, jfc1: jfc1,intc2: intc2, jfc2: jfc2, intc3: intc3, jfc3: jfc3,
-//     	analysis12:analysis12, analysis13:analysis13, analysis14:analysis14,streetccc: streetccc, intcc1: intcc1, jfcc1: jfcc1,  intcc2: intcc2, jfcc2: jfcc2, intcc3: intcc3, jfcc3: jfcc3, 
-//     		analysis111:analysis111, analysis112:analysis112, analysis113:analysis113}));  
-// 	});
-// });
-// app.get('/quimpoblvd',function(_req, _res){
+	  	let analysis72 = "";
+	  	if(jf72 == 0 || jf72 < 4){
+	  		analysis72 = "For"+wa+intc72+wa+"North bound Free flow of traffic";
+	  	}else if(jf72 == 4 || jf72 < 8){
+	  		analysis72 = "For"+wa+intc72+wa+"North bound Sluggish flow of traffic";
+	  	}else if(jf72 == 8 || jf72 < 10){
+	  		analysis72 = "For"+wa+intc72+wa+"North bound Slow flow of traffic";
+	  	}else if(jf72 == 10){
+	  		analysis72 = "For"+wa+intc72+wa+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis72 = "Cannot compute"
+	  	}
+		let analysis73 = "";
+	  	if(jf73 == 0 || jf73 < 4){
+	  		analysis73 = "For"+wa+intc73+wa+"North bound Free flow of traffic";
+	  	}else if(jf73 == 4 || jf73 < 8){
+	  		analysis73 = "For"+wa+intc73+wa+"North bound Slow flow of traffic";
+	  	}else if(jf73 == 8 || jf73 < 10){
+	  		analysis73 = "For"+wa+intc73+wa+"North bound Slow flow of traffic";
+	  	}else if(jf73 == 10){
+	  		analysis73 = "For"+wa+intc73+wa+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis73 = "Cannot compute"
+	  	}
+		let analysis74 = "";
+	  	if(jf74 == 0 || jf74 < 4){
+	  		analysis74 = "For"+wa+intc74+wa+"North bound Free flow of traffic";
+	  	}else if(jf74 == 4 || jf74 < 8){
+	  		analysis74 = "For"+wa+intc74+wa+"North bound Sluggish flow of traffic";
+	  	}else if(jf74 == 8 || jf74 < 10){
+	  		analysis74 = "For"+wa+intc74+wa+"North bound Slow flow of traffic";
+	  	}else if(jf74 == 10){
+	  		analysis74 = "For"+wa+intc74+wa+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis74 = "Cannot compute"
+	  	}
+	  	_res.setHeader('Content-Type', 'application/json');
+    	_res.send(JSON.stringify({ tulipdr1: tulipdr1, intc69: intc69, jf69: jf69,intc70: intc70, jf70: jf70, intc71: intc71, jf71: jf71,
+    	analysis69:analysis69, analysis70:analysis70, analysis71:analysis71,tulipdrr1: tulipdrr1, intc72: intc72, jf72: jf72,  intc73: intc73, jf73: jf73, intc74: intc74, jf74: jf74, 
+    		analysis72:analysis72, analysis73:analysis73, analysis74:analysis74}));  
+	});
+});
+app.get('/quimpoblvd',function(_req, _res){
 
-// 	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
-// 	  if (err) { return console.log(err); }
-// 	    //north 
-// 	  	quimpo = body.RWS[0].RW[14].DE;
-// 	  	const inttc11 = body.RWS[0].RW[14].FIS[0].FI[0].TMC.DE; 
-// 	  	const jffc11 = body.RWS[0].RW[14].FIS[0].FI[0].CF[0].JF;	
-// 	  	const inttc22 = body.RWS[0].RW[14].FIS[0].FI[1].TMC.DE;
-// 	  	const jffc22 = body.RWS[0].RW[14].FIS[0].FI[1].CF[0].JF;
-// 	  	const inttc33 = body.RWS[0].RW[14].FIS[0].FI[2].TMC.DE;
-// 	    const jffc33 = body.RWS[0].RW[14].FIS[0].FI[2].CF[0].JF;
-// 	  	const inttc44 = body.RWS[0].RW[14].FIS[0].FI[3].TMC.DE;
-// 	  	const jffc44 = body.RWS[0].RW[14].FIS[0].FI[3].CF[0].JF;
-// 	  	var x = ' ';//space ni
-// 	  	let analysis116 = "";
-// 	  	if(jffc11 == 0 || jffc11 < 4){
-// 	  		analysis116 = "For"+x+inttc11+x+"South bound Free flow of traffic";
-// 	  	}else if(jffc11 == 4 || jffc11 < 8){
-// 	  		analysis116 = "For"+x+inttc11+x+"South bound Sluggish flow of traffic";
-// 	  	}else if(jffc11 == 8 || jffc11 < 10){
-// 	  		analysis116 = "For"+x+inttc11+x+"South bound Slow flow of traffic";
-// 	  	}else if(jffc11 == 10){
-// 	  		analysis116 = "For"+x+inttc11+x+"South bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis116 = "Cannot compute"
-// 	  	}
-// 	  	let analysis117 = "";
-// 	  	if(jffc22 == 0 || jffc22 < 4){
-// 	  		analysis117 = "For"+x+inttc22+x+"South bound Free flow of traffic";
-// 	  	}else if(jffc22 == 4 || jffc22 < 8){
-// 	  		analysis117 = "For"+x+inttc22+x+"South bound Sluggish flow of traffic";
-// 	  	}else if(jffc22 == 8 || jffc22 < 10){
-// 	  		analysis117 = "For"+x+inttc22+x+"South bound Slow flow of traffic";
-// 	  	}else if(jffc22 == 10){
-// 	  		analysis117 = "For"+x+inttc22+x+"South bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis117 = "Cannot compute"
-// 	  	}
-// 	  	let analysis118 = "";
-// 	  	if(jffc33 == 0 || jffc33 < 4){
-// 	  		analysis118 = "For"+x+inttc33+x+"South bound Free flow of traffic";
-// 	  	}else if(jffc33 == 4 || jffc33 < 8){
-// 	  		analysis118 = "For"+x+inttc3+x+"South bound Sluggish flow of traffic";
-// 	  	}else if(jffc33 == 8 || jffc33 < 10){
-// 	  		analysis118 = "For"+x+inttc3+x+"South bound Slow flow of traffic";
-// 	  	}else if(jffc33 == 10){
-// 	  		analysis118 = "For"+x+inttc3+x+"South bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis118 = "Cannot compute"
-// 	  	}
-// 	  	let analysis119 = "";
-// 	  	if(jffc44 == 0 || jffc44 < 4){
-// 	  		analysis119 = "For"+x+inttc44+x+"South bound Free flow of traffic";
-// 	  	}else if(jffc44 == 4 || jffc44 < 8){
-// 	  		analysis119 = "For"+x+inttc44+x+"South bound Sluggish flow of traffic";
-// 	  	}else if(jffc44 == 8 || jffc44 < 10){
-// 	  		analysis119 = "For"+x+inttc44+x+"South bound Slow flow of traffic";
-// 	  	}else if(jffc44 == 10){
-// 	  		analysis119 = "For"+x+inttc44+x+"South bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis119 = "Cannot compute"
-// 	  	}
-// 	  	//north
-// 	  	const quimpooo = body.RWS[0].RW[16].DE;
-// 	  	const intc11 = body.RWS[0].RW[16].FIS[0].FI[0].TMC.DE; 
-// 	  	const jfc11 = body.RWS[0].RW[16].FIS[0].FI[0].CF[0].JF;	
-// 	  	const intc22 = body.RWS[0].RW[16].FIS[0].FI[1].TMC.DE;
-// 	  	const jfc22 = body.RWS[0].RW[16].FIS[0].FI[1].CF[0].JF;
-// 	  	const intc33 = body.RWS[0].RW[16].FIS[0].FI[2].TMC.DE;
-// 	    const jfc33 = body.RWS[0].RW[16].FIS[0].FI[2].CF[0].JF;
-// 	  	const intc44 = body.RWS[0].RW[16].FIS[0].FI[3].TMC.DE;
-// 	  	const jfc44 = body.RWS[0].RW[16].FIS[0].FI[3].CF[0].JF;
-// 	  	var x = ' ';//space ni
-// 	  	let analysis16 = "";
-// 	  	if(jfc11 == 0 || jfc11 < 4){
-// 	  		analysis16 = "For"+x+intc11+x+"South bound Free flow of traffic";
-// 	  	}else if(jfc11 == 4 || jffc11 < 8){
-// 	  		analysis16 = "For"+x+intc11+x+"South bound Sluggish flow of traffic";
-// 	  	}else if(jfc11 == 8 || jfc11 < 10){
-// 	  		analysis16 = "For"+x+intc11+x+"South bound Slow flow of traffic";
-// 	  	}else if(jfc11 == 10){
-// 	  		analysis16 = "For"+x+intc11+x+"South bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis16 = "Cannot compute"
-// 	  	}
-// 	  	let analysis17 = "";
-// 	  	if(jfc22 == 0 || jfc22 < 4){
-// 	  		analysis17 = "For"+x+intc22+x+"South bound Free flow of traffic";
-// 	  	}else if(jfc22 == 4 || jfc22 < 8){
-// 	  		analysis17 = "For"+x+intc22+x+"South bound Sluggish flow of traffic";
-// 	  	}else if(jfc22 == 8 || jfc22 < 10){
-// 	  		analysis17 = "For"+x+intc22+x+"South bound Slow flow of traffic";
-// 	  	}else if(jfc22 == 10){
-// 	  		analysis17 = "For"+x+intc22+x+"South bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis17 = "Cannot compute"
-// 	  	}
-// 	  	let analysis18 = "";
-// 	  	if(jfc33 == 0 || jfc33 < 4){
-// 	  		analysis18 = "For"+x+intc33+x+"South bound Free flow of traffic";
-// 	  	}else if(jfc33 == 4 || jfc33 < 8){
-// 	  		analysis18 = "For"+x+intc3+x+"South bound Sluggish flow of traffic";
-// 	  	}else if(jfc33 == 8 || jfc33 < 10){
-// 	  		analysis18 = "For"+x+intc3+x+"South bound Slow flow of traffic";
-// 	  	}else if(jfc33 == 10){
-// 	  		analysis18 = "For"+x+intc3+x+"South bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis18 = "Cannot compute"
-// 	  	}
-// 	  	let analysis19 = "";
-// 	  	if(jfc44 == 0 || jfc44 < 4){
-// 	  		analysis19 = "For"+x+intc44+x+"South bound Free flow of traffic";
-// 	  	}else if(jfc44 == 4 || jfc44 < 8){
-// 	  		analysis19 = "For"+x+intc44+x+"South bound Sluggish flow of traffic";
-// 	  	}else if(jfc44 == 8 || jfc44 < 10){
-// 	  		analysis19 = "For"+x+intc44+x+"South bound Slow flow of traffic";
-// 	  	}else if(jfc44 == 10){
-// 	  		analysis19 = "For"+x+intc44+x+"South bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis19 = "Cannot compute"
-// 	  	}
-// 	  	_res.setHeader('Content-Type', 'application/json');
-//     	_res.send(JSON.stringify({ quimpo: quimpo,inttc11: inttc11, jffc11: jffc11,  inttc22: inttc22, jffc22: jffc22,inttc33:inttc33,inttc33:inttc33,inttc44: inttc44, jffc44: jffc44,
-//     	analysis116:analysis116, analysis117:analysis117,analysis118:analysis118, analysis119:analysis119,quimpo:quimpo, }));  
-// 	});
-// });
-// app.get('/sandaward',function(_req, _res){
+	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
+	  if (err) { return console.log(err); }
+	    //north 
+	  	quimpoblvd1 = body.RWS[0].RW[14].DE;
+	  	const intc75 = body.RWS[0].RW[14].FIS[0].FI[0].TMC.DE; 
+	  	const jf75 = body.RWS[0].RW[14].FIS[0].FI[0].CF[0].JF;	
+	  	const intc76 = body.RWS[0].RW[14].FIS[0].FI[1].TMC.DE;
+	  	const jf76 = body.RWS[0].RW[14].FIS[0].FI[1].CF[0].JF;
+	  	const intc77 = body.RWS[0].RW[14].FIS[0].FI[2].TMC.DE;
+	    const jf77 = body.RWS[0].RW[14].FIS[0].FI[2].CF[0].JF;
+	  	const intc78 = body.RWS[0].RW[14].FIS[0].FI[3].TMC.DE;
+	  	const jf78 = body.RWS[0].RW[14].FIS[0].FI[3].CF[0].JF;
+	  	var x = ' ';//space ni
+	  	let analysis75 = "";
+	  	if(jf75 == 0 || jf75 < 4){
+	  		analysis75 = "For"+x+intc75+x+"South bound Free flow of traffic";
+	  	}else if(jf75 == 4 || jf75 < 8){
+	  		analysis75 = "For"+x+intc75+x+"South bound Sluggish flow of traffic";
+	  	}else if(jf75 == 8 || jf75 < 10){
+	  		analysis75 = "For"+x+intc75+x+"South bound Slow flow of traffic";
+	  	}else if(jf75 == 10){
+	  		analysis75 = "For"+x+intc75+x+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis75 = "Cannot compute"
+	  	}
+	  	let analysis76 = "";
+	  	if(jf76 == 0 || jf76 < 4){
+	  		analysis76 = "For"+x+intc76+x+"South bound Free flow of traffic";
+	  	}else if(jf76 == 4 || jf76 < 8){
+	  		analysis76 = "For"+x+intc76+x+"South bound Sluggish flow of traffic";
+	  	}else if(jf76 == 8 || jf76 < 10){
+	  		analysis76 = "For"+x+intc76+x+"South bound Slow flow of traffic";
+	  	}else if(jf76 == 10){
+	  		analysis76 = "For"+x+intc76+x+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis76 = "Cannot compute"
+	  	}
+	  	let analysis77 = "";
+	  	if(jf77 == 0 || jf77 < 4){
+	  		analysis77 = "For"+x+intc77+x+"South bound Free flow of traffic";
+	  	}else if(jf77 == 4 || jf77 < 8){
+	  		analysis77 = "For"+x+intc77+x+"South bound Sluggish flow of traffic";
+	  	}else if(jf77 == 8 || jf77 < 10){
+	  		analysis77 = "For"+x+intc77+x+"South bound Slow flow of traffic";
+	  	}else if(jf77 == 10){
+	  		analysis77 = "For"+x+intc77+x+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis77 = "Cannot compute"
+	  	}
+	  	let analysis78 = "";
+	  	if(jf78 == 0 || jf78 < 4){
+	  		analysis78 = "For"+x+intc78+x+"South bound Free flow of traffic";
+	  	}else if(jf78 == 4 || jf78 < 8){
+	  		analysis78 = "For"+x+intc78+x+"South bound Sluggish flow of traffic";
+	  	}else if(jf78 == 8 || jf78 < 10){
+	  		analysis78 = "For"+x+intc78+x+"South bound Slow flow of traffic";
+	  	}else if(jf78 == 10){
+	  		analysis78 = "For"+x+intc78+x+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis78 = "Cannot compute"
+	  	}
+	  	//north
+	  	const quimpooblvd1 = body.RWS[0].RW[16].DE;
+	  	const intc79 = body.RWS[0].RW[16].FIS[0].FI[0].TMC.DE; 
+	  	const jf79 = body.RWS[0].RW[16].FIS[0].FI[0].CF[0].JF;	
+	  	const intc80 = body.RWS[0].RW[16].FIS[0].FI[1].TMC.DE;
+	  	const jf80 = body.RWS[0].RW[16].FIS[0].FI[1].CF[0].JF;
+	  	const intc81 = body.RWS[0].RW[16].FIS[0].FI[2].TMC.DE;
+	    const jf81 = body.RWS[0].RW[16].FIS[0].FI[2].CF[0].JF;
+	  	const intc82 = body.RWS[0].RW[16].FIS[0].FI[3].TMC.DE;
+	  	const jf82 = body.RWS[0].RW[16].FIS[0].FI[3].CF[0].JF;
+	  	var x = ' ';//space ni
+	  	let analysis79 = "";
+	  	if(jf79 == 0 || jf79 < 4){
+	  		analysis79 = "For"+x+intc79+x+"South bound Free flow of traffic";
+	  	}else if(jf79 == 4 || jf79 < 8){
+	  		analysis79 = "For"+x+intc79+x+"South bound Sluggish flow of traffic";
+	  	}else if(jf79 == 8 || jf79 < 10){
+	  		analysis79 = "For"+x+intc79+x+"South bound Slow flow of traffic";
+	  	}else if(jf79 == 10){
+	  		analysis79 = "For"+x+intc79+x+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis79 = "Cannot compute"
+	  	}
+	  	let analysis80 = "";
+	  	if(jf80 == 0 || jf80 < 4){
+	  		analysis80 = "For"+x+intc80+x+"South bound Free flow of traffic";
+	  	}else if(jf80 == 4 || jf80 < 8){
+	  		analysis80 = "For"+x+intc80+x+"South bound Sluggish flow of traffic";
+	  	}else if(jf80 == 8 || jf80 < 10){
+	  		analysis80 = "For"+x+intc80+x+"South bound Slow flow of traffic";
+	  	}else if(jf80 == 10){
+	  		analysis80 = "For"+x+intc80+x+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis80 = "Cannot compute"
+	  	}
+	  	let analysis81 = "";
+	  	if(jf81 == 0 || jf81 < 4){
+	  		analysis81 = "For"+x+intc81+x+"South bound Free flow of traffic";
+	  	}else if(jf81 == 4 || jf81 < 8){
+	  		analysis81 = "For"+x+intc81+x+"South bound Sluggish flow of traffic";
+	  	}else if(jf81 == 8 || jf81 < 10){
+	  		analysis81 = "For"+x+intc81+x+"South bound Slow flow of traffic";
+	  	}else if(jf81 == 10){
+	  		analysis81 = "For"+x+intc81+x+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis81 = "Cannot compute"
+	  	}
+	  	let analysis82 = "";
+	  	if(jf82 == 0 || jf82 < 4){
+	  		analysis82 = "For"+x+intc82+x+"South bound Free flow of traffic";
+	  	}else if(jf82 == 4 || jf82 < 8){
+	  		analysis82 = "For"+x+intc82+x+"South bound Sluggish flow of traffic";
+	  	}else if(jf82 == 8 || jf82 < 10){
+	  		analysis82 = "For"+x+intc82+x+"South bound Slow flow of traffic";
+	  	}else if(jf82 == 10){
+	  		analysis82 = "For"+x+intc82+x+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis82 = "Cannot compute"
+	  	}
+	  	_res.setHeader('Content-Type', 'application/json');
+    	_res.send(JSON.stringify({ quimpoblvd1: quimpoblvd1, intc75: intc75, jf75: jf75,  intc76: intc76, jf76: jf76,intc77:intc77,jf77:jf77, intc78: intc78, jf78: jf78,
+    	analysis75:analysis75, analysis76:analysis76,analysis77:analysis77, analysis78:analysis78,quimpooblvd1: quimpooblvd1, intc79: intc79, jf79: jf79,  intc80: intc80, jf80: jf80,intc81:intc81,jf81:jf81, intc82: intc82, jf82: jf82,
+    	analysis79:analysis79, analysis80:analysis80,analysis81:analysis81, analysis82:analysis82, }));  
+	});
+});
+app.get('/sandaward',function(_req, _res){
 
-// 	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
-// 	  if (err) { return console.log(err); }
-// 	    //north 
-// 	  	sandawa = body.RWS[0].RW[15].DE;
-// 	  	const inttc11 = body.RWS[0].RW[14].FIS[0].FI[0].TMC.DE; 
-// 	  	const jffc11 = body.RWS[0].RW[14].FIS[0].FI[0].CF[0].JF;	
-// 	  	const inttc22 = body.RWS[0].RW[14].FIS[0].FI[1].TMC.DE;
-// 	  	const jffc22 = body.RWS[0].RW[14].FIS[0].FI[1].CF[0].JF;
-// 	  	const inttc33 = body.RWS[0].RW[14].FIS[0].FI[2].TMC.DE;
-// 	    const jffc33 = body.RWS[0].RW[14].FIS[0].FI[2].CF[0].JF;
-// 	  	const inttc44 = body.RWS[0].RW[14].FIS[0].FI[3].TMC.DE;
-// 	  	const jffc44 = body.RWS[0].RW[14].FIS[0].FI[3].CF[0].JF;
-// 	  	var x = ' ';//space ni
-// 	  	let analysis116 = "";
-// 	  	if(jffc11 == 0 || jffc11 < 4){
-// 	  		analysis116 = "For"+x+inttc11+x+"North bound Free flow of traffic";
-// 	  	}else if(jffc11 == 4 || jffc11 < 8){
-// 	  		analysis116 = "For"+x+inttc11+x+"North bound Sluggish flow of traffic";
-// 	  	}else if(jffc11 == 8 || jffc11 < 10){
-// 	  		analysis116 = "For"+x+inttc11+x+"North bound Slow flow of traffic";
-// 	  	}else if(jffc11 == 10){
-// 	  		analysis116 = "For"+x+intc11+x+"North bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis116 = "Cannot compute"
-// 	  	}
-// 	  	let analysis117 = "";
-// 	  	if(jffc22 == 0 || jffc22 < 4){
-// 	  		analysis117 = "For"+x+inttc22+x+"North bound Free flow of traffic";
-// 	  	}else if(jffc22 == 4 || jffc22 < 8){
-// 	  		analysis117 = "For"+x+inttc22+x+"North bound Sluggish flow of traffic";
-// 	  	}else if(jffc22 == 8 || jffc22 < 10){
-// 	  		analysis117 = "For"+x+inttc22+x+"North bound Slow flow of traffic";
-// 	  	}else if(jffc22 == 10){
-// 	  		analysis117 = "For"+x+inttc22+x+"North bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis117 = "Cannot compute"
-// 	  	}
-// 	  	let analysis118 = "";
-// 	  	if(jffc33 == 0 || jffc33 < 4){
-// 	  		analysis118 = "For"+x+inttc33+x+"North bound Free flow of traffic";
-// 	  	}else if(jffc33 == 4 || jffc33 < 8){
-// 	  		analysis118 = "For"+x+inttc3+x+"North bound Sluggish flow of traffic";
-// 	  	}else if(jffc33 == 8 || jffc33 < 10){
-// 	  		analysis118 = "For"+x+inttc3+x+"North bound Slow flow of traffic";
-// 	  	}else if(jffc33 == 10){
-// 	  		analysis118 = "For"+x+inttc3+x+"North bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis18 = "Cannot compute"
-// 	  	}
-// 	  	let analysis119 = "";
-// 	  	if(jffc44 == 0 || jffc44 < 4){
-// 	  		analysis119 = "For"+x+inttc44+x+"North bound Free flow of traffic";
-// 	  	}else if(jffc44 == 4 || jffc44 < 8){
-// 	  		analysis119 = "For"+x+inttc44+x+"North bound Sluggish flow of traffic";
-// 	  	}else if(jffc44 == 8 || jffc44 < 10){
-// 	  		analysis119 = "For"+x+inttc44+x+"North bound Slow flow of traffic";
-// 	  	}else if(jffc44 == 10){
-// 	  		analysis119 = "For"+x+inttc44+x+"North bound Traffic stopped or Road closed"
-// 	  	}else{
-// 	  		analysis119 = "Cannot compute"
-// 	  	}
-// 	  	_res.setHeader('Content-Type', 'application/json');
-//     	_res.send(JSON.stringify({ quimpo: quimpo,inttc11: inttc11, jffc11: jffc11,  inttc22: inttc22, jffc22: jffc22,inttc33:inttc33,inttc33:inttc33,inttc44: inttc44, jffc44: jffc44,
-//     	analysis116:analysis116, analysis117:analysis117,analysis118:analysis118, analysis119:analysis119,quimpo:quimpo}));  
-// 	});
-// });
+	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
+	  if (err) { return console.log(err); }
+	    //north 
+	  	sandawa1 = body.RWS[0].RW[15].DE;
+	  	const intc83 = body.RWS[0].RW[15].FIS[0].FI[0].TMC.DE; 
+	  	const jf83 = body.RWS[0].RW[15].FIS[0].FI[0].CF[0].JF;	
+	  	const intc84 = body.RWS[0].RW[15].FIS[0].FI[1].TMC.DE;
+	  	const jf84 = body.RWS[0].RW[15].FIS[0].FI[1].CF[0].JF;
+
+	  	var sa = ' ';//space ni
+	  	let analysis83 = "";
+	  	if(jf83 == 0 || jf83 < 4){
+	  		analysis83 = "For"+sa+intc83+sa+"South bound Free flow of traffic";
+	  	}else if(jf83 == 4 || jf83 < 8){
+	  		analysis83 = "For"+sa+intc83+sa+"South bound Sluggish flow of traffic";
+	  	}else if(jf83 == 8 || jf83 < 10){
+	  		analysis83 = "For"+sa+intc83+sa+"South bound Slow flow of traffic";
+	  	}else if(jf83 == 10){
+	  		analysis83 = "For"+sa+intc83+sa+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis83 = "Cannot compute"
+	  	}
+
+	  	let analysis84 = "";
+	  	if(jf84 == 0 || jf84 < 4){
+	  		analysis84 = "For"+sa+intc84+sa+"South bound Free flow of traffic";
+	  	}else if(jf84 == 4 || jf84 < 8){
+	  		analysis84 = "For"+sa+intc84+sa+"South bound Sluggish flow of traffic";
+	  	}else if(jf84 == 8 || jf84 < 10){
+	  		analysis84 = "For"+sa+intc84+sa+"South bound Slow flow of traffic";
+	  	}else if(jf84 == 10){
+	  		analysis84 = "For"+sa+intc84+sa+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis84 = "Cannot compute"
+	  	}
+
+	  	const sandawaa1 = body.RWS[0].RW[17].DE;
+	  	const intc85 = body.RWS[0].RW[17].FIS[0].FI[0].TMC.DE; 
+	  	const jf85 = body.RWS[0].RW[17].FIS[0].FI[0].CF[0].JF;	
+	  	const intc86 = body.RWS[0].RW[17].FIS[0].FI[1].TMC.DE;
+	  	const jf86 = body.RWS[0].RW[17].FIS[0].FI[1].CF[0].JF;
+
+	  	var sa = ' ';//space ni
+	  	let analysis85 = "";
+	  	if(jf85 == 0 || jf85 < 4){
+	  		analysis85 = "For"+sa+intc85+sa+"North bound Free flow of traffic";
+	  	}else if(jf85 == 4 || jf85 < 8){
+	  		analysis85 = "For"+sa+intc85+sa+"North bound Sluggish flow of traffic";
+	  	}else if(jf85 == 8 || jf85 < 10){
+	  		analysis85 = "For"+sa+intc85+sa+"North bound Slow flow of traffic";
+	  	}else if(jf85 == 10){
+	  		analysis85 = "For"+sa+intc85+sa+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis85 = "Cannot compute"
+	  	}
+
+	  	let analysis86 = "";
+	  	if(jf86 == 0 || jf86 < 4){
+	  		analysis86 = "For"+sa+intc86+sa+"North bound Free flow of traffic";
+	  	}else if(jf86 == 4 || jf86 < 8){
+	  		analysis86 = "For"+sa+intc86+sa+"North bound Sluggish flow of traffic";
+	  	}else if(jf86 == 8 || jf86 < 10){
+	  		analysis86 = "For"+sa+intc86+sa+"North bound Slow flow of traffic";
+	  	}else if(jf86 == 10){
+	  		analysis86 = "For"+sa+intc86+sa+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis86 = "Cannot compute"
+	  	}
+	  	
+	  	_res.setHeader('Content-Type', 'application/json');
+    	_res.send(JSON.stringify({ sandawa1: sandawa1, intc83: intc83, jf83: jf83,  intc84: intc84, jf84: jf84,
+    	analysis83:analysis83, analysis84:analysis84, sandawaa1: sandawaa1, intc85: intc85, jf85: jf85,  intc86: intc86, jf86: jf86,
+    	analysis85:analysis85, analysis86:analysis86}));  
+	});
+});
+
+app.get('/quezonblvd',function(_req, _res){
+
+	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
+	  if (err) { return console.log(err); }
+	    //north 
+	  	quezonblvd1 = body.RWS[0].RW[18].DE;
+	  	const intc87 = body.RWS[0].RW[18].FIS[0].FI[0].TMC.DE; 
+	  	const jf87 = body.RWS[0].RW[18].FIS[0].FI[0].CF[0].JF;	
+	  	const intc88 = body.RWS[0].RW[18].FIS[0].FI[1].TMC.DE;
+	  	const jf88 = body.RWS[0].RW[18].FIS[0].FI[1].CF[0].JF;
+	  	const intc89 = body.RWS[0].RW[18].FIS[0].FI[2].TMC.DE;
+	  	const jf89 = body.RWS[0].RW[18].FIS[0].FI[2].CF[0].JF;
+	  	const intc90 = body.RWS[0].RW[18].FIS[0].FI[3].TMC.DE;
+	  	const jf90 = body.RWS[0].RW[18].FIS[0].FI[3].CF[0].JF;
+	  	const intc91 = body.RWS[0].RW[18].FIS[0].FI[4].TMC.DE;
+	  	const jf91 = body.RWS[0].RW[18].FIS[0].FI[4].CF[0].JF;
+
+	  	var qu = ' ';//space ni
+	  	let analysis87 = "";
+	  	if(jf87 == 0 || jf87 < 4){
+	  		analysis87 = "For"+qu+intc87+qu+"South bound Free flow of traffic";
+	  	}else if(jf87 == 4 || jf87 < 8){
+	  		analysis87 = "For"+qu+intc87+qu+"South bound Sluggish flow of traffic";
+	  	}else if(jf87 == 8 || jf87 < 10){
+	  		analysis87 = "For"+qu+intc87+qu+"South bound Slow flow of traffic";
+	  	}else if(jf87 == 10){
+	  		analysis87 = "For"+qu+intc87+qu+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis87 = "Cannot compute"
+	  	}
+
+	  	let analysis88 = "";
+	  	if(jf88 == 0 || jf88 < 4){
+	  		analysis88 = "For"+qu+intc88+qu+"South bound Free flow of traffic";
+	  	}else if(jf88 == 4 || jf88 < 8){
+	  		analysis88 = "For"+qu+intc88+qu+"South bound Sluggish flow of traffic";
+	  	}else if(jf88 == 8 || jf88 < 10){
+	  		analysis88 = "For"+qu+intc88+qu+"South bound Slow flow of traffic";
+	  	}else if(jf88 == 10){
+	  		analysis88 = "For"+qu+intc88+qu+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis88 = "Cannot compute"
+	  	}
+
+	  	let analysis89 = "";
+	  	if(jf89 == 0 || jf89 < 4){
+	  		analysis89 = "For"+qu+intc89+qu+"South bound Free flow of traffic";
+	  	}else if(jf89 == 4 || jf89 < 8){
+	  		analysis89 = "For"+qu+intc89+qu+"South bound Sluggish flow of traffic";
+	  	}else if(jf89 == 8 || jf89 < 10){
+	  		analysis89 = "For"+qu+intc89+qu+"South bound Slow flow of traffic";
+	  	}else if(jf89 == 10){
+	  		analysis89 = "For"+qu+intc89+qu+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis89 = "Cannot compute"
+	  	}
+
+	  	let analysis90 = "";
+	  	if(jf90 == 0 || jf90 < 4){
+	  		analysis90 = "For"+qu+intc90+qu+"South bound Free flow of traffic";
+	  	}else if(jf90 == 4 || jf90 < 8){
+	  		analysis90 = "For"+qu+intc90+qu+"South bound Sluggish flow of traffic";
+	  	}else if(jf90 == 8 || jf90 < 10){
+	  		analysis90 = "For"+qu+intc90+qu+"South bound Slow flow of traffic";
+	  	}else if(jf90 == 10){
+	  		analysis90 = "For"+qu+intc90+qu+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis90 = "Cannot compute"
+	  	}
+
+	  	let analysis91 = "";
+	  	if(jf91 == 0 || jf91 < 4){
+	  		analysis91 = "For"+qu+intc91+qu+"South bound Free flow of traffic";
+	  	}else if(jf91 == 4 || jf91 < 8){
+	  		analysis91 = "For"+qu+intc91+qu+"South bound Sluggish flow of traffic";
+	  	}else if(jf91 == 8 || jf91 < 10){
+	  		analysis91 = "For"+qu+intc91+qu+"South bound Slow flow of traffic";
+	  	}else if(jf91 == 10){
+	  		analysis91 = "For"+qu+intc91+qu+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis91 = "Cannot compute"
+	  	}
+
+	  	const quezoonblvd1 = body.RWS[0].RW[19].DE;
+	  	const intc92 = body.RWS[0].RW[19].FIS[0].FI[0].TMC.DE; 
+	  	const jf92 = body.RWS[0].RW[19].FIS[0].FI[0].CF[0].JF;	
+	  	const intc93 = body.RWS[0].RW[19].FIS[0].FI[1].TMC.DE;
+	  	const jf93 = body.RWS[0].RW[19].FIS[0].FI[1].CF[0].JF;
+	  	const intc94 = body.RWS[0].RW[19].FIS[0].FI[2].TMC.DE;
+	  	const jf94 = body.RWS[0].RW[19].FIS[0].FI[2].CF[0].JF;
+	  	const intc95 = body.RWS[0].RW[19].FIS[0].FI[3].TMC.DE;
+	  	const jf95 = body.RWS[0].RW[19].FIS[0].FI[3].CF[0].JF;
+	  	const intc96 = body.RWS[0].RW[19].FIS[0].FI[4].TMC.DE;
+	  	const jf96 = body.RWS[0].RW[19].FIS[0].FI[4].CF[0].JF;
+
+	  	var qu = ' ';//space ni
+	  	let analysis92 = "";
+	  	if(jf92 == 0 || jf92 < 4){
+	  		analysis92 = "For"+qu+intc92+qu+"North bound Free flow of traffic";
+	  	}else if(jf92 == 4 || jf92 < 8){
+	  		analysis92 = "For"+qu+intc92+qu+"North bound Sluggish flow of traffic";
+	  	}else if(jf92 == 8 || jf92 < 10){
+	  		analysis92 = "For"+qu+intc92+qu+"North bound Slow flow of traffic";
+	  	}else if(jf92 == 10){
+	  		analysis92 = "For"+qu+intc92+qu+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis92 = "Cannot compute"
+	  	}
+
+	  	let analysis93 = "";
+	  	if(jf93 == 0 || jf93 < 4){
+	  		analysis93 = "For"+qu+intc93+qu+"North bound Free flow of traffic";
+	  	}else if(jf93 == 4 || jf93 < 8){
+	  		analysis93 = "For"+qu+intc93+qu+"North bound Sluggish flow of traffic";
+	  	}else if(jf93 == 8 || jf93 < 10){
+	  		analysis93 = "For"+qu+intc93+qu+"North bound Slow flow of traffic";
+	  	}else if(jf93 == 10){
+	  		analysis93 = "For"+qu+intc93+qu+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis93 = "Cannot compute"
+	  	}
+
+	  	let analysis94 = "";
+	  	if(jf94 == 0 || jf94 < 4){
+	  		analysis94 = "For"+qu+intc94+qu+"North bound Free flow of traffic";
+	  	}else if(jf94 == 4 || jf94 < 8){
+	  		analysis94 = "For"+qu+intc94+qu+"North bound Sluggish flow of traffic";
+	  	}else if(jf94 == 8 || jf94 < 10){
+	  		analysis94 = "For"+qu+intc94+qu+"North bound Slow flow of traffic";
+	  	}else if(jf94 == 10){
+	  		analysis94 = "For"+qu+intc94+qu+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis94 = "Cannot compute"
+	  	}
+
+	  	let analysis95 = "";
+	  	if(jf95 == 0 || jf95 < 4){
+	  		analysis95 = "For"+qu+intc95+qu+"North bound Free flow of traffic";
+	  	}else if(jf95 == 4 || jf95 < 8){
+	  		analysis95 = "For"+qu+intc95+qu+"North bound Sluggish flow of traffic";
+	  	}else if(jf95 == 8 || jf95 < 10){
+	  		analysis95 = "For"+qu+intc95+qu+"North bound Slow flow of traffic";
+	  	}else if(jf95 == 10){
+	  		analysis95 = "For"+qu+intc95+qu+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis95 = "Cannot compute"
+	  	}
+
+	  	let analysis96 = "";
+	  	if(jf96 == 0 || jf96 < 4){
+	  		analysis96 = "For"+qu+intc96+qu+"North bound Free flow of traffic";
+	  	}else if(jf96 == 4 || jf96 < 8){
+	  		analysis96 = "For"+qu+intc96+qu+"North bound Sluggish flow of traffic";
+	  	}else if(jf96 == 8 || jf96 < 10){
+	  		analysis96 = "For"+qu+intc96+qu+"North bound Slow flow of traffic";
+	  	}else if(jf96 == 10){
+	  		analysis96 = "For"+qu+intc96+qu+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis96 = "Cannot compute"
+	  	}
+	  	
+	  	_res.setHeader('Content-Type', 'application/json');
+    	_res.send(JSON.stringify({ quezonblvd1: quezonblvd1, intc87: intc87, jf87: jf87,  intc88: intc88, jf88: jf88, intc89: intc89, jf89: jf89, intc90: intc90, jf90: jf90, intc91: intc91, jf91: jf91,
+    	analysis87:analysis87, analysis88:analysis88, analysis89:analysis89, analysis90:analysis90, analysis91:analysis91, quezoonblvd1: quezoonblvd1, intc92: intc92, jf92: jf92,  intc93: intc93, jf93: jf93, intc94: intc94, jf94: jf94, intc95: intc95, jf95: jf95, intc96: intc96, jf96: jf96,
+    	analysis92:analysis92, analysis93:analysis93, analysis94:analysis94, analysis95:analysis95, analysis96:analysis96}));  
+	});
+});
+
+app.get('/mlquezonblvd',function(_req, _res){
+
+	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
+	  if (err) { return console.log(err); }
+	    //north 
+	  	mlquezon1 = body.RWS[0].RW[20].DE;
+	  	const intc97 = body.RWS[0].RW[20].FIS[0].FI[0].TMC.DE; 
+	  	const jf97 = body.RWS[0].RW[20].FIS[0].FI[0].CF[0].JF;	
+	  	const intc98 = body.RWS[0].RW[20].FIS[0].FI[1].TMC.DE;
+	  	const jf98 = body.RWS[0].RW[20].FIS[0].FI[1].CF[0].JF;
+	  	const intc99 = body.RWS[0].RW[20].FIS[0].FI[2].TMC.DE;
+	  	const jf99 = body.RWS[0].RW[20].FIS[0].FI[2].CF[0].JF;
+	  	const intc100 = body.RWS[0].RW[20].FIS[0].FI[3].TMC.DE;
+	  	const jf100 = body.RWS[0].RW[20].FIS[0].FI[3].CF[0].JF;
+	  	const intc101 = body.RWS[0].RW[20].FIS[0].FI[4].TMC.DE;
+	  	const jf101 = body.RWS[0].RW[20].FIS[0].FI[4].CF[0].JF;
+	  	const intc102 = body.RWS[0].RW[20].FIS[0].FI[5].TMC.DE;
+	  	const jf102 = body.RWS[0].RW[20].FIS[0].FI[5].CF[0].JF;
+
+	  	var ml = ' ';//space ni
+	  	let analysis97 = "";
+	  	if(jf97 == 0 || jf97 < 4){
+	  		analysis97 = "For"+ml+intc97+ml+"South bound Free flow of traffic";
+	  	}else if(jf97 == 4 || jf97 < 8){
+	  		analysis97 = "For"+ml+intc97+ml+"South bound Sluggish flow of traffic";
+	  	}else if(jf97 == 8 || jf97 < 10){
+	  		analysis97 = "For"+ml+intc97+ml+"South bound Slow flow of traffic";
+	  	}else if(jf97 == 10){
+	  		analysis97 = "For"+ml+intc97+ml+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis97 = "Cannot compute"
+	  	}
+
+	  	let analysis98 = "";
+	  	if(jf98 == 0 || jf98 < 4){
+	  		analysis98 = "For"+ml+intc98+ml+"South bound Free flow of traffic";
+	  	}else if(jf98 == 4 || jf98 < 8){
+	  		analysis98 = "For"+ml+intc98+ml+"South bound Sluggish flow of traffic";
+	  	}else if(jf98 == 8 || jf98 < 10){
+	  		analysis98 = "For"+ml+intc98+ml+"South bound Slow flow of traffic";
+	  	}else if(jf98 == 10){
+	  		analysis98 = "For"+ml+intc98+ml+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis98 = "Cannot compute"
+	  	}
+
+	  	let analysis99 = "";
+	  	if(jf99 == 0 || jf99 < 4){
+	  		analysis99 = "For"+ml+intc99+ml+"South bound Free flow of traffic";
+	  	}else if(jf99 == 4 || jf99 < 8){
+	  		analysis99 = "For"+ml+intc99+ml+"South bound Sluggish flow of traffic";
+	  	}else if(jf99 == 8 || jf99 < 10){
+	  		analysis99 = "For"+ml+intc99+ml+"South bound Slow flow of traffic";
+	  	}else if(jf99 == 10){
+	  		analysis99 = "For"+ml+intc99+ml+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis99 = "Cannot compute"
+	  	}
+
+	  	let analysis100 = "";
+	  	if(jf100 == 0 || jf100 < 4){
+	  		analysis100 = "For"+ml+intc100+ml+"South bound Free flow of traffic";
+	  	}else if(jf100 == 4 || jf100 < 8){
+	  		analysis100 = "For"+ml+intc100+ml+"South bound Sluggish flow of traffic";
+	  	}else if(jf100 == 8 || jf100 < 10){
+	  		analysis100 = "For"+ml+intc100+ml+"South bound Slow flow of traffic";
+	  	}else if(jf100 == 10){
+	  		analysis100 = "For"+ml+intc100+ml+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis100 = "Cannot compute"
+	  	}
+
+	  	let analysis101 = "";
+	  	if(jf101 == 0 || jf101 < 4){
+	  		analysis101 = "For"+ml+intc101+ml+"South bound Free flow of traffic";
+	  	}else if(jf101 == 4 || jf101 < 8){
+	  		analysis101 = "For"+ml+intc101+ml+"South bound Sluggish flow of traffic";
+	  	}else if(jf101 == 8 || jf101 < 10){
+	  		analysis101 = "For"+ml+intc101+ml+"South bound Slow flow of traffic";
+	  	}else if(jf101 == 10){
+	  		analysis101 = "For"+ml+intc101+ml+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis101 = "Cannot compute"
+	  	}
+
+	  	let analysis102 = "";
+	  	if(jf102 == 0 || jf102 < 4){
+	  		analysis102 = "For"+ml+intc102+ml+"South bound Free flow of traffic";
+	  	}else if(jf102 == 4 || jf102 < 8){
+	  		analysis102 = "For"+ml+intc102+ml+"South bound Sluggish flow of traffic";
+	  	}else if(jf102 == 8 || jf102 < 10){
+	  		analysis102 = "For"+ml+intc102+ml+"South bound Slow flow of traffic";
+	  	}else if(jf102 == 10){
+	  		analysis102 = "For"+ml+intc102+ml+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis102 = "Cannot compute"
+	  	}
+
+	  	const mlquezoon1 = body.RWS[0].RW[22].DE;
+	  	const intc103 = body.RWS[0].RW[22].FIS[0].FI[0].TMC.DE; 
+	  	const jf103 = body.RWS[0].RW[22].FIS[0].FI[0].CF[0].JF;	
+	  	const intc104 = body.RWS[0].RW[22].FIS[0].FI[1].TMC.DE;
+	  	const jf104 = body.RWS[0].RW[22].FIS[0].FI[1].CF[0].JF;
+	  	const intc105 = body.RWS[0].RW[22].FIS[0].FI[2].TMC.DE;
+	  	const jf105 = body.RWS[0].RW[22].FIS[0].FI[2].CF[0].JF;
+	  	const intc106 = body.RWS[0].RW[22].FIS[0].FI[3].TMC.DE;
+	  	const jf106 = body.RWS[0].RW[22].FIS[0].FI[3].CF[0].JF;
+	  	const intc107 = body.RWS[0].RW[22].FIS[0].FI[4].TMC.DE;
+	  	const jf107 = body.RWS[0].RW[22].FIS[0].FI[4].CF[0].JF;
+	  	const intc108 = body.RWS[0].RW[22].FIS[0].FI[5].TMC.DE;
+	  	const jf108 = body.RWS[0].RW[22].FIS[0].FI[5].CF[0].JF;
+
+	  	var ml = ' ';//space ni
+	  	let analysis103 = "";
+	  	if(jf103 == 0 || jf103 < 4){
+	  		analysis103 = "For"+ml+intc103+ml+"North bound Free flow of traffic";
+	  	}else if(jf103 == 4 || jf103 < 8){
+	  		analysis103 = "For"+ml+intc103+ml+"North bound Sluggish flow of traffic";
+	  	}else if(jf103 == 8 || jf103 < 10){
+	  		analysis103 = "For"+ml+intc103+ml+"North bound Slow flow of traffic";
+	  	}else if(jf103 == 10){
+	  		analysis103 = "For"+ml+intc103+ml+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis103 = "Cannot compute"
+	  	}
+
+	  	let analysis104 = "";
+	  	if(jf104 == 0 || jf104 < 4){
+	  		analysis104 = "For"+ml+intc104+ml+"North bound Free flow of traffic";
+	  	}else if(jf104 == 4 || jf104 < 8){
+	  		analysis104 = "For"+ml+intc104+ml+"North bound Sluggish flow of traffic";
+	  	}else if(jf104 == 8 || jf104 < 10){
+	  		analysis104 = "For"+ml+intc104+ml+"North bound Slow flow of traffic";
+	  	}else if(jf104 == 10){
+	  		analysis104 = "For"+ml+intc104+ml+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis104 = "Cannot compute"
+	  	}
+
+	  	let analysis105 = "";
+	  	if(jf105 == 0 || jf105 < 4){
+	  		analysis105 = "For"+ml+intc105+ml+"North bound Free flow of traffic";
+	  	}else if(jf105 == 4 || jf105 < 8){
+	  		analysis105 = "For"+ml+intc105+ml+"North bound Sluggish flow of traffic";
+	  	}else if(jf105 == 8 || jf105 < 10){
+	  		analysis105 = "For"+ml+intc105+ml+"North bound Slow flow of traffic";
+	  	}else if(jf105 == 10){
+	  		analysis105 = "For"+ml+intc105+ml+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis105 = "Cannot compute"
+	  	}
+
+	  	let analysis106 = "";
+	  	if(jf106 == 0 || jf106 < 4){
+	  		analysis106 = "For"+ml+intc106+ml+"North bound Free flow of traffic";
+	  	}else if(jf106 == 4 || jf106 < 8){
+	  		analysis106 = "For"+ml+intc106+ml+"North bound Sluggish flow of traffic";
+	  	}else if(jf106 == 8 || jf106 < 10){
+	  		analysis106 = "For"+ml+intc106+ml+"North bound Slow flow of traffic";
+	  	}else if(jf106 == 10){
+	  		analysis106 = "For"+ml+intc106+ml+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis106 = "Cannot compute"
+	  	}
+
+	  	let analysis107 = "";
+	  	if(jf107 == 0 || jf107 < 4){
+	  		analysis107 = "For"+ml+intc107+ml+"North bound Free flow of traffic";
+	  	}else if(jf107 == 4 || jf107 < 8){
+	  		analysis107 = "For"+ml+intc107+ml+"North bound Sluggish flow of traffic";
+	  	}else if(jf107 == 8 || jf107 < 10){
+	  		analysis107 = "For"+ml+intc107+ml+"North bound Slow flow of traffic";
+	  	}else if(jf107 == 10){
+	  		analysis107 = "For"+ml+intc107+ml+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis107 = "Cannot compute"
+	  	}
+
+	  	let analysis108 = "";
+	  	if(jf108 == 0 || jf108 < 4){
+	  		analysis108 = "For"+ml+intc108+ml+"North bound Free flow of traffic";
+	  	}else if(jf108 == 4 || jf108 < 8){
+	  		analysis108 = "For"+ml+intc108+ml+"North bound Sluggish flow of traffic";
+	  	}else if(jf108 == 8 || jf108 < 10){
+	  		analysis108 = "For"+ml+intc108+ml+"North bound Slow flow of traffic";
+	  	}else if(jf108 == 10){
+	  		analysis108 = "For"+ml+intc108+ml+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis108 = "Cannot compute"
+	  	}
+	  	
+	  	_res.setHeader('Content-Type', 'application/json');
+    	_res.send(JSON.stringify({ mlquezon1: mlquezon1, intc97: intc97, jf97: jf97,  intc98: intc98, jf98: jf98, intc99: intc99, jf99: jf99, intc100: intc100, jf100: jf100, intc101: intc101, jf101: jf101, intc102: intc102, jf102: jf102,
+    	analysis97:analysis97, analysis98:analysis98, analysis99:analysis99, analysis100:analysis100, analysis101:analysis101, analysis102: analysis102, mlquezoon1: mlquezoon1, intc103: intc103, jf103: jf103,  intc104: intc104, jf104: jf104, intc105: intc105, jf105: jf105, intc106: intc106, jf106: jf106, intc107: intc107, jf107: jf107, intc108: intc108, jf108: jf108,
+    	analysis103:analysis103, analysis104:analysis104, analysis105:analysis105, analysis106:analysis106, analysis107:analysis107, analysis108: analysis108}));  
+	});
+});
+
+app.get('/cabaguio',function(_req, _res){
+
+	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
+	  if (err) { return console.log(err); }
+	    //north 
+	  	cabaguio1 = body.RWS[0].RW[21].DE;
+	  	const intc109 = body.RWS[0].RW[21].FIS[0].FI[0].TMC.DE; 
+	  	const jf109 = body.RWS[0].RW[21].FIS[0].FI[0].CF[0].JF;	
+	  	const intc110 = body.RWS[0].RW[21].FIS[0].FI[1].TMC.DE;
+	  	const jf110 = body.RWS[0].RW[21].FIS[0].FI[1].CF[0].JF;
+	  	
+
+	  	var ca = ' ';//space ni
+	  	let analysis109 = "";
+	  	if(jf109 == 0 || jf109 < 4){
+	  		analysis109 = "For"+ca+intc109+ca+"South bound Free flow of traffic";
+	  	}else if(jf109 == 4 || jf109 < 8){
+	  		analysis109 = "For"+ca+intc109+ca+"South bound Sluggish flow of traffic";
+	  	}else if(jf109 == 8 || jf109 < 10){
+	  		analysis109 = "For"+ca+intc109+ca+"South bound Slow flow of traffic";
+	  	}else if(jf109 == 10){
+	  		analysis109 = "For"+ca+intc109+ca+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis109 = "Cannot compute"
+	  	}
+
+	  	let analysis110 = "";
+	  	if(jf110 == 0 || jf110 < 4){
+	  		analysis110 = "For"+ca+intc110+ca+"South bound Free flow of traffic";
+	  	}else if(jf110 == 4 || jf110 < 8){
+	  		analysis110 = "For"+ca+intc110+ca+"South bound Sluggish flow of traffic";
+	  	}else if(jf110 == 8 || jf110 < 10){
+	  		analysis110 = "For"+ca+intc110+ca+"South bound Slow flow of traffic";
+	  	}else if(jf110 == 10){
+	  		analysis110 = "For"+ca+intc110+ca+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis110 = "Cannot compute"
+	  	}
+
+	  	const cabaguioo1 = body.RWS[0].RW[24].DE;
+	  	const intc111 = body.RWS[0].RW[24].FIS[0].FI[0].TMC.DE; 
+	  	const jf111 = body.RWS[0].RW[24].FIS[0].FI[0].CF[0].JF;	
+	  	const intc112 = body.RWS[0].RW[24].FIS[0].FI[1].TMC.DE;
+	  	const jf112 = body.RWS[0].RW[24].FIS[0].FI[1].CF[0].JF;
+
+	  	var ca = ' ';//space ni
+	  	let analysis111 = "";
+	  	if(jf111 == 0 || jf111 < 4){
+	  		analysis111 = "For"+ca+intc111+ca+"North bound Free flow of traffic";
+	  	}else if(jf111 == 4 || jf111 < 8){
+	  		analysis111 = "For"+ca+intc111+ca+"North bound Sluggish flow of traffic";
+	  	}else if(jf111 == 8 || jf111 < 10){
+	  		analysis111 = "For"+ca+intc111+ca+"North bound Slow flow of traffic";
+	  	}else if(jf111 == 10){
+	  		analysis111 = "For"+ca+intc111+ca+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis111 = "Cannot compute"
+	  	}
+
+	  	let analysis112 = "";
+	  	if(jf112 == 0 || jf112 < 4){
+	  		analysis112 = "For"+ca+intc112+ca+"North bound Free flow of traffic";
+	  	}else if(jf112 == 4 || jf112 < 8){
+	  		analysis112 = "For"+ca+intc112+ca+"North bound Sluggish flow of traffic";
+	  	}else if(jf112 == 8 || jf112 < 10){
+	  		analysis112 = "For"+ca+intc112+ca+"North bound Slow flow of traffic";
+	  	}else if(jf112 == 10){
+	  		analysis112 = "For"+ca+intc112+ca+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis112 = "Cannot compute"
+	  	}
+	  	
+	  	_res.setHeader('Content-Type', 'application/json');
+    	_res.send(JSON.stringify({ cabaguio1: cabaguio1, intc109: intc109, jf109: jf109,  intc110: intc110, jf110: jf110, analysis109:analysis109, analysis110:analysis110, cabaguioo1: cabaguioo1, intc111: intc111, jf111: jf111, intc112: intc112, jf112: jf112, 
+    	 analysis111:analysis111, analysis112: analysis112}));  
+	});
+});
+
+app.get('/dacudao',function(_req, _res){
+
+	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
+	  if (err) { return console.log(err); }
+	    //north 
+	  	dacudao1 = body.RWS[0].RW[23].DE;
+	  	const intc113 = body.RWS[0].RW[23].FIS[0].FI[0].TMC.DE; 
+	  	const jf113 = body.RWS[0].RW[23].FIS[0].FI[0].CF[0].JF;	
+	  	const intc114 = body.RWS[0].RW[23].FIS[0].FI[1].TMC.DE;
+	  	const jf114 = body.RWS[0].RW[23].FIS[0].FI[1].CF[0].JF;
+	  	
+
+	  	var da = ' ';//space ni
+	  	let analysis113 = "";
+	  	if(jf113 == 0 || jf113 < 4){
+	  		analysis113 = "For"+da+intc113+da+"South bound Free flow of traffic";
+	  	}else if(jf113 == 4 || jf113 < 8){
+	  		analysis113 = "For"+da+intc113+da+"South bound Sluggish flow of traffic";
+	  	}else if(jf113 == 8 || jf113 < 10){
+	  		analysis113 = "For"+da+intc113+da+"South bound Slow flow of traffic";
+	  	}else if(jf113 == 10){
+	  		analysis113 = "For"+da+intc113+da+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis113 = "Cannot compute"
+	  	}
+
+	  	let analysis114 = "";
+	  	if(jf114 == 0 || jf114 < 4){
+	  		analysis114 = "For"+da+intc114+da+"South bound Free flow of traffic";
+	  	}else if(jf114 == 4 || jf114 < 8){
+	  		analysis114 = "For"+da+intc114+da+"South bound Sluggish flow of traffic";
+	  	}else if(jf114 == 8 || jf114 < 10){
+	  		analysis114 = "For"+da+intc114+da+"South bound Slow flow of traffic";
+	  	}else if(jf114 == 10){
+	  		analysis114 = "For"+da+intc114+da+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis114 = "Cannot compute"
+	  	}
+
+	  	const dacudaoo1 = body.RWS[0].RW[25].DE;
+	  	const intc115 = body.RWS[0].RW[25].FIS[0].FI[0].TMC.DE; 
+	  	const jf115 = body.RWS[0].RW[25].FIS[0].FI[0].CF[0].JF;	
+	  	const intc116 = body.RWS[0].RW[25].FIS[0].FI[1].TMC.DE;
+	  	const jf116 = body.RWS[0].RW[25].FIS[0].FI[1].CF[0].JF;
+
+	  	var da = ' ';//space ni
+	  	let analysis115 = "";
+	  	if(jf115 == 0 || jf115 < 4){
+	  		analysis115 = "For"+da+intc115+da+"North bound Free flow of traffic";
+	  	}else if(jf115 == 4 || jf115 < 8){
+	  		analysis115 = "For"+da+intc115+da+"North bound Sluggish flow of traffic";
+	  	}else if(jf115 == 8 || jf115 < 10){
+	  		analysis115 = "For"+da+intc115+da+"North bound Slow flow of traffic";
+	  	}else if(jf115 == 10){
+	  		analysis115 = "For"+da+intc115+da+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis115 = "Cannot compute"
+	  	}
+
+	  	let analysis116 = "";
+	  	if(jf116 == 0 || jf116 < 4){
+	  		analysis116 = "For"+da+intc116+da+"North bound Free flow of traffic";
+	  	}else if(jf116 == 4 || jf116 < 8){
+	  		analysis116 = "For"+da+intc116+da+"North bound Sluggish flow of traffic";
+	  	}else if(jf116 == 8 || jf116 < 10){
+	  		analysis116 = "For"+da+intc116+da+"North bound Slow flow of traffic";
+	  	}else if(jf116 == 10){
+	  		analysis116 = "For"+da+intc116+da+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis116 = "Cannot compute"
+	  	}
+	  	
+	  	_res.setHeader('Content-Type', 'application/json');
+    	_res.send(JSON.stringify({ dacudao1: dacudao1, intc113: intc113, jf113: jf113,  intc114: intc114, jf114: jf114, analysis113:analysis113, analysis114:analysis114, dacudaoo1: dacudaoo1, intc115: intc115, jf115: jf115, intc116: intc116, jf116: jf116, 
+    	 analysis115:analysis115, analysis116: analysis116}));  
+	});
+});
+
+app.get('/pichonst',function(_req, _res){
+
+	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
+	  if (err) { return console.log(err); }
+	    //north 
+	  	pichonst = body.RWS[0].RW[26].DE;
+	  	const intc117 = body.RWS[0].RW[26].FIS[0].FI[0].TMC.DE; 
+	  	const jf117 = body.RWS[0].RW[26].FIS[0].FI[0].CF[0].JF;	
+	  	const intc118 = body.RWS[0].RW[26].FIS[0].FI[1].TMC.DE;
+	  	const jf118 = body.RWS[0].RW[26].FIS[0].FI[1].CF[0].JF;
+	  	const intc119 = body.RWS[0].RW[26].FIS[0].FI[2].TMC.DE;
+	  	const jf119 = body.RWS[0].RW[26].FIS[0].FI[2].CF[0].JF;
+	  	const intc120 = body.RWS[0].RW[26].FIS[0].FI[3].TMC.DE;
+	  	const jf120 = body.RWS[0].RW[26].FIS[0].FI[3].CF[0].JF;
+	  	const intc121 = body.RWS[0].RW[26].FIS[0].FI[4].TMC.DE;
+	  	const jf121 = body.RWS[0].RW[26].FIS[0].FI[4].CF[0].JF;
+	  	
+
+	  	var pic = ' ';//space ni
+	  	let analysis117 = "";
+	  	if(jf117 == 0 || jf117 < 4){
+	  		analysis117 = "For"+pic+intc117+pic+"South bound Free flow of traffic";
+	  	}else if(jf117 == 4 || jf117 < 8){
+	  		analysis117 = "For"+pic+intc117+pic+"South bound Sluggish flow of traffic";
+	  	}else if(jf117 == 8 || jf117 < 10){
+	  		analysis117 = "For"+pic+intc117+pic+"South bound Slow flow of traffic";
+	  	}else if(jf117 == 10){
+	  		analysis117 = "For"+pic+intc117+pic+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis117 = "Cannot compute"
+	  	}
+
+	  	let analysis118 = "";
+	  	if(jf118 == 0 || jf118 < 4){
+	  		analysis118 = "For"+pic+intc118+pic+"South bound Free flow of traffic";
+	  	}else if(jf118 == 4 || jf118 < 8){
+	  		analysis118 = "For"+pic+intc118+pic+"South bound Sluggish flow of traffic";
+	  	}else if(jf118 == 8 || jf118 < 10){
+	  		analysis118 = "For"+pic+intc118+pic+"South bound Slow flow of traffic";
+	  	}else if(jf118 == 10){
+	  		analysis118 = "For"+pic+intc118+pic+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis118 = "Cannot compute"
+	  	}
+
+	  	let analysis119 = "";
+	  	if(jf119 == 0 || jf119 < 4){
+	  		analysis119 = "For"+pic+intc119+pic+"South bound Free flow of traffic";
+	  	}else if(jf119 == 4 || jf119 < 8){
+	  		analysis119 = "For"+pic+intc119+pic+"South bound Sluggish flow of traffic";
+	  	}else if(jf119 == 8 || jf119 < 10){
+	  		analysis119 = "For"+pic+intc119+pic+"South bound Slow flow of traffic";
+	  	}else if(jf119 == 10){
+	  		analysis119 = "For"+pic+intc119+pic+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis119 = "Cannot compute"
+	  	}
+
+	  	let analysis120 = "";
+	  	if(jf120 == 0 || jf120 < 4){
+	  		analysis120 = "For"+pic+intc120+pic+"South bound Free flow of traffic";
+	  	}else if(jf120 == 4 || jf120 < 8){
+	  		analysis120 = "For"+pic+intc120+pic+"South bound Sluggish flow of traffic";
+	  	}else if(jf120 == 8 || jf120 < 10){
+	  		analysis120 = "For"+pic+intc120+pic+"South bound Slow flow of traffic";
+	  	}else if(jf120 == 10){
+	  		analysis120 = "For"+pic+intc120+pic+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis120 = "Cannot compute"
+	  	}
+
+	  	let analysis121 = "";
+	  	if(jf121 == 0 || jf121 < 4){
+	  		analysis121 = "For"+pic+intc121+pic+"South bound Free flow of traffic";
+	  	}else if(jf121 == 4 || jf121 < 8){
+	  		analysis121 = "For"+pic+intc121+pic+"South bound Sluggish flow of traffic";
+	  	}else if(jf121 == 8 || jf121 < 10){
+	  		analysis121 = "For"+pic+intc121+pic+"South bound Slow flow of traffic";
+	  	}else if(jf121 == 10){
+	  		analysis121 = "For"+pic+intc121+pic+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis121 = "Cannot compute"
+	  	}
+
+	  	const pichoonst1 = body.RWS[0].RW[27].DE;
+	  	const intc122 = body.RWS[0].RW[27].FIS[0].FI[0].TMC.DE; 
+	  	const jf122 = body.RWS[0].RW[27].FIS[0].FI[0].CF[0].JF;	
+
+	  	var pic = ' ';//space ni
+	  	let analysis122 = "";
+	  	if(jf122 == 0 || jf122 < 4){
+	  		analysis122 = "For"+pic+intc122+pic+"North bound Free flow of traffic";
+	  	}else if(jf122 == 4 || jf122 < 8){
+	  		analysis122 = "For"+pic+intc122+pic+"North bound Sluggish flow of traffic";
+	  	}else if(jf122 == 8 || jf122 < 10){
+	  		analysis122 = "For"+pic+intc122+pic+"North bound Slow flow of traffic";
+	  	}else if(jf122 == 10){
+	  		analysis122 = "For"+pic+intc122+pic+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis122 = "Cannot compute"
+	  	}
+
+	  	
+	  	_res.setHeader('Content-Type', 'application/json');
+    	_res.send(JSON.stringify({ pichonst1: pichonst1, intc117: intc117, jf117: jf117,  intc118: intc118, jf118: jf118, intc119: intc119, jf119: jf119, intc120: intc120, jf120: jf120, intc121: intc121, jf121: jf121, analysis117:analysis117, analysis118:analysis118, analysis118:analysis119, analysis118:analysis120, analysis118:analysis121,
+    	 pichoonst1: pichonst1, intc122: intc122, jf122: jf122, analysis122:analysis122}));  
+	});
+});
+
+app.get('/sanpedrost',function(_req, _res){
+
+	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
+	  if (err) { return console.log(err); }
+	    //north 
+	  	sanpedro1 = body.RWS[0].RW[28].DE;
+	  	const intc123 = body.RWS[0].RW[28].FIS[0].FI[0].TMC.DE; 
+	  	const jf123 = body.RWS[0].RW[28].FIS[0].FI[0].CF[0].JF;	
+	  	const intc124 = body.RWS[0].RW[28].FIS[0].FI[1].TMC.DE;
+	  	const jf124 = body.RWS[0].RW[28].FIS[0].FI[1].CF[0].JF;
+	  	const intc125 = body.RWS[0].RW[28].FIS[0].FI[2].TMC.DE;
+	  	const jf125 = body.RWS[0].RW[28].FIS[0].FI[2].CF[0].JF;
+	  	const intc126 = body.RWS[0].RW[28].FIS[0].FI[3].TMC.DE;
+	  	const jf126 = body.RWS[0].RW[28].FIS[0].FI[3].CF[0].JF;
+	  	
+	  	var san = ' ';//space ni
+	  	let analysis123 = "";
+	  	if(jf123 == 0 || jf123 < 4){
+	  		analysis123 = "For"+san+intc123+san+"North bound Free flow of traffic";
+	  	}else if(jf123 == 4 || jf123 < 8){
+	  		analysis123 = "For"+san+intc123+san+"North bound Sluggish flow of traffic";
+	  	}else if(jf123 == 8 || jf123 < 10){
+	  		analysis123 = "For"+san+intc123+san+"North bound Slow flow of traffic";
+	  	}else if(jf123 == 10){
+	  		analysis123 = "For"+san+intc123+san+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis123 = "Cannot compute"
+	  	}
+
+	  	let analysis124 = "";
+	  	if(jf124 == 0 || jf124 < 4){
+	  		analysis124 = "For"+san+intc124+san+"North bound Free flow of traffic";
+	  	}else if(jf124 == 4 || jf124 < 8){
+	  		analysis124 = "For"+san+intc124+san+"North bound Sluggish flow of traffic";
+	  	}else if(jf124 == 8 || jf124 < 10){
+	  		analysis124 = "For"+san+intc124+san+"North bound Slow flow of traffic";
+	  	}else if(jf124 == 10){
+	  		analysis124 = "For"+san+intc124+san+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis124 = "Cannot compute"
+	  	}
+
+	  	let analysis125 = "";
+	  	if(jf125 == 0 || jf125 < 4){
+	  		analysis125 = "For"+san+intc125+san+"North bound Free flow of traffic";
+	  	}else if(jf125 == 4 || jf125 < 8){
+	  		analysis125 = "For"+san+intc125+san+"North bound Sluggish flow of traffic";
+	  	}else if(jf125 == 8 || jf125 < 10){
+	  		analysis125 = "For"+san+intc125+san+"North bound Slow flow of traffic";
+	  	}else if(jf125 == 10){
+	  		analysis125 = "For"+san+intc125+san+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis125 = "Cannot compute"
+	  	}
+
+	  	let analysis126 = "";
+	  	if(jf126 == 0 || jf126 < 4){
+	  		analysis126 = "For"+san+intc126+san+"North bound Free flow of traffic";
+	  	}else if(jf126 == 4 || jf126 < 8){
+	  		analysis126 = "For"+san+intc126+san+"North bound Sluggish flow of traffic";
+	  	}else if(jf126 == 8 || jf126 < 10){
+	  		analysis126 = "For"+san+intc126+san+"North bound Slow flow of traffic";
+	  	}else if(jf126 == 10){
+	  		analysis126 = "For"+san+intc126+san+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis126 = "Cannot compute"
+	  	}
+
+	  	
+	  	_res.setHeader('Content-Type', 'application/json');
+    	_res.send(JSON.stringify({ sanpedro1: sanpedro1, intc123: intc123, jf123: jf123,  intc124: intc124, jf124: jf124, intc125: intc125, jf125: jf125, intc126: intc126, jf126: jf126, 
+    	 analysis123:analysis123, analysis124:analysis124, analysis125:analysis125, analysis126:analysis126}));  
+	});
+});
+
+app.get('/bonifaciost',function(_req, _res){
+
+	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
+	  if (err) { return console.log(err); }
+	    //north 
+	  	bonifaciost1 = body.RWS[0].RW[30].DE;
+	  	const intc127 = body.RWS[0].RW[30].FIS[0].FI[0].TMC.DE; 
+	  	const jf127 = body.RWS[0].RW[30].FIS[0].FI[0].CF[0].JF;	
+	  	const intc128 = body.RWS[0].RW[30].FIS[0].FI[1].TMC.DE;
+	  	const jf128 = body.RWS[0].RW[30].FIS[0].FI[1].CF[0].JF;
+	  	const intc129 = body.RWS[0].RW[30].FIS[0].FI[2].TMC.DE;
+	  	const jf129 = body.RWS[0].RW[30].FIS[0].FI[2].CF[0].JF;
+	  	
+	  	var bo = ' ';//space ni
+	  	let analysis127 = "";
+	  	if(jf127 == 0 || jf127 < 4){
+	  		analysis127 = "For"+bo+intc127+bo+"South bound Free flow of traffic";
+	  	}else if(jf127 == 4 || jf127 < 8){
+	  		analysis127 = "For"+bo+intc127+bo+"South bound Sluggish flow of traffic";
+	  	}else if(jf127 == 8 || jf127 < 10){
+	  		analysis127 = "For"+bo+intc127+bo+"South bound Slow flow of traffic";
+	  	}else if(jf127 == 10){
+	  		analysis127 = "For"+bo+intc127+bo+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis127 = "Cannot compute"
+	  	}
+
+	  	let analysis128 = "";
+	  	if(jf128 == 0 || jf128 < 4){
+	  		analysis128 = "For"+bo+intc128+bo+"South bound Free flow of traffic";
+	  	}else if(jf128 == 4 || jf128 < 8){
+	  		analysis128 = "For"+bo+intc128+bo+"South bound Sluggish flow of traffic";
+	  	}else if(jf128 == 8 || jf128 < 10){
+	  		analysis128 = "For"+bo+intc128+bo+"South bound Slow flow of traffic";
+	  	}else if(jf128 == 10){
+	  		analysis128 = "For"+bo+intc128+bo+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis128 = "Cannot compute"
+	  	}
+
+	  	let analysis129 = "";
+	  	if(jf129 == 0 || jf129 < 4){
+	  		analysis129 = "For"+bo+intc129+bo+"South bound Free flow of traffic";
+	  	}else if(jf129 == 4 || jf129 < 8){
+	  		analysis129 = "For"+bo+intc129+bo+"South bound Sluggish flow of traffic";
+	  	}else if(jf129 == 8 || jf129 < 10){
+	  		analysis129 = "For"+bo+intc129+bo+"South bound Slow flow of traffic";
+	  	}else if(jf129 == 10){
+	  		analysis129 = "For"+bo+intc129+bo+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis129 = "Cannot compute"
+	  	}
+
+	  	const bonifacioost1 = body.RWS[0].RW[33].DE;
+	  	const intc130 = body.RWS[0].RW[33].FIS[0].FI[0].TMC.DE; 
+	  	const jf130 = body.RWS[0].RW[33].FIS[0].FI[0].CF[0].JF;	
+	  	const intc131 = body.RWS[0].RW[33].FIS[0].FI[1].TMC.DE;
+	  	const jf131 = body.RWS[0].RW[33].FIS[0].FI[1].CF[0].JF;
+	  	const intc132 = body.RWS[0].RW[33].FIS[0].FI[2].TMC.DE;
+	  	const jf132 = body.RWS[0].RW[33].FIS[0].FI[2].CF[0].JF;
+
+
+	  	var bo = ' ';//space ni
+	  	let analysis130 = "";
+	  	if(jf130 == 0 || jf130 < 4){
+	  		analysis130 = "For"+bo+intc130+bo+"North bound Free flow of traffic";
+	  	}else if(jf130 == 4 || jf130 < 8){
+	  		analysis130 = "For"+bo+intc130+bo+"North bound Sluggish flow of traffic";
+	  	}else if(jf130 == 8 || jf130 < 10){
+	  		analysis130 = "For"+bo+intc130+bo+"North bound Slow flow of traffic";
+	  	}else if(jf130 == 10){
+	  		analysis130 = "For"+bo+intc130+bo+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis130 = "Cannot compute"
+	  	}
+	  	let analysis131 = "";
+	  	if(jf131 == 0 || jf131 < 4){
+	  		analysis131 = "For"+bo+intc131+bo+"North bound Free flow of traffic";
+	  	}else if(jf131 == 4 || jf131 < 8){
+	  		analysis131 = "For"+bo+intc131+bo+"North bound Sluggish flow of traffic";
+	  	}else if(jf131 == 8 || jf131 < 10){
+	  		analysis131 = "For"+bo+intc131+bo+"North bound Slow flow of traffic";
+	  	}else if(jf131 == 10){
+	  		analysis131 = "For"+bo+intc131+bo+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis131 = "Cannot compute"
+	  	}
+	  	let analysis132 = "";
+	  	if(jf132 == 0 || jf132 < 4){
+	  		analysis132 = "For"+bo+intc132+bo+"North bound Free flow of traffic";
+	  	}else if(jf132 == 4 || jf132 < 8){
+	  		analysis132 = "For"+bo+intc132+bo+"North bound Sluggish flow of traffic";
+	  	}else if(jf132 == 8 || jf132 < 10){
+	  		analysis132 = "For"+bo+intc132+bo+"North bound Slow flow of traffic";
+	  	}else if(jf132 == 10){
+	  		analysis132 = "For"+bo+intc132+bo+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis132 = "Cannot compute"
+	  	}
+
+	  	
+	  	_res.setHeader('Content-Type', 'application/json');
+    	_res.send(JSON.stringify({ bonifaciost1: bonifaciost1, intc127: intc127, jf127: jf127,  intc128: intc128, jf128: jf128, intc129: intc129, jf129: jf129, analysis127:analysis127, analysis128:analysis128, analysis129:analysis129,
+    	 bonifacioost1: bonifacioost1, intc130: intc130, jf130: jf130, intc131: intc131, jf131: jf131, intc132: intc132, jf132: jf132,  analysis130:analysis130,  analysis131:analysis131,  analysis132:analysis132}));  
+	});
+});
+
+app.get('/ftorrest',function(_req, _res){
+
+	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
+	  if (err) { return console.log(err); }
+	    //north 
+	  	ftorrest1 = body.RWS[0].RW[31].DE;
+	  	const intc133 = body.RWS[0].RW[31].FIS[0].FI[0].TMC.DE; 
+	  	const jf133 = body.RWS[0].RW[31].FIS[0].FI[0].CF[0].JF;	
+	  	const intc134 = body.RWS[0].RW[31].FIS[0].FI[1].TMC.DE;
+	  	const jf134 = body.RWS[0].RW[31].FIS[0].FI[1].CF[0].JF;
+	  	
+	  	var ft = ' ';//space ni
+	  	let analysis133 = "";
+	  	if(jf133 == 0 || jf133 < 4){
+	  		analysis133 = "For"+ft+intc133+ft+"South bound Free flow of traffic";
+	  	}else if(jf133 == 4 || jf133 < 8){
+	  		analysis133 = "For"+ft+intc133+ft+"South bound Sluggish flow of traffic";
+	  	}else if(jf133 == 8 || jf133 < 10){
+	  		analysis133 = "For"+ft+intc133+ft+"South bound Slow flow of traffic";
+	  	}else if(jf133 == 10){
+	  		analysis133 = "For"+ft+intc133+ft+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis133 = "Cannot compute"
+	  	}
+
+	  	let analysis134 = "";
+	  	if(jf134 == 0 || jf134 < 4){
+	  		analysis134 = "For"+ft+intc134+ft+"South bound Free flow of traffic";
+	  	}else if(jf134 == 4 || jf134 < 8){
+	  		analysis134 = "For"+ft+intc134+ft+"South bound Sluggish flow of traffic";
+	  	}else if(jf134 == 8 || jf134 < 10){
+	  		analysis134 = "For"+ft+intc134+ft+"South bound Slow flow of traffic";
+	  	}else if(jf134 == 10){
+	  		analysis134 = "For"+ft+intc134+ft+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis134 = "Cannot compute"
+	  	}
+
+
+	  	const ftorreest1 = body.RWS[0].RW[32].DE;
+	  	const intc135 = body.RWS[0].RW[32].FIS[0].FI[0].TMC.DE; 
+	  	const jf135 = body.RWS[0].RW[32].FIS[0].FI[0].CF[0].JF;	
+	  	const intc136 = body.RWS[0].RW[32].FIS[0].FI[1].TMC.DE;
+	  	const jf136 = body.RWS[0].RW[32].FIS[0].FI[1].CF[0].JF;
+
+	  	var ft = ' ';//space ni
+	  	let analysis135 = "";
+	  	if(jf135 == 0 || jf135 < 4){
+	  		analysis135 = "For"+ft+intc135+ft+"North bound Free flow of traffic";
+	  	}else if(jf135 == 4 || jf135 < 8){
+	  		analysis135 = "For"+ft+intc135+ft+"North bound Sluggish flow of traffic";
+	  	}else if(jf135 == 8 || jf135 < 10){
+	  		analysis135 = "For"+ft+intc135+ft+"North bound Slow flow of traffic";
+	  	}else if(jf135 == 10){
+	  		analysis135 = "For"+ft+intc135+ft+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis135 = "Cannot compute"
+	  	}
+	  	let analysis136 = "";
+	  	if(jf136 == 0 || jf136 < 4){
+	  		analysis136 = "For"+ft+intc136+ft+"North bound Free flow of traffic";
+	  	}else if(jf136 == 4 || jf136 < 8){
+	  		analysis136 = "For"+ft+intc136+ft+"North bound Sluggish flow of traffic";
+	  	}else if(jf136 == 8 || jf136 < 10){
+	  		analysis136 = "For"+ft+intc136+ft+"North bound Slow flow of traffic";
+	  	}else if(jf136 == 10){
+	  		analysis136 = "For"+ft+intc136+ft+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis136 = "Cannot compute"
+	  	}
+	  	
+	  	_res.setHeader('Content-Type', 'application/json');
+    	_res.send(JSON.stringify({ ftorrest1: ftorrest1, intc133: intc133, jf144: jf133,  intc134: intc134, jf134: jf134, analysis133:analysis133, analysis134:analysis134,
+    	 ftorreest1: ftorreest1, intc135: intc135, jf135: jf135, intc136: intc136, jf136: jf136, analysis135:analysis135,  analysis136:analysis136}));  
+	});
+});
+
+app.get('/mroxas',function(_req, _res){
+
+	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
+	  if (err) { return console.log(err); }
+	    //north 
+	  	mroxas1 = body.RWS[0].RW[34].DE;
+	  	const intc137 = body.RWS[0].RW[34].FIS[0].FI[0].TMC.DE; 
+	  	const jf137 = body.RWS[0].RW[34].FIS[0].FI[0].CF[0].JF;	
+	  	const intc138 = body.RWS[0].RW[34].FIS[0].FI[1].TMC.DE;
+	  	const jf138 = body.RWS[0].RW[34].FIS[0].FI[1].CF[0].JF;
+	  	const intc139 = body.RWS[0].RW[34].FIS[0].FI[2].TMC.DE;
+	  	const jf139 = body.RWS[0].RW[34].FIS[0].FI[2].CF[0].JF;
+	  	
+	  	var mr = ' ';//space ni
+	  	let analysis137 = "";
+	  	if(jf137 == 0 || jf137 < 4){
+	  		analysis137 = "For"+mr+intc137+mr+"South bound Free flow of traffic";
+	  	}else if(jf137 == 4 || jf137 < 8){
+	  		analysis137 = "For"+mr+intc137+mr+"South bound Sluggish flow of traffic";
+	  	}else if(jf137 == 8 || jf137 < 10){
+	  		analysis137 = "For"+mr+intc137+mr+"South bound Slow flow of traffic";
+	  	}else if(jf137 == 10){
+	  		analysis137 = "For"+mr+intc137+mr+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis137 = "Cannot compute"
+	  	}
+
+	  	let analysis138 = "";
+	  	if(jf138 == 0 || jf138 < 4){
+	  		analysis138 = "For"+mr+intc138+mr+"South bound Free flow of traffic";
+	  	}else if(jf138 == 4 || jf138 < 8){
+	  		analysis138 = "For"+mr+intc138+mr+"South bound Sluggish flow of traffic";
+	  	}else if(jf138 == 8 || jf138 < 10){
+	  		analysis138 = "For"+mr+intc138+mr+"South bound Slow flow of traffic";
+	  	}else if(jf138 == 10){
+	  		analysis138 = "For"+mr+intc138+mr+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis138 = "Cannot compute"
+	  	}
+
+	  	let analysis139 = "";
+	  	if(jf139 == 0 || jf139 < 4){
+	  		analysis139 = "For"+mr+intc139+mr+"South bound Free flow of traffic";
+	  	}else if(jf139 == 4 || jf139 < 8){
+	  		analysis139 = "For"+mr+intc139+mr+"South bound Sluggish flow of traffic";
+	  	}else if(jf139 == 8 || jf139 < 10){
+	  		analysis139 = "For"+mr+intc139+mr+"South bound Slow flow of traffic";
+	  	}else if(jf139 == 10){
+	  		analysis139 = "For"+mr+intc139+mr+"South bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis139 = "Cannot compute"
+	  	}
+
+	  	const mroxaas1 = body.RWS[0].RW[35].DE;
+	  	const intc140 = body.RWS[0].RW[35].FIS[0].FI[0].TMC.DE; 
+	  	const jf140 = body.RWS[0].RW[35].FIS[0].FI[0].CF[0].JF;	
+	  	const intc141 = body.RWS[0].RW[35].FIS[0].FI[1].TMC.DE;
+	  	const jf141 = body.RWS[0].RW[35].FIS[0].FI[1].CF[0].JF;
+	  	const intc142 = body.RWS[0].RW[35].FIS[0].FI[2].TMC.DE;
+	  	const jf142 = body.RWS[0].RW[35].FIS[0].FI[2].CF[0].JF;
+
+
+	  	var mr = ' ';//space ni
+	  	let analysis140 = "";
+	  	if(jf140 == 0 || jf140 < 4){
+	  		analysis140 = "For"+mr+intc140+mr+"North bound Free flow of traffic";
+	  	}else if(jf140 == 4 || jf140 < 8){
+	  		analysis140 = "For"+mr+intc140+mr+"North bound Sluggish flow of traffic";
+	  	}else if(jf140 == 8 || jf140 < 10){
+	  		analysis140 = "For"+mr+intc140+mr+"North bound Slow flow of traffic";
+	  	}else if(jf140 == 10){
+	  		analysis140 = "For"+mr+intc140+mr+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis140 = "Cannot compute"
+	  	}
+	  	let analysis141 = "";
+	  	if(jf141 == 0 || jf141 < 4){
+	  		analysis141 = "For"+mr+intc141+mr+"North bound Free flow of traffic";
+	  	}else if(jf141 == 4 || jf141 < 8){
+	  		analysis141 = "For"+mr+intc141+mr+"North bound Sluggish flow of traffic";
+	  	}else if(jf141 == 8 || jf141 < 10){
+	  		analysis141 = "For"+mr+intc141+mr+"North bound Slow flow of traffic";
+	  	}else if(jf141 == 10){
+	  		analysis141 = "For"+mr+intc141+mr+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis141 = "Cannot compute"
+	  	}
+	  	let analysis142 = "";
+	  	if(jf142 == 0 || jf142 < 4){
+	  		analysis142 = "For"+mr+intc142+mr+"North bound Free flow of traffic";
+	  	}else if(jf142 == 4 || jf142 < 8){
+	  		analysis142 = "For"+mr+intc142+mr+"North bound Sluggish flow of traffic";
+	  	}else if(jf142 == 8 || jf142 < 10){
+	  		analysis142 = "For"+mr+intc142+mr+"North bound Slow flow of traffic";
+	  	}else if(jf142 == 10){
+	  		analysis142 = "For"+mr+intc142+mr+"North bound Traffic stopped or Road closed"
+	  	}else{
+	  		analysis142 = "Cannot compute"
+	  	}
+
+	  	
+	  	_res.setHeader('Content-Type', 'application/json');
+    	_res.send(JSON.stringify({ mroxas1: mroxas1, intc137: intc137, jf137: jf137,  intc138: intc138, jf138: jf138, intc139: intc139, jf139: jf139, analysis137:analysis137, analysis138:analysis138, analysis139:analysis139,
+    	 mroxaas1: mroxaas1, intc140: intc140, jf140: jf140, intc141: intc141, jf141: jf141, intc142: intc142, jf142: jf142,  analysis140:analysis140,  analysis141:analysis141,  analysis142:analysis142}));  
+	});
+});
 
 //-------------------------------------------
 
 app.get('/geo',function(req, res){
-	axios.get('http://trapiko.herokuapp.com/equirino')
+	axios.get('http://trapiknapud.herokuapp.com/equirino')
 	  .then(function (response) {
 	    console.log(response.data);
 	  
@@ -1454,76 +2458,186 @@ app.get('/geo',function(req, res){
 	 
 	  });
 })
-// app.get('/geo',function(req, res){
-// 	axios.get('http://trapiko.herokuapp.com/jplauel')
-// 	  .then(function (response) {
-// 	    console.log(response.data);	  
-// 	  })
-// 	  .catch(function (error) {
-// 	    console.log(error);
+app.get('/geo',function(req, res){
+	axios.get('http://trapiknapud.herokuapp.com/jplauel')
+	  .then(function (response) {
+	    console.log(response.data);	  
+	  })
+	  .catch(function (error) {
+	    console.log(error);
 	 
-// 	  });
-// })
-// app.get('/geo',function(req, res){
-// 	axios.get('http://trapiko.herokuapp.com/mcarthur')
-// 	  .then(function (response) {
-// 	    console.log(response.data);	  
-// 	  })
-// 	  .catch(function (error) {
-// 	    console.log(error);
+	  });
+})
+app.get('/geo',function(req, res){
+	axios.get('http://trapiknapud.herokuapp.com/mcarthur')
+	  .then(function (response) {
+	    console.log(response.data);	  
+	  })
+	  .catch(function (error) {
+	    console.log(error);
 	 
-// 	  });
-// })
-// app.get('/geo',function(req, res){
-// 	axios.get('http://trapiko.herokuapp.com/ecowestdr')
-// 	  .then(function (response) {
-// 	    console.log(response.data);	  
-// 	  })
-// 	  .catch(function (error) {
-// 	    console.log(error);
+	  });
+})
+app.get('/geo',function(req, res){
+	axios.get('http://trapiknapud.herokuapp.com/ecowestdr')
+	  .then(function (response) {
+	    console.log(response.data);	  
+	  })
+	  .catch(function (error) {
+	    console.log(error);
 	 
-// 	  });
-// })
-// app.get('/geo',function(req, res){
-// 	axios.get('http://trapiko.herokuapp.com/matinaaplaya')
-// 	  .then(function (response) {
-// 	    console.log(response.data);	  
-// 	  })
-// 	  .catch(function (error) {
-// 	    console.log(error);
+	  });
+})
+app.get('/geo',function(req, res){
+	axios.get('http://trapiknapud.herokuapp.com/matinaaplaya')
+	  .then(function (response) {
+	    console.log(response.data);	  
+	  })
+	  .catch(function (error) {
+	    console.log(error);
 	 
-// 	  });
-// })
-// app.get('/geo',function(req, res){
-// 	axios.get('http://trapiko.herokuapp.com/ecoland')
-// 	  .then(function (response) {
-// 	    console.log(response.data);	  
-// 	  })
-// 	  .catch(function (error) {
-// 	    console.log(error);
+	  });
+})
+app.get('/geo',function(req, res){
+	axios.get('http://trapiknapud.herokuapp.com/ecoland')
+	  .then(function (response) {
+	    console.log(response.data);	  
+	  })
+	  .catch(function (error) {
+	    console.log(error);
 	 
-// 	  });
-// })
-// app.get('/geo',function(req, res){
-// 	axios.get('http://trapiko.herokuapp.com/tulipdr')
-// 	  .then(function (response) {
-// 	    console.log(response.data);	  
-// 	  })
-// 	  .catch(function (error) {
-// 	    console.log(error);
+	  });
+})
+app.get('/geo',function(req, res){
+	axios.get('http://trapiknapud.herokuapp.com/tulipdr')
+	  .then(function (response) {
+	    console.log(response.data);	  
+	  })
+	  .catch(function (error) {
+	    console.log(error);
 	 
-// 	  });
-// })
-// app.get('/geo',function(req, res){
-// 	axios.get('http://trapiko.herokuapp.com/quimpoblvd')
-// 	  .then(function (response) {
-// 	    console.log(response.data);	  
-// 	  })
-// 	  .catch(function (error) {
-// 	    console.log(error);
+	  });
+})
+app.get('/geo',function(req, res){
+	axios.get('http://trapiknapud.herokuapp.com/quimpoblvd')
+	  .then(function (response) {
+	    console.log(response.data);	  
+	  })
+	  .catch(function (error) {
+	    console.log(error);
 	 
-// 	  });
-// })
+	  });
+})
+app.get('/geo',function(req, res){
+	axios.get('http://trapiknapud.herokuapp.com/sandaward')
+	  .then(function (response) {
+	    console.log(response.data);	  
+	  })
+	  .catch(function (error) {
+	    console.log(error);
+	 
+	  });
+})
+app.get('/geo',function(req, res){
+	axios.get('http://trapiknapud.herokuapp.com/quezonblvd')
+	  .then(function (response) {
+	    console.log(response.data);	  
+	  })
+	  .catch(function (error) {
+	    console.log(error);
+	 
+	  });
+})
+
+app.get('/geo',function(req, res){
+	axios.get('http://trapiknapud.herokuapp.com/mlquezonblvd')
+	  .then(function (response) {
+	    console.log(response.data);	  
+	  })
+	  .catch(function (error) {
+	    console.log(error);
+	 
+	  });
+})
+
+app.get('/geo',function(req, res){
+	axios.get('http://trapiknapud.herokuapp.com/cabaguio')
+	  .then(function (response) {
+	    console.log(response.data);	  
+	  })
+	  .catch(function (error) {
+	    console.log(error);
+	 
+	  });
+})
+
+app.get('/geo',function(req, res){
+	axios.get('http://trapiknapud.herokuapp.com/dacudao')
+	  .then(function (response) {
+	    console.log(response.data);	  
+	  })
+	  .catch(function (error) {
+	    console.log(error);
+	 
+	  });
+})
+
+app.get('/geo',function(req, res){
+	axios.get('http://trapiknapud.herokuapp.com/pichonst')
+	  .then(function (response) {
+	    console.log(response.data);	  
+	  })
+	  .catch(function (error) {
+	    console.log(error);
+	 
+	  });
+})
+
+app.get('/geo',function(req, res){
+	axios.get('http://trapiknapud.herokuapp.com/sanpedrost')
+	  .then(function (response) {
+	    console.log(response.data);	  
+	  })
+	  .catch(function (error) {
+	    console.log(error);
+	 
+	  });
+})
+
+app.get('/geo',function(req, res){
+	axios.get('http://trapiknapud.herokuapp.com/bonifaciost')
+	  .then(function (response) {
+	    console.log(response.data);	  
+	  })
+	  .catch(function (error) {
+	    console.log(error);
+	 
+	  });
+})
+
+app.get('/geo',function(req, res){
+	axios.get('http://trapiknapud.herokuapp.com/ftorrest')
+	  .then(function (response) {
+	    console.log(response.data);	  
+	  })
+	  .catch(function (error) {
+	    console.log(error);
+	 
+	  });
+})
+
+app.get('/geo',function(req, res){
+	axios.get('http://trapiknapud.herokuapp.com/mroxas')
+	  .then(function (response) {
+	    console.log(response.data);	  
+	  })
+	  .catch(function (error) {
+	    console.log(error);
+	 
+	  });
+})
+
+
 
 
 //facebook reply---------------------------------------------------------------------------------------------------------------
@@ -1547,8 +2661,8 @@ app.post('/webhook/', function(req, res) {
 				let chatbotResponse2 = "";
 				let chatbotResponse3 = "";
 				let chatbotResponse4 = "";	
-				axios.get('http://trapiko.herokuapp.com/equirino')
-				  .then(function (response) {
+				axios.get('http://trapiknapud.herokuapp.com/equirino')
+					.then(function (response) {
 				    //console.log(response);
 				    chatbotResponse = response.data.analysisjf1;
 				    sendText(sender, chatbotResponse)
@@ -1576,7 +2690,7 @@ app.post('/webhook/', function(req, res) {
 					let chatbotResponse3 = "";
 					let chatbotResponse4 = "";	
 				//source : https://www.npmjs.com/package/axios
-					axios.get('http://trapiko.herokuapp.com/equirino')
+					axios.get('http://trapiknapud.herokuapp.com/equirino')
 				  		.then(function (response) {
 				    //console.log(response);
 				    	chatbotResponse = response.data.analysisjf6;
@@ -1604,7 +2718,7 @@ app.post('/webhook/', function(req, res) {
 					let chatbotResponse3 = "";
 					let chatbotResponse4 = "";	
 				//source : https://www.npmjs.com/package/axios
-					axios.get('http://trapiko.herokuapp.com/equirino')
+					axios.get('http://trapiknapud.herokuapp.com/equirino')
 				  		.then(function (response) {
 				    //console.log(response);
 				   		chatbotResponse = response.data.analysisjf1;
@@ -1623,7 +2737,8 @@ app.post('/webhook/', function(req, res) {
 				    sendText(sender, chatbotResponse)
 				  });
 				  break;
-				}else if(text== ''+equirino1+a+'north intersections'){
+				}
+				else if(text== ''+equirino1+a+'north intersections'){
 				 //sendText(sender, "I guess you mean"+a+street+a+"north intersections. The traffic status for the intersections.")
 					let chatbotResponse = "";
 					let chatbotResponse1 = "";
@@ -1631,7 +2746,7 @@ app.post('/webhook/', function(req, res) {
 					let chatbotResponse3 = "";
 					let chatbotResponse4 = "";	
 				//source : https://www.npmjs.com/package/axios
-					axios.get('http://trapiko.herokuapp.com/equirino')
+					axios.get('http://trapiknapud.herokuapp.com/equirino')
 				  		.then(function (response) {
 				    //console.log(response);
 				    	chatbotResponse = response.data.analysisjf6;
@@ -1651,689 +2766,779 @@ app.post('/webhook/', function(req, res) {
 				  });
 				  break;
 				}
-			// 	else if(text.includes('laurel north') || text.includes("Laurel North")|| text.includes("laurel North")){
-			// 	 sendText(sender, "I guess you mean"+a+streetj+a+"north intersections. The traffic status for the intersections.")
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	let chatbotResponse3 = "";
-			// 	let chatbotResponse4 = "";
-			// 	let chatbotResponse5 = "";	
-			// 	axios.get('http://trapiko.herokuapp.com/jplaurel')
-			// 	  .then(function (response) {
-			// 	    //console.log(response);
-			// 	    chatbotResponse = response.data.analysisjp1;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysisjp2;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	    chatbotResponse2 = response.data.analysisjp3;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	    chatbotResponse3 = response.data.analysisjp4;
-			// 	    sendText(sender, chatbotResponse3)
-			// 	    chatbotResponse4 = response.data.analysisjp5;
-			// 	    sendText(sender, chatbotResponse4)
-			// 	     chatbotResponse5 = response.data.analysisjp6;
-			// 	    sendText(sender, chatbotResponse5)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}else if(text.includes('laurel south') || text.includes("Laurel south")|| text.includes("laurel South")){
-			// 	 sendText(sender, "I guess you mean"+a+streetj+a+"south intersections. The traffic status for the intersections.")
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	let chatbotResponse3 = "";
-			// 	let chatbotResponse4 = "";
-			// 	let chatbotResponse5 = "";	
-			// 	axios.get('http://trapiko.herokuapp.com/jplaurel')
-			// 	  .then(function (response) {
-			// 	    //console.log(response);
-			// 	    chatbotResponse = response.data.analysisjp01;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysisjp02;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	    chatbotResponse2 = response.data.analysisjp03;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	    chatbotResponse3 = response.data.analysisjp04;
-			// 	    sendText(sender, chatbotResponse3)
-			// 	    chatbotResponse4 = response.data.analysisjp05;
-			// 	    sendText(sender, chatbotResponse4)
-			// 	     chatbotResponse5 = response.data.analysisjp06;
-			// 	    sendText(sender, chatbotResponse5)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}else if(text == ''+streetj+a+'south intersections'){
-			// 	 //sendText(sender, "I guess you mean"+a+streetj+a+"south intersections. The traffic status for the intersections.")
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	let chatbotResponse3 = "";
-			// 	let chatbotResponse4 = "";
-			// 	let chatbotResponse5 = "";	
-			// 	axios.get('http://trapiko.herokuapp.com/jplaurel')
-			// 	  .then(function (response) {
-			// 	    //console.log(response);
-			// 	    chatbotResponse = response.data.analysisjp01;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysisjp02;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	    chatbotResponse2 = response.data.analysisjp03;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	    chatbotResponse3 = response.data.analysisjp04;
-			// 	    sendText(sender, chatbotResponse3)
-			// 	    chatbotResponse4 = response.data.analysisjp05;
-			// 	    sendText(sender, chatbotResponse4)
-			// 	     chatbotResponse5 = response.data.analysisjp06;
-			// 	    sendText(sender, chatbotResponse5)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}
-			// 	else if(text == ''+streetj+a+'north intersections'){
-			// 	 //sendText(sender, "I guess you mean"+a+streetj+a+"south intersections. The traffic status for the intersections.")
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	let chatbotResponse3 = "";
-			// 	let chatbotResponse4 = "";
-			// 	let chatbotResponse5 = "";	
-			// 	axios.get('http://trapiko.herokuapp.com/jplaurel')
-			// 	  .then(function (response) {
-			// 	    //console.log(response);
-			// 	    chatbotResponse = response.data.analysisjp1;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysisjp2;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	    chatbotResponse2 = response.data.analysisjp3;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	    chatbotResponse3 = response.data.analysisjp4;
-			// 	    sendText(sender, chatbotResponse3)
-			// 	    chatbotResponse4 = response.data.analysisjp5;
-			// 	    sendText(sender, chatbotResponse4)
-			// 	     chatbotResponse5 = response.data.analysisjp6;
-			// 	    sendText(sender, chatbotResponse5)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}else if(text.includes('arthur south') ||  text.includes('arthur South')){
-			// 	 sendText(sender, "I guess you mean"+a+streetmm+a+"south intersections. The traffic status for the intersections.")
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	let chatbotResponse3 = "";
-			// 	let chatbotResponse4 = "";
-			// 	let chatbotResponse5 = "";
-			// 	let chatbotResponse6 = "";
-			// 	let chatbotResponse7 = "";
-			// 	let chatbotResponse8 = "";
-			// 	let chatbotResponse9 = "";
-			// 	let chatbotResponse10 = "";
-			// 	let chatbotResponse11 = "";
-			// 	let chatbotResponse12 = "";
-			// 	let chatbotResponse13 = "";	
-			// 	let chatbotResponse14 = "";		
-			// 	axios.get('http://trapiko.herokuapp.com/mcarthur')
-			// 	  .then(function (response) {
-			// 	    //console.log(response);
-			// 	    chatbotResponse = response.data.analysis35;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis22;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	    chatbotResponse2 = response.data.analysis23;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	    chatbotResponse3 = response.data.analysis24;
-			// 	    sendText(sender, chatbotResponse3)
-			// 	    chatbotResponse4 = response.data.analysis25;
-			// 	    sendText(sender, chatbotResponse4)
-			// 	    chatbotResponse5 = response.data.analysis26;
-			// 	    sendText(sender, chatbotResponse5)
-			// 	     chatbotResponse6 = response.data.analysis26;
-			// 	    sendText(sender, chatbotResponse6)
-			// 	     chatbotResponse7 = response.data.analysis27;
-			// 	    sendText(sender, chatbotResponse7)
-			// 	     chatbotResponse8 = response.data.analysis28;
-			// 	    sendText(sender, chatbotResponse8)
-			// 	     chatbotResponse9 = response.data.analysis29;
-			// 	    sendText(sender, chatbotResponse9)
-			// 	     chatbotResponse10 = response.data.analysis30;
-			// 	    sendText(sender, chatbotResponse10)
-			// 	     chatbotResponse11 = response.data.analysis31;
-			// 	    sendText(sender, chatbotResponse12)
-			// 	     chatbotResponse12 = response.data.analysis32;
-			// 	    sendText(sender, chatbotResponse12)
-			// 	    chatbotResponse13 = response.data.analysis33;
-			// 	    sendText(sender, chatbotResponse13)
-			// 	    chatbotResponse14 = response.data.analysis34;
-			// 	    sendText(sender, chatbotResponse14)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}
-			// 	else if(text.includes('arthur north') || text.includes('arthur North')){
-			// 	sendText(sender, "I guess you mean"+a+streetmm+a+"north intersections. The traffic status for the intersections.")
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	let chatbotResponse3 = "";
-			// 	let chatbotResponse4 = "";
-			// 	let chatbotResponse5 = "";
-			// 	let chatbotResponse6 = "";
-			// 	let chatbotResponse7 = "";
-			// 	let chatbotResponse8 = "";
-			// 	let chatbotResponse9 = "";
-			// 	let chatbotResponse10 = "";
-			// 	let chatbotResponse11 = "";
-			// 	let chatbotResponse12 = "";
-			// 	let chatbotResponse13 = "";	
-			// 	let chatbotResponse14 = "";		
-			// 	axios.get('http://trapiko.herokuapp.com/mcarthur')
-			// 	  .then(function (response) {
-			// 	    //console.log(response);
-			// 	    chatbotResponse = response.data.analysis222;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis223;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	    chatbotResponse2 = response.data.analysis224;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	    chatbotResponse3 = response.data.analysis225;
-			// 	    sendText(sender, chatbotResponse3)
-			// 	    chatbotResponse4 = response.data.analysis226;
-			// 	    sendText(sender, chatbotResponse4)
-			// 	    chatbotResponse5 = response.data.analysis227;
-			// 	    sendText(sender, chatbotResponse5)
-			// 	     chatbotResponse6 = response.data.analysis228;
-			// 	    sendText(sender, chatbotResponse6)
-			// 	     chatbotResponse7 = response.data.analysis229;
-			// 	    sendText(sender, chatbotResponse7)
-			// 	     chatbotResponse8 = response.data.analysis230;
-			// 	    sendText(sender, chatbotResponse8)
-			// 	     chatbotResponse9 = response.data.analysis231;
-			// 	    sendText(sender, chatbotResponse9)
-			// 	     chatbotResponse10 = response.data.analysis232;
-			// 	    sendText(sender, chatbotResponse10)
-			// 	     chatbotResponse11 = response.data.analysis233;
-			// 	    sendText(sender, chatbotResponse12)
-			// 	     chatbotResponse12 = response.data.analysis234;
-			// 	    sendText(sender, chatbotResponse12)
-			// 	    chatbotResponse13 = response.data.analysis235;
-			// 	    sendText(sender, chatbotResponse13)
-			// 	    // chatbotResponse14 = response.data.analysis34;
-			// 	    // sendText(sender, chatbotResponse14)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}
-			// 	else if(text == ''+streetmm+a+'south intersections'){
-			// 	 //sendText(sender, "I guess you mean"+a+streetj+a+"south intersections. The traffic status for the intersections.")
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	let chatbotResponse3 = "";
-			// 	let chatbotResponse4 = "";
-			// 	let chatbotResponse5 = "";
-			// 	let chatbotResponse6 = "";
-			// 	let chatbotResponse7 = "";
-			// 	let chatbotResponse8 = "";
-			// 	let chatbotResponse9 = "";
-			// 	let chatbotResponse10 = "";
-			// 	let chatbotResponse11 = "";
-			// 	let chatbotResponse12 = "";
-			// 	let chatbotResponse13 = "";	
-			// 	let chatbotResponse14 = "";		
-			// 	axios.get('http://trapiko.herokuapp.com/mcarthur')
-			// 	  .then(function (response) {
-			// 	    //console.log(response);
-			// 	    chatbotResponse = response.data.analysis35;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis22;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	    chatbotResponse2 = response.data.analysis23;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	    chatbotResponse3 = response.data.analysis24;
-			// 	    sendText(sender, chatbotResponse3)
-			// 	    chatbotResponse4 = response.data.analysis25;
-			// 	    sendText(sender, chatbotResponse4)
-			// 	    chatbotResponse5 = response.data.analysis26;
-			// 	    sendText(sender, chatbotResponse5)
-			// 	     chatbotResponse6 = response.data.analysis26;
-			// 	    sendText(sender, chatbotResponse6)
-			// 	     chatbotResponse7 = response.data.analysis27;
-			// 	    sendText(sender, chatbotResponse7)
-			// 	     chatbotResponse8 = response.data.analysis28;
-			// 	    sendText(sender, chatbotResponse8)
-			// 	     chatbotResponse9 = response.data.analysis29;
-			// 	    sendText(sender, chatbotResponse9)
-			// 	     chatbotResponse10 = response.data.analysis30;
-			// 	    sendText(sender, chatbotResponse10)
-			// 	     chatbotResponse11 = response.data.analysis31;
-			// 	    sendText(sender, chatbotResponse12)
-			// 	     chatbotResponse12 = response.data.analysis32;
-			// 	    sendText(sender, chatbotResponse12)
-			// 	    chatbotResponse13 = response.data.analysis33;
-			// 	    sendText(sender, chatbotResponse13)
-			// 	    chatbotResponse14 = response.data.analysis34;
-			// 	    sendText(sender, chatbotResponse14)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}
-			// 	else if(text == ''+streetmm+a+'north intersections'){
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	let chatbotResponse3 = "";
-			// 	let chatbotResponse4 = "";
-			// 	let chatbotResponse5 = "";
-			// 	let chatbotResponse6 = "";
-			// 	let chatbotResponse7 = "";
-			// 	let chatbotResponse8 = "";
-			// 	let chatbotResponse9 = "";
-			// 	let chatbotResponse10 = "";
-			// 	let chatbotResponse11 = "";
-			// 	let chatbotResponse12 = "";
-			// 	let chatbotResponse13 = "";	
-			// 	let chatbotResponse14 = "";		
-			// 	axios.get('http://trapiko.herokuapp.com/mcarthur')
-			// 	  .then(function (response) {
-			// 	    //console.log(response);
-			// 	    chatbotResponse = response.data.analysis222;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis223;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	    chatbotResponse2 = response.data.analysis224;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	    chatbotResponse3 = response.data.analysis225;
-			// 	    sendText(sender, chatbotResponse3)
-			// 	    chatbotResponse4 = response.data.analysis226;
-			// 	    sendText(sender, chatbotResponse4)
-			// 	    chatbotResponse5 = response.data.analysis227;
-			// 	    sendText(sender, chatbotResponse5)
-			// 	     chatbotResponse6 = response.data.analysis228;
-			// 	    sendText(sender, chatbotResponse6)
-			// 	     chatbotResponse7 = response.data.analysis229;
-			// 	    sendText(sender, chatbotResponse7)
-			// 	     chatbotResponse8 = response.data.analysis230;
-			// 	    sendText(sender, chatbotResponse8)
-			// 	     chatbotResponse9 = response.data.analysis231;
-			// 	    sendText(sender, chatbotResponse9)
-			// 	     chatbotResponse10 = response.data.analysis232;
-			// 	    sendText(sender, chatbotResponse10)
-			// 	     chatbotResponse11 = response.data.analysis233;
-			// 	    sendText(sender, chatbotResponse12)
-			// 	     chatbotResponse12 = response.data.analysis234;
-			// 	    sendText(sender, chatbotResponse12)
-			// 	    chatbotResponse13 = response.data.analysis235;
-			// 	    sendText(sender, chatbotResponse13)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}
-			// 	else if(text.includes('ecowest north') || text.includes("Ecowest North")|| text.includes("ecowest North")){
-			// 	sendText(sender, "I guess you mean"+a+streetec+a+"north intersections. The traffic status for the intersections.")
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	axios.get('http://trapiko.herokuapp.com/ecowestdr')
-			// 	  .then(function (response) {
-			// 	    //console.log(response);
-			// 	    chatbotResponse = response.data.analysis05;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis06;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}
-			// 	else if(text.includes('ecowest south') || text.includes("Ecowest South")|| text.includes("ecowest South")){
-			// 	sendText(sender, "I guess you mean"+a+streetec+a+"south intersections. The traffic status for the intersections.")
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	axios.get('http://trapiko.herokuapp.com/ecowestdr')
-			// 	  .then(function (response) {
-			// 	    //console.log(response);
-			// 	    chatbotResponse = response.data.analysis5;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis6;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}
-			// 	else if(text==''+streetec+a+'south intersections'){
-			// //	sendText(sender, "I guess you mean"+a+streetec+a+"south intersections. The traffic status for the intersections.")
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	axios.get('http://trapiko.herokuapp.com/ecowestdr')
-			// 	  .then(function (response) {
-			// 	    //console.log(response);
-			// 	    chatbotResponse = response.data.analysis5;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis6;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}
-			// 	else if(text==''+streetec+a+'north intersections'){
-			// //	sendText(sender, "I guess you mean"+a+streetec+a+"south intersections. The traffic status for the intersections.")
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	axios.get('http://trapiko.herokuapp.com/ecowestdr')
-			// 	  .then(function (response) {
-			// 	    //console.log(response);
-			// 	    chatbotResponse = response.data.analysis05;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis06;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}else if(text.includes('mati south') || text.includes("Mati South")|| text.includes("mati South")){
-			// 	sendText(sender, "I guess you mean"+a+streetmmm+a+"south intersections. The traffic status for the intersections.")
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	let chatbotResponse3 = "";
-			// 	axios.get('http://trapiko.herokuapp.com/matinaaplaya')
-			// 	  .then(function (response) {
-			// 	    //console.log(response);
-			// 	    chatbotResponse = response.data.analysis9;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis10;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	      chatbotResponse2 = response.data.analysis11;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	      chatbotResponse3 = response.data.analysis12;
-			// 	    sendText(sender, chatbotResponse3)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}else if(text.includes('mati north') || text.includes("Mati North")|| text.includes("mati north")){
-			// 	sendText(sender, "I guess you mean"+a+streetmmm+a+"north intersections. The traffic status for the intersections.")
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	let chatbotResponse3 = "";
-			// 	axios.get('http://trapiko.herokuapp.com/matinaaplaya')
-			// 	  .then(function (response) {
-			// 	    //console.log(response);
-			// 	    chatbotResponse = response.data.analysis09;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis010;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	      chatbotResponse2 = response.data.analysis011;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	      chatbotResponse3 = response.data.analysis012;
-			// 	    sendText(sender, chatbotResponse3)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}else if(text==''+streetmmm+a+'south intersections'){
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	let chatbotResponse3 = "";
-			// 	axios.get('http://trapiko.herokuapp.com/matinaaplaya')
-			// 	  .then(function (response) {
-			// 	    //console.log(response);
-			// 	    chatbotResponse = response.data.analysis9;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis10;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	      chatbotResponse2 = response.data.analysis11;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	      chatbotResponse3 = response.data.analysis12;
-			// 	    sendText(sender, chatbotResponse3)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}else if(text==''+streetmmm+a+'north intersections'){
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	let chatbotResponse3 = "";
-			// 	axios.get('http://trapiko.herokuapp.com/matinaaplaya')
-			// 	  .then(function (response) {
-			// 	    chatbotResponse = response.data.analysis09;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis010;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	      chatbotResponse2 = response.data.analysis011;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	      chatbotResponse3 = response.data.analysis012;
-			// 	    sendText(sender, chatbotResponse3)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}else if(text.includes('ecoland south ')||text.includes('ecoland South ')){
-			// 	sendText(sender, "I guess you mean"+a+street+a+"south intersections. The Traffic status for the intersections.")
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	axios.get('http://trapiko.herokuapp.com/ecoland')
-			// 	  .then(function (response) {
-			// 	    chatbotResponse = response.data.analysis10;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis11;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	      chatbotResponse2 = response.data.analysis12;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}else if(text.includes('ecoland north ')||text.includes('ecoland North ')){
-			// 	sendText(sender, "I guess you mean"+a+street+a+"north intersections. The Traffic status for the intersections.")
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	let chatbotResponse3 = "";
-			// 	axios.get('http://trapiko.herokuapp.com/ecoland')
-			// 	  .then(function (response) {
-			// 	    chatbotResponse = response.data.analysis09;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis010;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	      chatbotResponse2 = response.data.analysis011;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	     chatbotResponse3 = response.data.analysis012;
-			// 	    sendText(sender, chatbotResponse3)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}else if(text==''+street+a+'south intersections'){
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	axios.get('http://trapiko.herokuapp.com/ecoland')
-			// 	  .then(function (response) {
-			// 	    chatbotResponse = response.data.analysis10;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis11;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	      chatbotResponse2 = response.data.analysis12;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}else if(text==''+street+a+'north intersections'){
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	let chatbotResponse3 = "";
-			// 	axios.get('http://trapiko.herokuapp.com/ecoland')
-			// 	  .then(function (response) {
-			// 	    chatbotResponse = response.data.analysis09;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis010;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	    chatbotResponse2 = response.data.analysis011;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	    chatbotResponse3 = response.data.analysis012;
-			// 	    sendText(sender, chatbotResponse3)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}else if(text==''+streetccc+a+'north intersections'){
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	axios.get('http://trapiko.herokuapp.com/tulipdr')
-			// 	  .then(function (response) {
-			// 	    chatbotResponse = response.data.analysis12;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis13;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	    chatbotResponse2 = response.data.analysis14;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}else if(text==''+streetccc+a+'south intersections'){
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	axios.get('http://trapiko.herokuapp.com/tulipdr')
-			// 	  .then(function (response) {
-			// 	    chatbotResponse = response.data.analysis111;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis112;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	    chatbotResponse2 = response.data.analysis113;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}else if(text.includes('tulip north') || text.includes('tulip North')){
-			// 	sendText(sender, "I gues you mean"+a+streetccc+a+"north intersections.The traffic status for the intersections.")		
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	axios.get('http://trapiko.herokuapp.com/tulipdr')
-			// 	  .then(function (response) {
-			// 	    chatbotResponse = response.data.analysis12;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis13;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	    chatbotResponse2 = response.data.analysis14;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}else if(text.includes('tulip south') || text.includes('tulip South')){
-			// 	sendText(sender, "I gues you mean"+a+streetccc+a+"south intersections.The traffic status for the intersections.")		
-			// 	let chatbotResponse = "";
-			// 	let chatbotResponse1 = "";
-			// 	let chatbotResponse2 = "";
-			// 	axios.get('http://trapiko.herokuapp.com/tulipdr')
-			// 	  .then(function (response) {
-			// 	    chatbotResponse = response.data.analysis111;
-			// 	    sendText(sender, chatbotResponse)
-			// 	    chatbotResponse1 = response.data.analysis112;
-			// 	    sendText(sender, chatbotResponse1)
-			// 	    chatbotResponse2 = response.data.analysis113;
-			// 	    sendText(sender, chatbotResponse2)
-			// 	  })
-			// 	  .catch(function (error) {
-			// 	    //console.log(error);
-			// 	    chatbotResponse = "not ok";
-			// 	    sendText(sender, chatbotResponse)
-			// 	  });
-			// 	  break;
-			// 	}else{
-			// 		sendText(sender, "Oops error")
-			// 	}
+				else if(text.includes('laurel north') || text.includes("Laurel North")|| text.includes("laurel North")){
+					sendText(sender, "I guess you mean"+a+jplaurel1+a+"north intersections. The traffic status for the intersections.")
+					let chatbotResponse = "";
+					let chatbotResponse1 = "";
+					let chatbotResponse2 = "";
+					let chatbotResponse3 = "";
+					let chatbotResponse4 = "";
+					let chatbotResponse5 = "";	
+					axios.get('http://trapiknapud.herokuapp.com/jplaurel')
+						.then(function (response) {
+				    //console.log(response);
+				    	chatbotResponse = response.data.analysisjp1;
+				    	sendText(sender, chatbotResponse)
+				    	chatbotResponse1 = response.data.analysisjp2;
+				    	sendText(sender, chatbotResponse1)
+				    	chatbotResponse2 = response.data.analysisjp3;
+				    	sendText(sender, chatbotResponse2)
+				    	chatbotResponse3 = response.data.analysisjp4;
+				    	sendText(sender, chatbotResponse3)
+				    	chatbotResponse4 = response.data.analysisjp5;
+				    	sendText(sender, chatbotResponse4)
+				     	chatbotResponse5 = response.data.analysisjp6;
+				    	sendText(sender, chatbotResponse5)
+				 	})
+				  	.catch(function (error) {
+				    //console.log(error);
+				 		chatbotResponse = "not ok";
+				    	sendText(sender, chatbotResponse)
+				  	});
+				  	break;
+				}
+				else if(text.includes('laurel south') || text.includes("Laurel south")|| text.includes("laurel South")){
+					sendText(sender, "I guess you mean"+a+jplaurel1+a+"south intersections. The traffic status for the intersections.")
+					let chatbotResponse = "";
+					let chatbotResponse1 = "";
+					let chatbotResponse2 = "";
+					let chatbotResponse3 = "";
+					let chatbotResponse4 = "";
+					let chatbotResponse5 = "";	
+				axios.get('http://trapiknapud.herokuapp.com/jplaurel')
+					.then(function (response) {
+				    //console.log(response);
+				    chatbotResponse = response.data.analysisjp01;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysisjp02;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysisjp03;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysisjp04;
+				    sendText(sender, chatbotResponse3)
+				    chatbotResponse4 = response.data.analysisjp05;
+				    sendText(sender, chatbotResponse4)
+				    chatbotResponse5 = response.data.analysisjp06;
+				    sendText(sender, chatbotResponse5)
+				  })
+				  	.catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text == ''+jplaurel1+a+'south intersections'){
+				 //sendText(sender, "I guess you mean"+a+streetj+a+"south intersections. The traffic status for the intersections.")
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				let chatbotResponse4 = "";
+				let chatbotResponse5 = "";	
+				axios.get('http://trapiknapud.herokuapp.com/jplaurel')
+				  .then(function (response) {
+				    //console.log(response);
+				    chatbotResponse = response.data.analysisjp01;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysisjp02;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysisjp03;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysisjp04;
+				    sendText(sender, chatbotResponse3)
+				    chatbotResponse4 = response.data.analysisjp05;
+				    sendText(sender, chatbotResponse4)
+				     chatbotResponse5 = response.data.analysisjp06;
+				    sendText(sender, chatbotResponse5)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}
+				else if(text == ''+jplaurel1+a+'north intersections'){
+				 //sendText(sender, "I guess you mean"+a+streetj+a+"south intersections. The traffic status for the intersections.")
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				let chatbotResponse4 = "";
+				let chatbotResponse5 = "";	
+				axios.get('http://trapiknapud.herokuapp.com/jplaurel')
+				  .then(function (response) {
+				    //console.log(response);
+				    chatbotResponse = response.data.analysisjp1;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysisjp2;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysisjp3;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysisjp4;
+				    sendText(sender, chatbotResponse3)
+				    chatbotResponse4 = response.data.analysisjp5;
+				    sendText(sender, chatbotResponse4)
+				     chatbotResponse5 = response.data.analysisjp6;
+				    sendText(sender, chatbotResponse5)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}
+				else if(text.includes('mcarthur south') ||  text.includes('mcarthur South')){
+					sendText(sender, "I guess you mean"+a+mcarthur1+a+"south intersections. The traffic status for the intersections.")
+					let chatbotResponse = "";
+					let chatbotResponse1 = "";
+					let chatbotResponse2 = "";
+					let chatbotResponse3 = "";
+					let chatbotResponse4 = "";
+					let chatbotResponse5 = "";
+					let chatbotResponse6 = "";
+					let chatbotResponse7 = "";
+					let chatbotResponse8 = "";
+					let chatbotResponse9 = "";
+					let chatbotResponse10 = "";
+					let chatbotResponse11 = "";
+					let chatbotResponse12 = "";
+					let chatbotResponse13 = "";		
+					axios.get('http://trapiknapud.herokuapp.com/mcarthur')
+				  		.then(function (response) {
+				    //console.log(response);
+				    	chatbotResponse = response.data.analysis23;
+				    	sendText(sender, chatbotResponse)
+				    	chatbotResponse1 = response.data.analysis24;
+				    	sendText(sender, chatbotResponse1)
+				    	chatbotResponse2 = response.data.analysis25;
+				    	sendText(sender, chatbotResponse2)
+				    	chatbotResponse3 = response.data.analysis26;
+				    	sendText(sender, chatbotResponse3)
+				    	chatbotResponse4 = response.data.analysis27;
+				    	sendText(sender, chatbotResponse4)
+				    	chatbotResponse5 = response.data.analysis28;
+				    	sendText(sender, chatbotResponse5)
+				     	chatbotResponse6 = response.data.analysis29;
+				    	sendText(sender, chatbotResponse6)
+				    	chatbotResponse7 = response.data.analysis30;
+				    	sendText(sender, chatbotResponse7)
+				     	chatbotResponse8 = response.data.analysis31;
+				    	sendText(sender, chatbotResponse8)
+				    	chatbotResponse9 = response.data.analysis32;
+				    	sendText(sender, chatbotResponse9)
+				    	chatbotResponse10 = response.data.analysis33;
+				    	sendText(sender, chatbotResponse10)
+				    	chatbotResponse11 = response.data.analysis34;
+				    	sendText(sender, chatbotResponse12)
+				    	chatbotResponse12 = response.data.analysis35;
+				    	sendText(sender, chatbotResponse12)
+				    	chatbotResponse13 = response.data.analysis36;
+				    	sendText(sender, chatbotResponse13)
+				  	})
+				  	.catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				 	});
+				  break;
+				}
+				else if(text.includes('mcarthur north') || text.includes('mcarthur North')){
+					sendText(sender, "I guess you mean"+a+mcarthur1+a+"north intersections. The traffic status for the intersections.")
+					let chatbotResponse = "";
+					let chatbotResponse1 = "";
+					let chatbotResponse2 = "";
+					let chatbotResponse3 = "";
+					let chatbotResponse4 = "";
+					let chatbotResponse5 = "";
+					let chatbotResponse6 = "";
+					let chatbotResponse7 = "";
+					let chatbotResponse8 = "";
+					let chatbotResponse9 = "";
+					let chatbotResponse10 = "";
+					let chatbotResponse11 = "";
+					let chatbotResponse12 = "";
+					let chatbotResponse13 = "";			
+					axios.get('http://trapiknapud.herokuapp.com/mcarthur')
+				  		.then(function (response) {
+				    //console.log(response);
+				    	chatbotResponse = response.data.analysis37;
+				    	sendText(sender, chatbotResponse)
+				    	chatbotResponse1 = response.data.analysis38;
+				    	sendText(sender, chatbotResponse1)
+				    	chatbotResponse2 = response.data.analysis39;
+				    	sendText(sender, chatbotResponse2)
+				    	chatbotResponse3 = response.data.analysis40;
+				    	sendText(sender, chatbotResponse3)
+				    	chatbotResponse4 = response.data.analysis41;
+				    	sendText(sender, chatbotResponse4)
+				    	chatbotResponse5 = response.data.analysis42;
+				    	sendText(sender, chatbotResponse5)
+				    	chatbotResponse6 = response.data.analysis43;
+				    	sendText(sender, chatbotResponse6)
+				    	chatbotResponse7 = response.data.analysis44;
+				    	sendText(sender, chatbotResponse7)
+				    	chatbotResponse8 = response.data.analysis45;
+				    	sendText(sender, chatbotResponse8)
+				    	chatbotResponse9 = response.data.analysis46;
+				    	sendText(sender, chatbotResponse9)
+				    	chatbotResponse10 = response.data.analysis47;
+				    	sendText(sender, chatbotResponse10)
+				    	chatbotResponse11 = response.data.analysis48;
+				    	sendText(sender, chatbotResponse12)
+				    	chatbotResponse12 = response.data.analysis49;
+				    	sendText(sender, chatbotResponse12)
+				    	chatbotResponse13 = response.data.analysis50;
+				    	sendText(sender, chatbotResponse13)
+				    // chatbotResponse14 = response.data.analysis34;
+				    // sendText(sender, chatbotResponse14)
+				  	})
+				  	.catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  	});
+				  	break;
+				}
+				else if(text == ''+mcarthur1+a+'south intersections'){
+				 //sendText(sender, "I guess you mean"+a+streetj+a+"south intersections. The traffic status for the intersections.")
+					let chatbotResponse = "";
+					let chatbotResponse1 = "";
+					let chatbotResponse2 = "";
+					let chatbotResponse3 = "";
+					let chatbotResponse4 = "";
+					let chatbotResponse5 = "";
+					let chatbotResponse6 = "";
+					let chatbotResponse7 = "";
+					let chatbotResponse8 = "";
+					let chatbotResponse9 = "";
+					let chatbotResponse10 = "";
+					let chatbotResponse11 = "";
+					let chatbotResponse12 = "";
+					let chatbotResponse13 = "";			
+					axios.get('http://trapiknapud.herokuapp.com/mcarthur')
+				 		.then(function (response) {
+				    //console.log(response);
+				    	chatbotResponse = response.data.analysis23;
+				    	sendText(sender, chatbotResponse)
+				    	chatbotResponse1 = response.data.analysis24;
+				    	sendText(sender, chatbotResponse1)
+				    	chatbotResponse2 = response.data.analysis25;
+				    	sendText(sender, chatbotResponse2)
+				    	chatbotResponse3 = response.data.analysis26;
+				    	sendText(sender, chatbotResponse3)
+				    	chatbotResponse4 = response.data.analysis27;
+				    	sendText(sender, chatbotResponse4)
+				    	chatbotResponse5 = response.data.analysis28;
+				    	sendText(sender, chatbotResponse5)
+				    	chatbotResponse6 = response.data.analysis29;
+				    	sendText(sender, chatbotResponse6)
+				    	chatbotResponse7 = response.data.analysis30;
+				    	sendText(sender, chatbotResponse7)
+				    	chatbotResponse8 = response.data.analysis31;
+				    	sendText(sender, chatbotResponse8)
+				    	chatbotResponse9 = response.data.analysis32;
+				    	sendText(sender, chatbotResponse9)
+				    	chatbotResponse10 = response.data.analysis33;
+				    	sendText(sender, chatbotResponse10)
+				    	chatbotResponse11 = response.data.analysis34;
+				    	sendText(sender, chatbotResponse12)
+				    	chatbotResponse12 = response.data.analysis35;
+				   		sendText(sender, chatbotResponse12)
+				   		chatbotResponse13 = response.data.analysis36;
+				    	sendText(sender, chatbotResponse13)
+				  	})
+				  	.catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  	});
+				  	break;
+				}
+				else if(text == ''+mcarthur1+a+'north intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				let chatbotResponse4 = "";
+				let chatbotResponse5 = "";
+				let chatbotResponse6 = "";
+				let chatbotResponse7 = "";
+				let chatbotResponse8 = "";
+				let chatbotResponse9 = "";
+				let chatbotResponse10 = "";
+				let chatbotResponse11 = "";
+				let chatbotResponse12 = "";
+				let chatbotResponse13 = "";		
+				axios.get('http://trapiknapud.herokuapp.com/mcarthur')
+				  .then(function (response) {
+				    //console.log(response);
+				    chatbotResponse = response.data.analysis37;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis38;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis39;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysis40;
+				    sendText(sender, chatbotResponse3)
+				    chatbotResponse4 = response.data.analysis41;
+				    sendText(sender, chatbotResponse4)
+				    chatbotResponse5 = response.data.analysis42;
+				    sendText(sender, chatbotResponse5)
+				     chatbotResponse6 = response.data.analysis43;
+				    sendText(sender, chatbotResponse6)
+				     chatbotResponse7 = response.data.analysis44;
+				    sendText(sender, chatbotResponse7)
+				     chatbotResponse8 = response.data.analysis45;
+				    sendText(sender, chatbotResponse8)
+				     chatbotResponse9 = response.data.analysis46;
+				    sendText(sender, chatbotResponse9)
+				     chatbotResponse10 = response.data.analysis47;
+				    sendText(sender, chatbotResponse10)
+				     chatbotResponse11 = response.data.analysis48;
+				    sendText(sender, chatbotResponse12)
+				     chatbotResponse12 = response.data.analysis49;
+				    sendText(sender, chatbotResponse12)
+				    chatbotResponse13 = response.data.analysis50;
+				    sendText(sender, chatbotResponse13)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}
+				else if(text.includes('ecowest north') || text.includes("Ecowest North")|| text.includes("ecowest North")){
+				sendText(sender, "I guess you mean"+a+ecowestdr1+a+"north intersections. The traffic status for the intersections.")
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/ecowestdr')
+				  .then(function (response) {
+				    //console.log(response);
+				    chatbotResponse = response.data.analysis51;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis52;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}
+				else if(text.includes('ecowest south') || text.includes("Ecowest South")|| text.includes("ecowest South")){
+				sendText(sender, "I guess you mean"+a+ecowestdr1+a+"south intersections. The traffic status for the intersections.")
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/ecowestdr')
+				  .then(function (response) {
+				    //console.log(response);
+				    chatbotResponse = response.data.analysis53;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis54;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}
+				else if(text==''+ecowestdr1+a+'south intersections'){
+			//	sendText(sender, "I guess you mean"+a+streetec+a+"south intersections. The traffic status for the intersections.")
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/ecowestdr')
+				  .then(function (response) {
+				    //console.log(response);
+				    chatbotResponse = response.data.analysis51;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis52;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}
+				else if(text==''+ecowestdr1+a+'north intersections'){
+			//	sendText(sender, "I guess you mean"+a+streetec+a+"south intersections. The traffic status for the intersections.")
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/ecowestdr')
+				  .then(function (response) {
+				    //console.log(response);
+				    chatbotResponse = response.data.analysis53;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis54;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('mati south') || text.includes("Mati South")|| text.includes("mati South")){
+				sendText(sender, "I guess you mean"+a+matinaaplaya1+a+"south intersections. The traffic status for the intersections.")
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				axios.get('http://trapiknapud.herokuapp.com/matinaaplaya')
+				  .then(function (response) {
+				    //console.log(response);
+				    chatbotResponse = response.data.analysis55;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis56;
+				    sendText(sender, chatbotResponse1)
+				      chatbotResponse2 = response.data.analysis57;
+				    sendText(sender, chatbotResponse2)
+				      chatbotResponse3 = response.data.analysis58;
+				    sendText(sender, chatbotResponse3)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('mati north') || text.includes("Mati North")|| text.includes("mati north")){
+				sendText(sender, "I guess you mean"+a+matinaaplaya1+a+"north intersections. The traffic status for the intersections.")
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				axios.get('http://trapiknapud.herokuapp.com/matinaaplaya')
+				  .then(function (response) {
+				    //console.log(response);
+				    chatbotResponse = response.data.analysis59;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis60;
+				    sendText(sender, chatbotResponse1)
+				      chatbotResponse2 = response.data.analysis61;
+				    sendText(sender, chatbotResponse2)
+				      chatbotResponse3 = response.data.analysis62;
+				    sendText(sender, chatbotResponse3)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text==''+matinaaplaya1+a+'south intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				axios.get('http://trapiknapud.herokuapp.com/matinaaplaya')
+				  .then(function (response) {
+				    //console.log(response);
+				    chatbotResponse = response.data.analysis55;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis56;
+				    sendText(sender, chatbotResponse1)
+				      chatbotResponse2 = response.data.analysis57;
+				    sendText(sender, chatbotResponse2)
+				      chatbotResponse3 = response.data.analysis58;
+				    sendText(sender, chatbotResponse3)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text==''+matinaaplaya1+a+'north intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				axios.get('http://trapiknapud.herokuapp.com/matinaaplaya')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis59;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis60;
+				    sendText(sender, chatbotResponse1)
+				      chatbotResponse2 = response.data.analysis61;
+				    sendText(sender, chatbotResponse2)
+				      chatbotResponse3 = response.data.analysis62;
+				    sendText(sender, chatbotResponse3)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}
+				else if(text.includes('ecoland south ')||text.includes('ecoland South ')){
+				sendText(sender, "I guess you mean"+a+ecoland1+a+"south intersections. The Traffic status for the intersections.")
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				axios.get('http://trapiknapud.herokuapp.com/ecoland')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis63;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis64;
+				    sendText(sender, chatbotResponse1)
+				      chatbotResponse2 = response.data.analysis65;
+				    sendText(sender, chatbotResponse2)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}
+				else if(text.includes('ecoland north ')||text.includes('ecoland North ')){
+				sendText(sender, "I guess you mean"+a+ecoland1+a+"north intersections. The Traffic status for the intersections.")
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				axios.get('http://trapiknapud.herokuapp.com/ecoland')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis66;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis067;
+				    sendText(sender, chatbotResponse1)
+				      chatbotResponse2 = response.data.analysis068;
+				    sendText(sender, chatbotResponse2)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}
+				else if(text==''+ecoland1+a+'south intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				axios.get('http://trapiknapud.herokuapp.com/ecoland')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis63;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis64;
+				    sendText(sender, chatbotResponse1)
+				      chatbotResponse2 = response.data.analysis65;
+				    sendText(sender, chatbotResponse2)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text==''+ecoland1+a+'north intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				axios.get('http://trapiknapud.herokuapp.com/ecoland')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis66;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis67;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis68;
+				    sendText(sender, chatbotResponse2)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}
+				else if(text==''+tulipdr1+a+'north intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				axios.get('http://trapiknapud.herokuapp.com/tulipdr')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis69;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis70;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis71;
+				    sendText(sender, chatbotResponse2)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text==''+tulipdr1+a+'south intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				axios.get('http://trapiknapud.herokuapp.com/tulipdr')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis72;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis73;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis74;
+				    sendText(sender, chatbotResponse2)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('tulip north') || text.includes('tulip North')){
+				sendText(sender, "I gues you mean"+a+tulipdr1+a+"north intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				axios.get('http://trapiknapud.herokuapp.com/tulipdr')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis72;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis73;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis74;
+				    sendText(sender, chatbotResponse2)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('tulip south') || text.includes('tulip South')){
+				sendText(sender, "I gues you mean"+a+tulipdr1+a+"south intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				axios.get('http://trapiknapud.herokuapp.com/tulipdr')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis69;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis70;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis71;
+				    sendText(sender, chatbotResponse2)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else{
+					sendText(sender, "Oops error")
+				}
+
+				else if(text==''+quimpoblvd1+a+'north intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				axios.get('http://trapiknapud.herokuapp.com/quimpoblvd')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis75;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis76;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis77;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysis78;
+				    sendText(sender, chatbotResponse3)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text==''+quimpoblvd1+a+'south intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				axios.get('http://trapiknapud.herokuapp.com/quimpoblvd')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis79;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis80;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis81;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysis82;
+				    sendText(sender, chatbotResponse3)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('quimpo north') || text.includes('quimpo North')){
+				sendText(sender, "I gues you mean"+a+quimpoblvd1+a+"north intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				axios.get('http://trapiknapud.herokuapp.com/quimpoblvd')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis75;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis76;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis77;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysis78;
+				    sendText(sender, chatbotResponse3)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('quimpo south') || text.includes('quimpo South')){
+				sendText(sender, "I gues you mean"+a+quimpoblvd1+a+"south intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				axios.get('http://trapiknapud.herokuapp.com/quimpoblvd')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis79;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis80;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis81;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysis82;
+				    sendText(sender, chatbotResponse3)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else{
+					sendText(sender, "Oops error")
+				}
+				
+
 
 
 
