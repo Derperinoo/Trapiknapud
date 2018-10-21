@@ -3440,10 +3440,7 @@ app.post('/webhook/', function(req, res) {
 				    sendText(sender, chatbotResponse)
 				  });
 				  break;
-				}else{
-					sendText(sender, "Oops error")
 				}
-
 				else if(text==''+quimpoblvd1+a+'north intersections'){
 				let chatbotResponse = "";
 				let chatbotResponse1 = "";
@@ -3537,7 +3534,7 @@ app.post('/webhook/', function(req, res) {
 				}else{
 					sendText(sender, "Oops error")
 				}
-				
+
 
 
 
