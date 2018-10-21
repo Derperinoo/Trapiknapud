@@ -228,7 +228,7 @@ app.get('/jplaurel',function(_req, _res){
 	  	const jf11 = body.RWS[0].RW[2].FIS[0].FI[0].CF[0].JF;	
 	  	const intc12 = body.RWS[0].RW[2].FIS[0].FI[1].TMC.DE;
 	  	const jf12 = body.RWS[0].RW[2].FIS[0].FI[1].CF[0].JF;
-	 	const int13 = body.RWS[0].RW[2].FIS[0].FI[2].TMC.DE;
+	 	const intc13 = body.RWS[0].RW[2].FIS[0].FI[2].TMC.DE;
 	  	const jf13 = body.RWS[0].RW[2].FIS[0].FI[2].CF[0].JF;
 	  	const intc14 = body.RWS[0].RW[2].FIS[0].FI[3].TMC.DE;
 	  	const jf14 = body.RWS[0].RW[2].FIS[0].FI[3].CF[0].JF;
