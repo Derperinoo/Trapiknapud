@@ -3279,7 +3279,7 @@ app.post('/webhook/', function(req, res) {
 				  });
 				  break;
 				}
-				else if(text.includes('ecoland south')||text.includes('ecoland South') || ||text.includes('Ecoland south')){
+				else if(text.includes('ecoland south')||text.includes('ecoland South')||text.includes('Ecoland south')){
 				sendText(sender, "I guess you mean"+a+ecoland1+a+"south intersections. The Traffic status for the intersections.")
 				let chatbotResponse = "";
 				let chatbotResponse1 = "";
