@@ -1975,7 +1975,7 @@ app.get('/pichonst',function(_req, _res){
 	request('https://traffic.api.here.com/traffic/6.1/flow.json?bbox=7.2598%2C125.0860%3B6.7670%2C125.6674&app_id=fQbW8CGYiU3l5mLqWgBE&app_code=SYZXwjFBHSYi_1t1GNuHow', { json: true }, (err, res, body) => {
 	  if (err) { return console.log(err); }
 	    //north 
-	  	pichonst = body.RWS[0].RW[26].DE;
+	  	pichonst1 = body.RWS[0].RW[26].DE;
 	  	const intc117 = body.RWS[0].RW[26].FIS[0].FI[0].TMC.DE; 
 	  	const jf117 = body.RWS[0].RW[26].FIS[0].FI[0].CF[0].JF;	
 	  	const intc118 = body.RWS[0].RW[26].FIS[0].FI[1].TMC.DE;
