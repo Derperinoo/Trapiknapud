@@ -69,69 +69,69 @@ app.get('/equirino',function(_req, _res){
 	  	const jf5 = body.RWS[0].RW[0].FIS[0].FI[4].CF[0].JF;
 	  	var p = ' ';
  
-	  	let analysisjf1 = "";
+	  	let analysis1 = "";
 	  	if(jf1 == 0 || jf1 < 4){
-	  		analysisjf1 = "For"+p+intc1+p+ "South bound Free flow of traffic";
+	  		analysis1 = "For"+p+intc1+p+ "South bound Free flow of traffic";
 	  	}else if(jf1 == 4 || jf1 < 8){
-	  		analysisjf1 = "For"+p+intc1+p+ "South bound Sluggish flow of traffic";
+	  		analysis1 = "For"+p+intc1+p+ "South bound Sluggish flow of traffic";
 	  	}else if(jf1 == 8 || jf1 < 10){
-	  		analysisjf1 = "For"+p+intc1+p+ "South bound Slow flow of traffic";
+	  		analysis1 = "For"+p+intc1+p+ "South bound Slow flow of traffic";
 	  	}else if(jf1 == 10){
-	  		analysisjf1 = "For"+p+intc1+p+ "South bound Traffic stopped or Road closed"
+	  		analysis1 = "For"+p+intc1+p+ "South bound Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf1 = "Cannot compute"
+	  		analysis1 = "Cannot compute"
 	  	}
 
-	  	let analysisjf2 = "";
+	  	let analysis2 = "";
 	  	if(jf2 == 0 || jf2 < 4){
-	  		analysisjf2 = "For"+p+intc2+p+ "South bound Free flow of traffic";
+	  		analysis2 = "For"+p+intc2+p+ "South bound Free flow of traffic";
 	  	}else if(jf2 == 4 || jf2 < 8){
-	  		analysisjf2 = "For"+p+intc2+p+ "South bound Sluggish flow of traffic";
+	  		analysis2 = "For"+p+intc2+p+ "South bound Sluggish flow of traffic";
 	  	}else if(jf2 == 8 || jf2 < 10){
-	  		analysisjf2 = "For"+p+intc2+p+ "South bound Slow flow of traffic";
+	  		analysis2 = "For"+p+intc2+p+ "South bound Slow flow of traffic";
 	  	}else if(jf2 == 10){
-	  		analysisjf2 = "For"+p+intc2+p+ "South bound Traffic stopped or Road closed"
+	  		analysis2 = "For"+p+intc2+p+ "South bound Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf2 = "Cannot compute"
+	  		analysis2 = "Cannot compute"
 	  	}
 
-	  	let analysisjf3 = "";
+	  	let analysis3 = "";
 	  	if(jf3 == 0 || jf3 < 4){
-	  		analysisjf3 = "For"+p+intc3+p+ "South bound Free flow of traffic";
+	  		analysis3 = "For"+p+intc3+p+ "South bound Free flow of traffic";
 	  	}else if(jf3 == 4 || jf3 < 8){
-	  		analysisjf3 = "For"+p+intc3+p+ "South bound Sluggish flow of traffic";
+	  		analysis3 = "For"+p+intc3+p+ "South bound Sluggish flow of traffic";
 	  	}else if(jf3 == 8 || jf3 < 10){
-	  		analysisjf3 = "For"+p+intc3+p+ "South bound Slow flow of traffic";
+	  		analysis3 = "For"+p+intc3+p+ "South bound Slow flow of traffic";
 	  	}else if(jf3 == 10){
-	  		analysisjf3 = "For"+p+intc3+p+ "South bound Traffic stopped or Road closed"
+	  		analysis3 = "For"+p+intc3+p+ "South bound Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf3 = "Cannot compute"
+	  		analysis3 = "Cannot compute"
 	  	}
 
-	  	let analysisjf4 = "";
+	  	let analysis4 = "";
 	  	if(jf4 == 0 || jf4 < 4){
-	  		analysisjf4 = "For"+p+intc4+p+ "South bound Free flow of traffic";
+	  		analysis4 = "For"+p+intc4+p+ "South bound Free flow of traffic";
 	  	}else if(jf4 == 4 || jf4 < 8){
-	  		analysisjf4 = "For"+p+intc4+p+ "South bound Sluggish flow of traffic";
+	  		analysis4 = "For"+p+intc4+p+ "South bound Sluggish flow of traffic";
 	  	}else if(jf4 == 8 || jf4 < 10){
-	  		analysisjf4 = "For"+p+intc4+p+ "South bound Slow flow of traffic";
+	  		analysis4 = "For"+p+intc4+p+ "South bound Slow flow of traffic";
 	  	}else if(jf4 == 10){
-	  		analysisjf4 = "For"+p+intc4+p+ "South bound Traffic stopped or Road closed"
+	  		analysis4 = "For"+p+intc4+p+ "South bound Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf4 = "Cannot compute"
+	  		analysis4 = "Cannot compute"
 	  	}
 
-	  	let analysisjf5 = "";
+	  	let analysis5 = "";
 	  	if(jf5 == 0 || jf5 < 4){
-	  		analysisjf5 = "For"+p+intc5+p+ "South bound Free flow of traffic";
+	  		analysis5 = "For"+p+intc5+p+ "South bound Free flow of traffic";
 	  	}else if(jf5 == 4 || jf5 < 8){
-	  		analysisjf5 = "For"+p+intc5+p+ "South bound Sluggish flow of traffic";
+	  		analysis5 = "For"+p+intc5+p+ "South bound Sluggish flow of traffic";
 	  	}else if(jf5 == 8 || jf5 < 10){
-	  		analysisjf5 = "For"+p+intc5+p+ "South bound Slow flow of traffic";
+	  		analysis5 = "For"+p+intc5+p+ "South bound Slow flow of traffic";
 	  	}else if(jf5 == 10){
-	  		analysisjf5 = "For"+p+intc5+p+ "South bound Traffic stopped or Road closed"
+	  		analysis5 = "For"+p+intc5+p+ "South bound Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf5 = "Cannot compute"
+	  		analysis5 = "Cannot compute"
 	 	}
 		//equirino north
 
@@ -148,72 +148,72 @@ app.get('/equirino',function(_req, _res){
 	  	const intc10 = body.RWS[0].RW[1].FIS[0].FI[4].TMC.DE;
 	  	const jf10 = body.RWS[0].RW[1].FIS[0].FI[4].CF[0].JF;
 	  	var va  = ' ';
-	  	let analysisjf6 = "";
+	  	let analysis6 = "";
 	  	if(jf6 == 0 || jf6 < 4){
-	  		analysisjf6 = "For"+va+intc6+va+ "North bound lane Free flow of traffic";
+	  		analysis6 = "For"+va+intc6+va+ "North bound lane Free flow of traffic";
 	  	}else if(jf6 == 4 || jf6 < 8){
-	  		analysisjf6 = "For"+va+intc6+va+ "North bound lane Sluggish flow of traffic";
+	  		analysis6 = "For"+va+intc6+va+ "North bound lane Sluggish flow of traffic";
 	  	}else if(jf6 == 8 || jf6 < 10){
-	  		analysisjf6 = "For"+va+intc6+va+ "North bound lane Slow flow of traffic";
+	  		analysis6 = "For"+va+intc6+va+ "North bound lane Slow flow of traffic";
 	  	}else if(jf6 == 10){
-	  		analysisjf6 = "For"+va+intc6+va+ "North bound lane Traffic stopped or Road closed"
+	  		analysis6 = "For"+va+intc6+va+ "North bound lane Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf6 = "Cannot compute"
+	  		analysis6 = "Cannot compute"
 	  	}
-	  	let analysisjf7 = "";
+	  	let analysis7 = "";
 	  	if(jf7 == 0 || jf7 < 4){
-	  		analysisjf7 = "For"+va+intc7+va+ "North bound lane Free flow of traffic";
+	  		analysis7 = "For"+va+intc7+va+ "North bound lane Free flow of traffic";
 	  	}else if(jf7 == 4 || jf7 < 8){
-	  		analysisjf7 = "For"+va+intc7+va+ "North bound lane Sluggish flow of traffic";
+	  		analysis7 = "For"+va+intc7+va+ "North bound lane Sluggish flow of traffic";
 	  	}else if(jf7 == 8 || jf7 < 10){
-	  		analysisjf7 = "For"+va+intc7+va+ "North bound lane Slow flow of traffic";
+	  		analysis7 = "For"+va+intc7+va+ "North bound lane Slow flow of traffic";
 	  	}else if(jf7 == 10){
-	  		analysisjf7 = "For"+va+intc7+va+ "North bound lane Traffic stopped or Road closed"
+	  		analysis7 = "For"+va+intc7+va+ "North bound lane Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf7 = "Cannot compute"
+	  		analysis7 = "Cannot compute"
 	  	}
-	  	let analysisjf8 = "";
+	  	let analysis8 = "";
 	  	if(jf8 == 0 || jf8 < 4){
-	  		analysisjf8 = "For"+va+intc8+va+ "North bound lane Free flow of traffic";
+	  		analysis8 = "For"+va+intc8+va+ "North bound lane Free flow of traffic";
 	  	}else if(jf8 == 4 || jf8 < 8){
-	  		analysisjf8 = "For"+va+intc8+va+ "North bound lane Sluggish flow of traffic";
+	  		analysis8 = "For"+va+intc8+va+ "North bound lane Sluggish flow of traffic";
 	  	}else if(jf8 == 8 || jf8 < 10){
-	  		analysisjf8 = "For"+va+intc8+va+ "North bound lane Slow flow of traffic";
+	  		analysis8 = "For"+va+intc8+va+ "North bound lane Slow flow of traffic";
 	  	}else if(jf8 == 10){
-	  		analysisjf8 = "For"+va+intc8+va+ "North bound lane Traffic stopped or Road closed"
+	  		analysis8 = "For"+va+intc8+va+ "North bound lane Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf8 = "Cannot compute"
+	  		analysis8 = "Cannot compute"
 	  	}
-	  	let analysisjf9 = "";
+	  	let analysis9 = "";
 	  	if(jf9 == 0 || jf9 < 4){
-	  		analysisjf9 = "For"+va+intc9+va+ "North bound lane Free flow of traffic";
+	  		analysis9 = "For"+va+intc9+va+ "North bound lane Free flow of traffic";
 	  	}else if(jf9 == 4 || jf9 < 8){
-	  		analysisjf9 = "For"+va+intc9+va+ "North bound lane Sluggish flow of traffic";
+	  		analysis9 = "For"+va+intc9+va+ "North bound lane Sluggish flow of traffic";
 	  	}else if(jf9 == 8 || jf9 < 10){
-	  		analysisjf9 = "For"+va+intc9+va+ "North bound lane Slow flow of traffic";
+	  		analysis9 = "For"+va+intc9+va+ "North bound lane Slow flow of traffic";
 	  	}else if(jf9 == 10){
-	  		analysisjf9 = "For"+va+intc9+va+ "North bound lane Traffic stopped or Road closed"
+	  		analysis9 = "For"+va+intc9+va+ "North bound lane Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf9 = "Cannot compute"
+	  		analysis9 = "Cannot compute"
 	  	}
-	  	let analysisjf10 = "";
+	  	let analysis10 = "";
 	  	if(jf10 == 0 || jf10 < 4){
-	  		analysisjf10 = "For"+va+intc10+va+ "North bound lane Free flow of traffic";
+	  		analysis10 = "For"+va+intc10+va+ "North bound lane Free flow of traffic";
 	  	}else if(jf10 == 4 || jf10 < 8){
-	  		analysisjf10 = "For"+va+intc10+va+ "North bound lane Sluggish flow of traffic";
+	  		analysis10 = "For"+va+intc10+va+ "North bound lane Sluggish flow of traffic";
 	  	}else if(jf10 == 8 || jf10 < 10){
-	  		analysisjf10 = "For"+va+intc10+va+ "North bound lane Slow flow of traffic";
+	  		analysis10 = "For"+va+intc10+va+ "North bound lane Slow flow of traffic";
 	  	}else if(jf10 == 10){
-	  		analysisjf10 = "For"+va+intc10+va+ "North bound lane Traffic stopped or Road closed"
+	  		analysis10 = "For"+va+intc10+va+ "North bound lane Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf10 = "Cannot compute"
+	  		analysis10 = "Cannot compute"
 	  	}
 	  	_res.setHeader('Content-Type', 'application/json');
     	_res.send(JSON.stringify({ equirino1: equirino1, intc1: intc1, jf1: jf1,  intc2: intc2, jf2: jf2,  intc3: intc3, jf3: jf3, 
-    		intc4: intc4, jf4: jf4,  intc5: intc5, jf5: jf5, analysisjf1: analysisjf1, analysisjf2: analysisjf2, analysisjf3:analysisjf3, analysisjf4:analysisjf4, 
-    		analysisjf5:analysisjf5,equirinoo1: equirinoo1, intc6: intc6, jf6: jf6,  intc7: intc7, jf7: jf7,  intc8: intc8, jf8: jf8, 
-    		intc9: intc9, jf9: jf9,  intc10: intc10, jf10: jf10, analysisjf6: analysisjf6, analysisjf7: analysisjf7, analysisjf8:analysisjf8, analysisjf9:analysisjf9, 
-    		analysisjf10:analysisjf10}));	  
+    		intc4: intc4, jf4: jf4,  intc5: intc5, jf5: jf5, analysis1: analysis1, analysis2: analysis2, analysis3:analysis3, analysis4:analysis4, 
+    		analysis5:analysis5,equirinoo1: equirinoo1, intc6: intc6, jf6: jf6,  intc7: intc7, jf7: jf7,  intc8: intc8, jf8: jf8, 
+    		intc9: intc9, jf9: jf9,  intc10: intc10, jf10: jf10, analysis6: analysis6, analysis7: analysis7, analysis8:analysis8, analysis9:analysis9, 
+    		analysis10:analysis10}));	  
 	});
 });
 app.get('/jplaurel',function(_req, _res){
@@ -237,78 +237,78 @@ app.get('/jplaurel',function(_req, _res){
 		const intc16 = body.RWS[0].RW[2].FIS[0].FI[5].TMC.DE;
 	  	const jf16 = body.RWS[0].RW[2].FIS[0].FI[5].CF[0].JF;
 	  	var vva = ' ';
-	    let analysisjf11 = "";
+	    let analysis11 = "";
 	  	if(jf11 == 0 || jf11 < 4){
-	  		analysisjf11 = "For"+vva+intc11+vva+ "South bound lane Free flow of traffic";
+	  		analysis11 = "For"+vva+intc11+vva+ "South bound lane Free flow of traffic";
 	  	}else if(jf11 == 4 || jf11 < 8){
-	  		analysisjf11 = "For"+vva+intc11+vva+ "South bound Sluggish flow of traffic";
+	  		analysis11 = "For"+vva+intc11+vva+ "South bound Sluggish flow of traffic";
 	  	}else if(jf11 == 8 || jf11 < 10){
-	  		analysisjf11 = "For"+vva+intc11+vva+ "South bound Slow flow of traffic";
+	  		analysis11 = "For"+vva+intc11+vva+ "South bound Slow flow of traffic";
 	  	}else if(jf11 == 10){
-	  		analysisjf11 = "For"+vva+intc11+vva+ "South bound Traffic stopped or Road closed"
+	  		analysis11 = "For"+vva+intc11+vva+ "South bound Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf11 = "Cannot compute"
+	  		analysis11 = "Cannot compute"
 	  	}
-	  	let analysisjf12 = "";
+	  	let analysis12 = "";
 	  	if(jf12 == 0 || jf12 < 4){
-	  		analysisjf12 = "For"+vva+intc12+vva+ "South bound Free flow of traffic";
+	  		analysis12 = "For"+vva+intc12+vva+ "South bound Free flow of traffic";
 	  	}else if(jf12 == 4 || jf12 < 8){
-	  		analysisjf12 = "For"+vva+intc12+vva+ "South bound Sluggish flow of traffic";
+	  		analysis12 = "For"+vva+intc12+vva+ "South bound Sluggish flow of traffic";
 	  	}else if(jf12 == 8 || jf12 < 10){
-	  		analysisjf12 = "For"+vva+intc12+vva+ "South bound Slow flow of traffic";
+	  		analysis12 = "For"+vva+intc12+vva+ "South bound Slow flow of traffic";
 	  	}else if(jf12 == 10){
-	  		analysisjf12 = "For"+vva+intc12+vva+ "South bound Traffic stopped or Road closed"
+	  		analysis12 = "For"+vva+intc12+vva+ "South bound Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf12 = "Cannot compute"
+	  		analysis12 = "Cannot compute"
 	  	}
-	  	let analysisjf13 = "";
+	  	let analysis13 = "";
 	  	if(jf13 == 0 || jf13 < 4){
-	  		analysisjf13 = "For"+vva+intc13+vva+ "South bound Free flow of traffic";
+	  		analysis13 = "For"+vva+intc13+vva+ "South bound Free flow of traffic";
 	  	}else if(jf13 == 4 || jf13 < 8){
-	  		analysisjf13 = "For"+vva+intc13+vva+ "South bound Sluggish flow of traffic";
+	  		analysis13 = "For"+vva+intc13+vva+ "South bound Sluggish flow of traffic";
 	  	}else if(jf13 == 8 || jf13 < 10){
-	  		analysisjf13 = "For"+vva+intc13+vva+ "South bound Slow flow of traffic";
+	  		analysis13 = "For"+vva+intc13+vva+ "South bound Slow flow of traffic";
 	  	}else if(jf13 == 10){
-	  		analysisjf13 = "For"+vva+intc13+vva+ "South bound Traffic stopped or Road closed"
+	  		analysis13 = "For"+vva+intc13+vva+ "South bound Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf13 = "Cannot compute"
+	  		analysis13 = "Cannot compute"
 	  	}
-	  	let analysisjf14 = "";
+	  	let analysis14 = "";
 	  	if(jf14 == 0 || jf14 < 4){
-	  		analysisjf14 = "For"+vva+intc14+vva+ "South bound Free flow of traffic";
+	  		analysis14 = "For"+vva+intc14+vva+ "South bound Free flow of traffic";
 	  	}else if(jf14 == 4 || jf14 < 8){
-	  		analysisjf14 = "For"+vva+intc14+vva+ "South bound Sluggish flow of traffic";
+	  		analysis14 = "For"+vva+intc14+vva+ "South bound Sluggish flow of traffic";
 	  	}else if(jf14 == 8 || jf14 < 10){
-	  		analysisjf14 = "For"+vva+intc14+vva+ "South bound Slow flow of traffic";
+	  		analysis14 = "For"+vva+intc14+vva+ "South bound Slow flow of traffic";
 	  	}else if(jf14 == 10){
-	  		analysisjf14 = "For"+vva+intc14+vva+ "South bound Traffic stopped or Road closed"
+	  		analysis14 = "For"+vva+intc14+vva+ "South bound Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf14 = "Cannot compute"
+	  		analysis14 = "Cannot compute"
 	  	}
 
-	  	let analysisjf15 = "";
+	  	let analysis15 = "";
 	  	if(jf15 == 0 || jf15 < 4){
-	  		analysisjf15 = "For"+vva+intc15+vva+ "South bound Free flow of traffic";
+	  		analysis15 = "For"+vva+intc15+vva+ "South bound Free flow of traffic";
 	  	}else if(jf15 == 4 || jf15 < 8){
-	  		analysisjf15 = "For"+vva+intc15+vva+ "South bound Sluggish flow of traffic";
+	  		analysis15 = "For"+vva+intc15+vva+ "South bound Sluggish flow of traffic";
 	  	}else if(jf15 == 8 || jf15 < 10){
-	  		analysisjf15 = "For"+vva+intc15+vva+ "South bound Slow flow of traffic";
+	  		analysis15 = "For"+vva+intc15+vva+ "South bound Slow flow of traffic";
 	  	}else if(jf15 == 10){
-	  		analysisjf15 = "For"+vva+intc15+vva+ "South bound Traffic stopped or Road closed"
+	  		analysis15 = "For"+vva+intc15+vva+ "South bound Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf15 = "Cannot compute"
+	  		analysis15 = "Cannot compute"
 	  	}
-	    let analysisjf16 = "";
+	    let analysis16 = "";
 	  	if(jf16 == 0 || jf16 < 4){
-	  		analysisjf16 = "For"+vva+intc16+vva+ "South bound Free flow of traffic";
+	  		analysis16 = "For"+vva+intc16+vva+ "South bound Free flow of traffic";
 	  	}else if(jf16 == 4 || jf16 < 8){
-	  		analysisjf16 = "For"+vva+intc16+vva+ "South bound Sluggish flow of traffic";
+	  		analysis16 = "For"+vva+intc16+vva+ "South bound Sluggish flow of traffic";
 	  	}else if(jf16 == 8 || jf16 < 10){
-	  		analysisjf16 = "For"+vva+intc16+vva+ "South bound Slow flow of traffic";
+	  		analysis16 = "For"+vva+intc16+vva+ "South bound Slow flow of traffic";
 	  	}else if(jf16 == 10){
-	  		analysisjf16 = "For"+vva+intc16+vva+ "South bound Traffic stopped or Road closed"
+	  		analysis16 = "For"+vva+intc16+vva+ "South bound Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf16 = "Cannot compute"
+	  		analysis16 = "Cannot compute"
 	  	}
 	  	//jp north 
 
@@ -327,85 +327,85 @@ app.get('/jplaurel',function(_req, _res){
 	  	const intc22 = body.RWS[0].RW[3].FIS[0].FI[5].TMC.DE;
 	  	const jf22 = body.RWS[0].RW[3].FIS[0].FI[5].CF[0].JF;
 	  	var pp = ' ';
-	  	let analysisjf17 = "";
+	  	let analysis17 = "";
 	  	if(jf17 == 0 || jf17 < 4){
-	  		analysisjf17 = "For"+pp+intc17+pp+"North bound lane Free flow of traffic";
+	  		analysis17 = "For"+pp+intc17+pp+"North bound lane Free flow of traffic";
 	  	}else if(jf17 == 4 || jf17 < 8){
-	  		analysisjf17 = "For"+pp+intc17+pp+"North bound lane Free Sluggish flow of traffic";
+	  		analysis17 = "For"+pp+intc17+pp+"North bound lane Free Sluggish flow of traffic";
 	  	}else if(jf17 == 8 || jf17 < 10){
-	  		analysisjf17 = "For"+pp+intc17+pp+"North bound lane Free Slow flow of traffic";
+	  		analysis17 = "For"+pp+intc17+pp+"North bound lane Free Slow flow of traffic";
 	  	}else if(jf17 == 10){
-	  		analysisjf17 = "For"+pp+intc17+pp+"North bound lane Free Traffic stopped or Road closed"
+	  		analysis17 = "For"+pp+intc17+pp+"North bound lane Free Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf17 = "Cannot compute"
+	  		analysis17 = "Cannot compute"
 	  	}
-	  	let analysisjf18 = "";
+	  	let analysis18 = "";
 	  	if(jf18 == 0 || jf18 < 4){
-	  		analysisjf18 = "For"+pp+intc18+pp+"North bound lane Free flow of traffic";
+	  		analysis18 = "For"+pp+intc18+pp+"North bound lane Free flow of traffic";
 	  	}else if(jf18 == 4 || jf18 < 8){
-	  		analysisjf18 = "For"+pp+intc18+pp+"North bound lane Free Sluggish flow of traffic";
+	  		analysis18 = "For"+pp+intc18+pp+"North bound lane Free Sluggish flow of traffic";
 	  	}else if(jf18 == 8 || jf18 < 10){
-	  		analysisjf18 = "For"+pp+intc18+pp+"North bound lane Free Slow flow of traffic";
+	  		analysis18 = "For"+pp+intc18+pp+"North bound lane Free Slow flow of traffic";
 	  	}else if(jf18 == 10){
-	  		analysisjf18 = "For"+pp+intc18+pp+"North bound lane Free Traffic stopped or Road closed"
+	  		analysis18 = "For"+pp+intc18+pp+"North bound lane Free Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf18 = "Cannot compute"
+	  		analysis18 = "Cannot compute"
 	  	}
-	  	let analysisjf19 = "";
+	  	let analysis19 = "";
 	  	if(jf19 == 0 || jf19 < 4){
-	  		analysisjf19 = "For"+pp+intc19+pp+"North bound lane Free flow of traffic";
+	  		analysis19 = "For"+pp+intc19+pp+"North bound lane Free flow of traffic";
 	  	}else if(jf19 == 4 || jf19 < 8){
-	  		analysisjf19 = "For"+pp+intc19+pp+"North bound lane Free Sluggish flow of traffic";
+	  		analysis19 = "For"+pp+intc19+pp+"North bound lane Free Sluggish flow of traffic";
 	  	}else if(jf19 == 8 || jf19 < 10){
-	  		analysisjf19 = "For"+pp+intc19+pp+"North bound lane Free Slow flow of traffic";
+	  		analysis19 = "For"+pp+intc19+pp+"North bound lane Free Slow flow of traffic";
 	  	}else if(jf19 == 10){
-	  		analysisjf19 = "For"+pp+intc19+pp+"North bound lane Free Traffic stopped or Road closed"
+	  		analysis19 = "For"+pp+intc19+pp+"North bound lane Free Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf19 = "Cannot compute"
+	  		analysis19 = "Cannot compute"
 	  	}
-	  	let analysisjf20 = "";
+	  	let analysis20 = "";
 	  	if(jf20 == 0 || jf20 < 4){
-	  		analysisjf20 = "For"+pp+intc20+pp+"North bound lane Free flow of traffic";
+	  		analysis20 = "For"+pp+intc20+pp+"North bound lane Free flow of traffic";
 	  	}else if(jf20 == 4 || jf20 < 8){
-	  		analysisjf20 = "For"+pp+intc20+pp+"North bound lane Free Sluggish flow of traffic";
+	  		analysis20 = "For"+pp+intc20+pp+"North bound lane Free Sluggish flow of traffic";
 	  	}else if(jf20 == 8 || jf20 < 10){
-	  		analysisjf20 = "For"+pp+intc20+pp+"North bound lane Free Slow flow of traffic";
+	  		analysis20 = "For"+pp+intc20+pp+"North bound lane Free Slow flow of traffic";
 	  	}else if(jf20 == 10){
-	  		analysisjf20 = "For"+pp+intc20+pp+"North bound lane Free Traffic stopped or Road closed"
+	  		analysis20 = "For"+pp+intc20+pp+"North bound lane Free Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf20 = "Cannot compute"
+	  		analysis20 = "Cannot compute"
 	  	}
-	  	let analysisjf21 = "";
+	  	let analysis21 = "";
 	  	if(jf21 == 0 || jf21 < 4){
-	  		analysisjf21 = "For"+pp+intc21+pp+"North bound lane Free flow of traffic";
+	  		analysis21 = "For"+pp+intc21+pp+"North bound lane Free flow of traffic";
 	  	}else if(jf21 == 4 || jf21 < 8){
-	  		analysisjf21 = "For"+pp+intc21+pp+"North bound lane Free Sluggish flow of traffic";
+	  		analysis21 = "For"+pp+intc21+pp+"North bound lane Free Sluggish flow of traffic";
 	  	}else if(jf21 == 8 || jf21 < 10){
-	  		analysisjf21 = "For"+pp+intc21+pp+"North bound lane Free Slow flow of traffic";
+	  		analysis21 = "For"+pp+intc21+pp+"North bound lane Free Slow flow of traffic";
 	  	}else if(jf21 == 10){
-	  		analysisjf21 = "For"+pp+intc21+pp+"North bound lane Free Traffic stopped or Road closed"
+	  		analysis21 = "For"+pp+intc21+pp+"North bound lane Free Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf21 = "Cannot compute"
+	  		analysis21 = "Cannot compute"
 	  	}
-	  	let analysisjf22 = "";
+	  	let analysis22 = "";
 	  	if(jf22 == 0 || jf22 < 4){
-	  		analysisjf22 = "For"+pp+intc22+pp+"North bound lane Free flow of traffic";
+	  		analysis22 = "For"+pp+intc22+pp+"North bound lane Free flow of traffic";
 	  	}else if(jf22 == 4 || jf22 < 8){
-	  		analysisjf22 = "For"+pp+intc22+pp+"North bound lane Free Sluggish flow of traffic";
+	  		analysis22 = "For"+pp+intc22+pp+"North bound lane Free Sluggish flow of traffic";
 	  	}else if(jf22 == 8 || jf22 < 10){
-	  		analysisjf22 = "For"+pp+intc22+pp+"North bound lane Free Slow flow of traffic";
+	  		analysis22 = "For"+pp+intc22+pp+"North bound lane Free Slow flow of traffic";
 	  	}else if(jf22 == 10){
-	  		analysisjf22 = "For"+pp+intc22+pp+"North bound lane Free Traffic stopped or Road closed"
+	  		analysis22 = "For"+pp+intc22+pp+"North bound lane Free Traffic stopped or Road closed"
 	  	}else{
-	  		analysisjf22 = "Cannot compute"
+	  		analysis22 = "Cannot compute"
 	  	}
 	  	_res.setHeader('Content-Type', 'application/json');
     	_res.send(JSON.stringify({ jplaurel1: jplaurel1, intc11: intc11, jf11: jf11,  intc12: intc12, jf12: jf12,  intc13: intc13, jf13: jf13,  
-    		intc14: intc14, jf14: jf14,  intc15: intc15, jf15: jf15, intc16: intc16, jf16:jf16,analysisjf11:analysisjf11, analysisjf12:analysisjf12, analysisjf13:analysisjf13,
-    		analysisjf14:analysisjf14, analysisjf15:analysisjf15,analysisjf16:analysisjf16, jplaureel1: jplaureel1, intc17: intc17, jf17: jf17,  intc18: intc18, jf18:  jf18 ,intc19: intc19, jf19: jf19, intc20: intc20, jf20: jf20,  intc21: intc21, jf21: jf21,
-    		intc22:intc22,jf22:jf22, analysisjf17:analysisjf17,
-		analysisjf18:analysisjf18, analysisjf19:analysisjf19, analysisjf20:analysisjf20,
-    		analysisjf21:analysisjf21, analysisjf22:analysisjf22,}));
+    		intc14: intc14, jf14: jf14,  intc15: intc15, jf15: jf15, intc16: intc16, jf16:jf16,analysis11:analysis11, analysis12:analysis12, analysis13:analysis13,
+    		analysis14:analysis14, analysis15:analysis15,analysis16:analysis16, jplaureel1: jplaureel1, intc17: intc17, jf17: jf17,  intc18: intc18, jf18:  jf18 ,intc19: intc19, jf19: jf19, intc20: intc20, jf20: jf20,  intc21: intc21, jf21: jf21,
+    		intc22:intc22,jf22:jf22, analysis17:analysis17,
+		analysis18:analysis18, analysis19:analysis19, analysis20:analysis20,
+    		analysis21:analysis21, analysis22:analysis22,}));
 	 
 	});
 });
@@ -2664,15 +2664,15 @@ app.post('/webhook/', function(req, res) {
 				axios.get('http://trapiknapud.herokuapp.com/equirino')
 					.then(function (response) {
 				    //console.log(response);
-				    chatbotResponse = response.data.analysisjf1;
+				    chatbotResponse = response.data.analysis1;
 				    sendText(sender, chatbotResponse)
-				    chatbotResponse1 = response.data.analysisjf2;
+				    chatbotResponse1 = response.data.analysis2;
 				    sendText(sender, chatbotResponse1)
-				    chatbotResponse2 = response.data.analysisjf3;
+				    chatbotResponse2 = response.data.analysis3;
 				    sendText(sender, chatbotResponse2)
-				    chatbotResponse3 = response.data.analysisjf4;
+				    chatbotResponse3 = response.data.analysis4;
 				    sendText(sender, chatbotResponse3)
-				    chatbotResponse4 = response.data.analysisjf5;
+				    chatbotResponse4 = response.data.analysis5;
 				    sendText(sender, chatbotResponse4)
 				  })
 				  .catch(function (error) {
@@ -2693,15 +2693,15 @@ app.post('/webhook/', function(req, res) {
 					axios.get('http://trapiknapud.herokuapp.com/equirino')
 				  		.then(function (response) {
 				    //console.log(response);
-				    	chatbotResponse = response.data.analysisjf6;
+				    	chatbotResponse = response.data.analysis6;
 				    	sendText(sender, chatbotResponse)
-				    	chatbotResponse1 = response.data.analysisjf7;
+				    	chatbotResponse1 = response.data.analysis7;
 				    	sendText(sender, chatbotResponse1)
-				    	chatbotResponse2 = response.data.analysisjf8;
+				    	chatbotResponse2 = response.data.analysis8;
 				    	sendText(sender, chatbotResponse2)
-				    	chatbotResponse3 = response.data.analysisjf9;
+				    	chatbotResponse3 = response.data.analysis9;
 				    	sendText(sender, chatbotResponse3)
-				    	chatbotResponse4 = response.data.analysisjf10;
+				    	chatbotResponse4 = response.data.analysis10;
 				    	sendText(sender, chatbotResponse4)
 				 	})
 				  	.catch(function (error) {
@@ -2721,15 +2721,15 @@ app.post('/webhook/', function(req, res) {
 					axios.get('http://trapiknapud.herokuapp.com/equirino')
 				  		.then(function (response) {
 				    //console.log(response);
-				   		chatbotResponse = response.data.analysisjf1;
+				   		chatbotResponse = response.data.analysis1;
 				    	sendText(sender, chatbotResponse)
-				    	chatbotResponse1 = response.data.analysisjf2;
+				    	chatbotResponse1 = response.data.analysis2;
 				    	sendText(sender, chatbotResponse1)
-				    	chatbotResponse2 = response.data.analysisjf3;
+				    	chatbotResponse2 = response.data.analysis3;
 				    	sendText(sender, chatbotResponse2)
-				    	chatbotResponse3 = response.data.analysisjf4;
+				    	chatbotResponse3 = response.data.analysis4;
 				    	sendText(sender, chatbotResponse3)
-				    	chatbotResponse4 = response.data.analysisjf5;
+				    	chatbotResponse4 = response.data.analysis5;
 				    	sendText(sender, chatbotResponse4)
 				  	})
 				  	.catch(function (error) {
@@ -2749,15 +2749,15 @@ app.post('/webhook/', function(req, res) {
 					axios.get('http://trapiknapud.herokuapp.com/equirino')
 				  		.then(function (response) {
 				    //console.log(response);
-				    	chatbotResponse = response.data.analysisjf6;
+				    	chatbotResponse = response.data.analysis6;
 				    	sendText(sender, chatbotResponse)
-				    	chatbotResponse1 = response.data.analysisjf7;
+				    	chatbotResponse1 = response.data.analysis7;
 				    	sendText(sender, chatbotResponse1)
-				    	chatbotResponse2 = response.data.analysisjf8;
+				    	chatbotResponse2 = response.data.analysis8;
 				    	sendText(sender, chatbotResponse2)
-				    	chatbotResponse3 = response.data.analysisjf9;
+				    	chatbotResponse3 = response.data.analysis9;
 				    	sendText(sender, chatbotResponse3)
-				    	chatbotResponse4 = response.data.analysisjf10;
+				    	chatbotResponse4 = response.data.analysis10;
 				    	sendText(sender, chatbotResponse4)
 				  	})
 				  	.catch(function (error) {
@@ -2777,17 +2777,17 @@ app.post('/webhook/', function(req, res) {
 					axios.get('http://trapiknapud.herokuapp.com/jplaurel')
 						.then(function (response) {
 				    //console.log(response);
-				    	chatbotResponse = response.data.analysisjp1;
+				    	chatbotResponse = response.data.analysis17;
 				    	sendText(sender, chatbotResponse)
-				    	chatbotResponse1 = response.data.analysisjp2;
+				    	chatbotResponse1 = response.data.analysis18;
 				    	sendText(sender, chatbotResponse1)
-				    	chatbotResponse2 = response.data.analysisjp3;
+				    	chatbotResponse2 = response.data.analysis19;
 				    	sendText(sender, chatbotResponse2)
-				    	chatbotResponse3 = response.data.analysisjp4;
+				    	chatbotResponse3 = response.data.analysis20;
 				    	sendText(sender, chatbotResponse3)
-				    	chatbotResponse4 = response.data.analysisjp5;
+				    	chatbotResponse4 = response.data.analysis21;
 				    	sendText(sender, chatbotResponse4)
-				     	chatbotResponse5 = response.data.analysisjp6;
+				     	chatbotResponse5 = response.data.analysis22;
 				    	sendText(sender, chatbotResponse5)
 				 	})
 				  	.catch(function (error) {
@@ -2808,17 +2808,17 @@ app.post('/webhook/', function(req, res) {
 				axios.get('http://trapiknapud.herokuapp.com/jplaurel')
 					.then(function (response) {
 				    //console.log(response);
-				    chatbotResponse = response.data.analysisjp01;
+				    chatbotResponse = response.data.analysis11;
 				    sendText(sender, chatbotResponse)
-				    chatbotResponse1 = response.data.analysisjp02;
+				    chatbotResponse1 = response.data.analysis12;
 				    sendText(sender, chatbotResponse1)
-				    chatbotResponse2 = response.data.analysisjp03;
+				    chatbotResponse2 = response.data.analysis13;
 				    sendText(sender, chatbotResponse2)
-				    chatbotResponse3 = response.data.analysisjp04;
+				    chatbotResponse3 = response.data.analysis14;
 				    sendText(sender, chatbotResponse3)
-				    chatbotResponse4 = response.data.analysisjp05;
+				    chatbotResponse4 = response.data.analysis15;
 				    sendText(sender, chatbotResponse4)
-				    chatbotResponse5 = response.data.analysisjp06;
+				    chatbotResponse5 = response.data.analysis16;
 				    sendText(sender, chatbotResponse5)
 				  })
 				  	.catch(function (error) {
@@ -2838,17 +2838,17 @@ app.post('/webhook/', function(req, res) {
 				axios.get('http://trapiknapud.herokuapp.com/jplaurel')
 				  .then(function (response) {
 				    //console.log(response);
-				    chatbotResponse = response.data.analysisjp01;
+				   chatbotResponse = response.data.analysis11;
 				    sendText(sender, chatbotResponse)
-				    chatbotResponse1 = response.data.analysisjp02;
+				    chatbotResponse1 = response.data.analysis12;
 				    sendText(sender, chatbotResponse1)
-				    chatbotResponse2 = response.data.analysisjp03;
+				    chatbotResponse2 = response.data.analysis13;
 				    sendText(sender, chatbotResponse2)
-				    chatbotResponse3 = response.data.analysisjp04;
+				    chatbotResponse3 = response.data.analysis14;
 				    sendText(sender, chatbotResponse3)
-				    chatbotResponse4 = response.data.analysisjp05;
+				    chatbotResponse4 = response.data.analysis15;
 				    sendText(sender, chatbotResponse4)
-				     chatbotResponse5 = response.data.analysisjp06;
+				    chatbotResponse5 = response.data.analysis16;
 				    sendText(sender, chatbotResponse5)
 				  })
 				  .catch(function (error) {
@@ -2869,18 +2869,18 @@ app.post('/webhook/', function(req, res) {
 				axios.get('http://trapiknapud.herokuapp.com/jplaurel')
 				  .then(function (response) {
 				    //console.log(response);
-				    chatbotResponse = response.data.analysisjp1;
+				    chatbotResponse = response.data.analysis17;
 				    sendText(sender, chatbotResponse)
-				    chatbotResponse1 = response.data.analysisjp2;
-				    sendText(sender, chatbotResponse1)
-				    chatbotResponse2 = response.data.analysisjp3;
-				    sendText(sender, chatbotResponse2)
-				    chatbotResponse3 = response.data.analysisjp4;
-				    sendText(sender, chatbotResponse3)
-				    chatbotResponse4 = response.data.analysisjp5;
-				    sendText(sender, chatbotResponse4)
-				     chatbotResponse5 = response.data.analysisjp6;
-				    sendText(sender, chatbotResponse5)
+				   	chatbotResponse1 = response.data.analysis18;
+				   	sendText(sender, chatbotResponse1)
+				   	chatbotResponse2 = response.data.analysis19;
+				   	sendText(sender, chatbotResponse2)
+			    	chatbotResponse3 = response.data.analysis20;
+			    	sendText(sender, chatbotResponse3)
+			    	chatbotResponse4 = response.data.analysis21;
+			    	sendText(sender, chatbotResponse4)
+			     	chatbotResponse5 = response.data.analysis22;
+			    	sendText(sender, chatbotResponse5)
 				  })
 				  .catch(function (error) {
 				    //console.log(error);
