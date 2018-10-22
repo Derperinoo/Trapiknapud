@@ -3529,7 +3529,790 @@ app.post('/webhook/', function(req, res) {
 				    sendText(sender, chatbotResponse)
 				  });
 				  break;
-				}else{
+				}
+				else if(text==''+sandawa1+a+'north intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/sandaward')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis85;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis86;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text==''+sandawa1+a+'south intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				axios.get('http://trapiknapud.herokuapp.com/sandaward')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis83;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis84;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('sandawa north') || text.includes('Sandawa North')||text.includes('Sandawa north')){
+				sendText(sender, "I gues you mean"+a+sandawa1+a+"north intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/sandaward')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis85;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis86;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('sandawa south') || text.includes('Sandawa South')||text.includes('Sandawa south')){
+				sendText(sender, "I gues you mean"+a+sandawa1+a+"south intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/sandaward')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis83;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis84;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				
+				}
+				else if(text==''+quezonblvd1+a+'north intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				let chatbotResponse4 = "";
+				axios.get('http://trapiknapud.herokuapp.com/quezonblvd')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis92;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis93;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis94;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysis95;
+				    sendText(sender, chatbotResponse3)
+				    chatbotResponse4 = response.data.analysis96;
+				    sendText(sender, chatbotResponse4)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text==''+quezonblvd1+a+'south intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				let chatbotResponse4 = "";
+				axios.get('http://trapiknapud.herokuapp.com/quezonblvd')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis87;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis88;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis89;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse4 = response.data.analysis90;
+				    sendText(sender, chatbotResponse3)
+				    chatbotResponse4 = response.data.analysis91;
+				    sendText(sender, chatbotResponse4)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('quezon north') || text.includes('Sandawa North')||text.includes('Sandawa north')){
+				sendText(sender, "I gues you mean"+a+quezonblvd1+a+"north intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				let chatbotResponse4 = "";
+				axios.get('http://trapiknapud.herokuapp.com/quezonblvd')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis92;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis93;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis94;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysis95;
+				    sendText(sender, chatbotResponse3)
+				    chatbotResponse4 = response.data.analysis96;
+				    sendText(sender, chatbotResponse4)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('quezon south') || text.includes('Quezon South')||text.includes('Quezon south')){
+				sendText(sender, "I gues you mean"+a+quezonblvd1+a+"south intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				let chatbotResponse4 = "";
+				axios.get('http://trapiknapud.herokuapp.com/quezonblvd')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis87;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis88;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis89;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysis90;
+				    sendText(sender, chatbotResponse3)
+				    chatbotResponse4 = response.data.analysis91;
+				    sendText(sender, chatbotResponse4)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				
+				}
+				else if(text==''+mlquezon1+a+'north intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				let chatbotResponse4 = "";
+				let chatbotResponse5 = "";
+				axios.get('http://trapiknapud.herokuapp.com/mlquezonblvd')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis103;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis104;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis105;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysis106;
+				    sendText(sender, chatbotResponse3)
+				    chatbotResponse4 = response.data.analysis107;
+				    sendText(sender, chatbotResponse4)
+				    chatbotResponse5 = response.data.analysis108;
+				    sendText(sender, chatbotResponse5)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text==''+mlquezon1+a+'south intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				let chatbotResponse4 = "";
+				let chatbotResponse5 = "";
+				axios.get('http://trapiknapud.herokuapp.com/mlquezonblvd')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis97;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis98;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis99;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysis100;
+				    sendText(sender, chatbotResponse3)
+				    chatbotResponse4 = response.data.analysis101;
+				    sendText(sender, chatbotResponse4)
+				    chatbotResponse5 = response.data.analysis102;
+				    sendText(sender, chatbotResponse5)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('mlquezon north') || text.includes('Mlquezon North')||text.includes('Mlquezon north')){
+				sendText(sender, "I gues you mean"+a+mlquezonblvd+a+"north intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				let chatbotResponse4 = "";
+				let chatbotResponse5 = "";
+				axios.get('http://trapiknapud.herokuapp.com/mlquezonblvd')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis97;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis98;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis99;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysis100;
+				    sendText(sender, chatbotResponse3)
+				    chatbotResponse4 = response.data.analysis101;
+				    sendText(sender, chatbotResponse4)
+				    chatbotResponse5 = response.data.analysis102;
+				    sendText(sender, chatbotResponse5)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('mlquezon south') || text.includes('Mlquezon South')||text.includes('Mlquezon south')){
+				sendText(sender, "I gues you mean"+a+mlquezon1+a+"south intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				let chatbotResponse4 = "";
+				let chatbotResponse5 = "";
+				axios.get('http://trapiknapud.herokuapp.com/mlquezonblvd')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis97;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis98;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis99;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysis100;
+				    sendText(sender, chatbotResponse3)
+				    chatbotResponse4 = response.data.analysis101;
+				    sendText(sender, chatbotResponse4)
+				    chatbotResponse5 = response.data.analysis102;
+				    sendText(sender, chatbotResponse5)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				
+				}
+				else if(text==''+cabaguio1+a+'north intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/cabaguio')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis111;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis112;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text==''+cabaguio1+a+'south intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/cabaguio')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis109;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis110;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('cabaguio north') || text.includes('Cabaguio North')||text.includes('Cabaguio north')){
+				sendText(sender, "I gues you mean"+a+cabaguio1+a+"north intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/mlquezonblvd')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis111;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis112;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('cabaguio south') || text.includes('Cabaguio South')||text.includes('Cabaguio south')){
+				sendText(sender, "I gues you mean"+a+cabaguio1+a+"south intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/mlquezonblvd')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis109;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis110;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				
+				}
+				else if(text==''+dacudao1+a+'north intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/dacudao')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis115;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis116;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text==''+dacudao1+a+'south intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/dacudao')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis113;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis114;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('dacudao north') || text.includes('Dacudao North')||text.includes('Dacudao north')){
+				sendText(sender, "I gues you mean"+a+dacudao1+a+"north intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/dacudao')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis115;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis116;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('dacudao south') || text.includes('Dacudao South')||text.includes('Dacudao south')){
+				sendText(sender, "I gues you mean"+a+dacudao1+a+"south intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/dacudao')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis113;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis114;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				
+				}
+				else if(text==''+pichonst1+a+'north intersections'){
+				let chatbotResponse = "";
+				axios.get('http://trapiknapud.herokuapp.com/pichonst')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis122;
+				    sendText(sender, chatbotResponse)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text==''+pichonst1+a+'south intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				let chatbotResponse4 = "";
+				axios.get('http://trapiknapud.herokuapp.com/pichonst')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis117;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis118;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis119;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysis120;
+				    sendText(sender, chatbotResponse3)
+				    chatbotResponse4 = response.data.analysis121;
+				    sendText(sender, chatbotResponse4)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('pichon north') || text.includes('Pichon North')||text.includes('Pichon north')){
+				sendText(sender, "I gues you mean"+a+pichonst1+a+"north intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				axios.get('http://trapiknapud.herokuapp.com/pichonst')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis122;
+				    sendText(sender, chatbotResponse)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('pichon south') || text.includes('Pichon South')||text.includes('Pichon south')){
+				sendText(sender, "I gues you mean"+a+pichonst1+a+"south intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				let chatbotResponse4 = "";
+				axios.get('http://trapiknapud.herokuapp.com/pichonst')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis117;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis118;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis119;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysis120;
+				    sendText(sender, chatbotResponse3)
+				    chatbotResponse4 = response.data.analysis121;
+				    sendText(sender, chatbotResponse4)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				
+				}
+				else if(text==''+sanpedro1+a+'north intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				axios.get('http://trapiknapud.herokuapp.com/sanpedrost')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis123;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis124;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis125;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysis126;
+				    sendText(sender, chatbotResponse3)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('sanpedro north') || text.includes('Sanpedro north')||text.includes('Sanpedro north')){
+				sendText(sender, "I gues you mean"+a+sanpedro1+a+"north intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				let chatbotResponse3 = "";
+				axios.get('http://trapiknapud.herokuapp.com/sanpedrost')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis123;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis124;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis125;
+				    sendText(sender, chatbotResponse2)
+				    chatbotResponse3 = response.data.analysis126;
+				    sendText(sender, chatbotResponse3)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				
+				}
+				else if(text==''+bonifaciost1+a+'north intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				axios.get('http://trapiknapud.herokuapp.com/bonifaciost')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis130;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis131;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis132;
+				    sendText(sender, chatbotResponse2)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text==''+bonifaciost1+a+'south intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				axios.get('http://trapiknapud.herokuapp.com/bonifaciost')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis127;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis128;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis129;
+				    sendText(sender, chatbotResponse2)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('bonifacio north') || text.includes('Bonifacio North')||text.includes('Bonifacio north')){
+				sendText(sender, "I gues you mean"+a+bonifaciost1+a+"north intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				axios.get('http://trapiknapud.herokuapp.com/bonifaciost')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis130;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis131;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis132;
+				    sendText(sender, chatbotResponse2)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('bonifacio south') || text.includes('Bonifacio South')||text.includes('Bonifacio south')){
+				sendText(sender, "I gues you mean"+a+bonifaciost1+a+"south intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				axios.get('http://trapiknapud.herokuapp.com/bonifaciost')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis127;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis128;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis129;
+				    sendText(sender, chatbotResponse2)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				
+				}
+				else if(text==''+ftorrest1+a+'north intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/ftorrest')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis135;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis136;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text==''+ftorrest1+a+'south intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/ftorrest')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis133;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis134;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('ftorres north') || text.includes('Ftorres North')||text.includes('Ftorres north')){
+				sendText(sender, "I gues you mean"+a+ftorrest1+a+"north intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/ftorrest')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis135;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis136;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('ftorres south') || text.includes('Ftorres South')||text.includes('Ftorres south')){
+				sendText(sender, "I gues you mean"+a+ftorrest1+a+"south intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				axios.get('http://trapiknapud.herokuapp.com/ftorrest')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis133;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis134;
+				    sendText(sender, chatbotResponse1)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				
+				}
+				else if(text==''+mroxas1+a+'north intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				axios.get('http://trapiknapud.herokuapp.com/mroxas')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis140;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis141;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis142;
+				    sendText(sender, chatbotResponse2)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text==''+mroxas1+a+'south intersections'){
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				axios.get('http://trapiknapud.herokuapp.com/mroxas')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis137;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis138;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis139;
+				    sendText(sender, chatbotResponse2)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('mroxas north') || text.includes('Mroxas North')||text.includes('Mroxas north')){
+				sendText(sender, "I gues you mean"+a+mroxas1+a+"north intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				axios.get('http://trapiknapud.herokuapp.com/mroxas')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis140;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis141;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis142;
+				    sendText(sender, chatbotResponse2)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				}else if(text.includes('mroxas south') || text.includes('Mroxas South')||text.includes('Mroxas south')){
+				sendText(sender, "I gues you mean"+a+mroxas1+a+"south intersections.The traffic status for the intersections.")		
+				let chatbotResponse = "";
+				let chatbotResponse1 = "";
+				let chatbotResponse2 = "";
+				axios.get('http://trapiknapud.herokuapp.com/mroxas')
+				  .then(function (response) {
+				    chatbotResponse = response.data.analysis137;
+				    sendText(sender, chatbotResponse)
+				    chatbotResponse1 = response.data.analysis138;
+				    sendText(sender, chatbotResponse1)
+				    chatbotResponse2 = response.data.analysis139;
+				    sendText(sender, chatbotResponse2)
+				  })
+				  .catch(function (error) {
+				    //console.log(error);
+				    chatbotResponse = "not ok";
+				    sendText(sender, chatbotResponse)
+				  });
+				  break;
+				
+				}
+				
+				else{
 					sendText(sender, "Oops error")
 				}
 
