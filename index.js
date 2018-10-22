@@ -3300,12 +3300,11 @@ app.post('/webhook/', function(req, res) {
 				  });
 				  break;
 				}
-				else if(text.includes('ecoland north ')||text.includes('ecoland North ')){
+				else if(text.includes('ecoland north')||text.includes('ecoland North')||text.includes('Ecoland north')){
 				sendText(sender, "I guess you mean"+a+ecoland1+a+"north intersections. The Traffic status for the intersections.")
 				let chatbotResponse = "";
 				let chatbotResponse1 = "";
 				let chatbotResponse2 = "";
-				let chatbotResponse3 = "";
 				axios.get('http://trapiknapud.herokuapp.com/ecoland')
 				  .then(function (response) {
 				    chatbotResponse = response.data.analysis66;
@@ -3345,7 +3344,6 @@ app.post('/webhook/', function(req, res) {
 				let chatbotResponse = "";
 				let chatbotResponse1 = "";
 				let chatbotResponse2 = "";
-				let chatbotResponse3 = "";
 				axios.get('http://trapiknapud.herokuapp.com/ecoland')
 				  .then(function (response) {
 				    chatbotResponse = response.data.analysis66;
