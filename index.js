@@ -3309,9 +3309,9 @@ app.post('/webhook/', function(req, res) {
 				  .then(function (response) {
 				    chatbotResponse = response.data.analysis66;
 				    sendText(sender, chatbotResponse)
-				    chatbotResponse1 = response.data.analysis067;
+				    chatbotResponse1 = response.data.analysis67;
 				    sendText(sender, chatbotResponse1)
-				    chatbotResponse2 = response.data.analysis068;
+				    chatbotResponse2 = response.data.analysis68;
 				    sendText(sender, chatbotResponse2)
 				  })
 				  .catch(function (error) {
