@@ -817,7 +817,7 @@ app.get('/mcarthur',function(_req, _res){
   	_res.setHeader('Content-Type', 'application/json');
     	_res.send(JSON.stringify({ mcarthur1: mcarthur1,intc23: intc23, jf23:jf23, intc24: intc24, jf24: jf24, intc25: intc25, jf25: jf25,  intc26: intc26, 
     		jf26: jf26, intc27: intc27, jf27: jf27,  intc28: intc28, jf28: jf28,  intc29: intc29, jf29: jf29,  intc30: intc30, 
-    		jf30: jf30,  intc31: intc31, jf31: jf31,  intc32: intc32, jf32: jf32, intc33: intc3, jf33: jf33, 
+    		jf30: jf30,  intc31: intc31, jf31: jf31,  intc32: intc32, jf32: jf32, intc33: intc33, jf33: jf33, 
     		intc34: intc34, jf34: jf34, intc35: intc35, jf35: jf35,  intc36: intc36, jf36: jf36,analysis23: analysis23,
     		analysis24: analysis24, analysis25:analysis25, analysis26:analysis26, analysis27:analysis27, analysis28:analysis28, analysis29:analysis29, analysis30:analysis30,
     		analysis31:analysis31, analysis32:analysis32, analysis33:analysis33, analysis34:analysis34, analysis35:analysis35, analysis36:analysis36, mcarthuur1: mcarthuur1,  
