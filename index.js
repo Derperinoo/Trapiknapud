@@ -402,7 +402,7 @@ app.get('/jplaurel',function(_req, _res){
 	  	_res.setHeader('Content-Type', 'application/json');
     	_res.send(JSON.stringify({ jplaurel1: jplaurel1, intc11: intc11, jf11: jf11,  intc12: intc12, jf12: jf12,  intc13: intc13, jf13: jf13,  
     		intc14: intc14, jf14: jf14,  intc15: intc15, jf15: jf15, intc16: intc16, jf16:jf16,analysisjf11:analysisjf11, analysisjf12:analysisjf12, analysisjf13:analysisjf13,
-    		analysisjf14:analysisjf14, analysisjf15:analysisjf15,analysisjf16:analysisjf16, jplaureel1: jplaureel1, intc17: intc17, jfc17: jfc17,  intc18: intc18, jf18:  jf18 ,intc19: intc19, jf19: jf19, intc20: intc20, jf20: jf20,  intc21: intc21, jf21: jf21,
+    		analysisjf14:analysisjf14, analysisjf15:analysisjf15,analysisjf16:analysisjf16, jplaureel1: jplaureel1, intc17: intc17, jf17: jf17,  intc18: intc18, jf18:  jf18 ,intc19: intc19, jf19: jf19, intc20: intc20, jf20: jf20,  intc21: intc21, jf21: jf21,
     		intc22:intc22,jf22:jf22, analysisjf17:analysisjf17,
 		analysisjf18:analysisjf18, analysisjf19:analysisjf19, analysisjf20:analysisjf20,
     		analysisjf21:analysisjf21, analysisjf22:analysisjf22,}));
@@ -896,7 +896,7 @@ app.get('/ecowestdr',function(_req, _res){
 	  		analysis54 = "Cannot compute"
 	  	}  	
 	  	_res.setHeader('Content-Type', 'application/json');
-    	_res.send(JSON.stringify({ ecowestdr1: ecowestdr1, intc51: intc51, jf51: jf51,  intc52: intc52, jfc52: jfc52, 
+    	_res.send(JSON.stringify({ ecowestdr1: ecowestdr1, intc51: intc51, jf51: jf51,  intc52: intc52, jf52: jf52, 
     		analysis51:analysis51, analysis52:analysis52, ecowestdrr1: ecowestdrr1, intc53: intc53, jf53: jf53,  intc54: intc54, jf54: jf54, 
     		analysis53:analysis53, analysis54:analysis54}));  
 	});
