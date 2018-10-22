@@ -3185,7 +3185,7 @@ app.post('/webhook/', function(req, res) {
 				    sendText(sender, chatbotResponse)
 				  });
 				  break;
-				}else if(text.includes('mati south') || text.includes("Mati South")|| text.includes("mati South")){
+				}else if(text.includes('matina south') || text.includes("Matina South")|| text.includes("matina South")){
 				sendText(sender, "I guess you mean"+a+matinaaplaya1+a+"south intersections. The traffic status for the intersections.")
 				let chatbotResponse = "";
 				let chatbotResponse1 = "";
@@ -3279,7 +3279,7 @@ app.post('/webhook/', function(req, res) {
 				  });
 				  break;
 				}
-				else if(text.includes('ecoland south ')||text.includes('ecoland South ')){
+				else if(text.includes('ecoland south')||text.includes('ecoland South') || ||text.includes('Ecoland south')){
 				sendText(sender, "I guess you mean"+a+ecoland1+a+"south intersections. The Traffic status for the intersections.")
 				let chatbotResponse = "";
 				let chatbotResponse1 = "";
@@ -3290,7 +3290,7 @@ app.post('/webhook/', function(req, res) {
 				    sendText(sender, chatbotResponse)
 				    chatbotResponse1 = response.data.analysis64;
 				    sendText(sender, chatbotResponse1)
-				      chatbotResponse2 = response.data.analysis65;
+				    chatbotResponse2 = response.data.analysis65;
 				    sendText(sender, chatbotResponse2)
 				  })
 				  .catch(function (error) {
@@ -3312,7 +3312,7 @@ app.post('/webhook/', function(req, res) {
 				    sendText(sender, chatbotResponse)
 				    chatbotResponse1 = response.data.analysis067;
 				    sendText(sender, chatbotResponse1)
-				      chatbotResponse2 = response.data.analysis068;
+				    chatbotResponse2 = response.data.analysis068;
 				    sendText(sender, chatbotResponse2)
 				  })
 				  .catch(function (error) {
@@ -3332,7 +3332,7 @@ app.post('/webhook/', function(req, res) {
 				    sendText(sender, chatbotResponse)
 				    chatbotResponse1 = response.data.analysis64;
 				    sendText(sender, chatbotResponse1)
-				      chatbotResponse2 = response.data.analysis65;
+				    chatbotResponse2 = response.data.analysis65;
 				    sendText(sender, chatbotResponse2)
 				  })
 				  .catch(function (error) {
