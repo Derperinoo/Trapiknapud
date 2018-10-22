@@ -2074,7 +2074,7 @@ app.get('/pichonst',function(_req, _res){
 
 	  	
 	  	_res.setHeader('Content-Type', 'application/json');
-    	_res.send(JSON.stringify({ pichonst1: pichonst1, intc117: intc117, jf117: jf117,  intc118: intc118, jf118: jf118, intc119: intc119, jf119: jf119, intc120: intc120, jf120: jf120, intc121: intc121, jf121: jf121, analysis117:analysis117, analysis118:analysis118, analysis118:analysis119, analysis118:analysis120, analysis118:analysis121,
+    	_res.send(JSON.stringify({ pichonst1: pichonst1, intc117: intc117, jf117: jf117,  intc118: intc118, jf118: jf118, intc119: intc119, jf119: jf119, intc120: intc120, jf120: jf120, intc121: intc121, jf121: jf121, analysis117:analysis117, analysis118:analysis118, analysis119:analysis119, analysis120:analysis120, analysis121:analysis121,
     	 pichoonst1: pichonst1, intc122: intc122, jf122: jf122, analysis122:analysis122}));  
 	});
 });
@@ -3856,7 +3856,7 @@ app.post('/webhook/', function(req, res) {
 				sendText(sender, "I gues you mean"+a+cabaguio1+a+"north intersections.The traffic status for the intersections.")		
 				let chatbotResponse = "";
 				let chatbotResponse1 = "";
-				axios.get('http://trapiknapud.herokuapp.com/mlquezonblvd')
+				axios.get('http://trapiknapud.herokuapp.com/cabaguio')
 				  .then(function (response) {
 				    chatbotResponse = response.data.analysis111;
 				    sendText(sender, chatbotResponse)
@@ -3873,7 +3873,7 @@ app.post('/webhook/', function(req, res) {
 				sendText(sender, "I gues you mean"+a+cabaguio1+a+"south intersections.The traffic status for the intersections.")		
 				let chatbotResponse = "";
 				let chatbotResponse1 = "";
-				axios.get('http://trapiknapud.herokuapp.com/mlquezonblvd')
+				axios.get('http://trapiknapud.herokuapp.com/cabaguio')
 				  .then(function (response) {
 				    chatbotResponse = response.data.analysis109;
 				    sendText(sender, chatbotResponse)
@@ -4313,7 +4313,7 @@ app.post('/webhook/', function(req, res) {
 				}
 				
 				else{
-					sendText(sender, "Oops error")
+					sendText(sender, "Command does not exist.")
 				}
 
 
